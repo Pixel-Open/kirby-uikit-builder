@@ -45,7 +45,7 @@ $outerClass = trim(implode(' ', array_filter([
     <a href="<?= html($button['href']) ?>"
        class="uk-button <?= $button['style'] ?><?= $i > 0 ? ' uk-margin-small-left' : '' ?>"
        <?= $button['target'] ? 'target="_blank" rel="noopener"' : '' ?>
-       <?= $button['scroll'] ? 'uk-scroll' : '' ?>role="button"><?= html($button['label']) ?></a>
+       <?= $button['scroll'] ? 'uk-scroll ' : '' ?>role="button"><?= html($button['label']) ?></a>
     <?php endforeach ?>
   </div>
   <?php endif ?>

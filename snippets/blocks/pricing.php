@@ -46,7 +46,7 @@ $gridClass = 'uk-grid uk-grid-match uk-child-width-' . $colsTablet . '@s uk-chil
       <?php if ($btnLabel && $btnUrl): ?>
       <div class="uk-margin-top">
         <a href="<?= html($btnUrl) ?>" class="uk-button <?= $cardBtnStyle ?> uk-width-1-1"
-           <?= str_starts_with($btnUrl, '#') ? 'uk-scroll' : '' ?>role="button"><?= html($btnLabel) ?></a>
+           <?= str_starts_with($btnUrl, '#') ? 'uk-scroll ' : '' ?>role="button"><?= html($btnLabel) ?></a>
       </div>
       <?php endif ?>
     </div>

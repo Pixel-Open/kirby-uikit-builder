@@ -9,7 +9,14 @@ $blockClass = $block->block_class()->value();
 $img      = $block->media_enable()->isTrue() ? $block->media_image()->toFiles()->first() : null;
 $mediaPos = $block->media_position()->value() ?: 'top';
 
-$href = $block->link_enable()->isTrue() ? $block->linkHref() : null;
+// Lien résolu par le block method du plugin (voir index.php). Un contenu écrit
+// hors Panel peut n'avoir aucun link_type : on garde la retombée sur l'URL brute.
+$href = null;
+if ($block->link_enable()->isTrue()) {
+    $href = $block->link_type()->isEmpty()
+        ? ($block->link_url()->value() ?: null)
+        : $block->linkHref();
+}
 
 $animation = '';
 if ($block->animation()->isTrue()) {

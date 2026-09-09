@@ -5,7 +5,7 @@ $src = $block->linkHref();
 
 if (!$src || $block->text()->isEmpty()) return;
 
-$extra = str_starts_with($src, '#') ? ' uk-scroll' : '';
+$extra = str_starts_with($src, '#') ? 'uk-scroll ' : '';
 ?>
 <a class="uk-button<?= $block->button_style()->value() ?><?= $block->button_size()->value() ?><?= $block->margin_top()->value() ?>"
    href="<?= htmlspecialchars($src) ?>"
