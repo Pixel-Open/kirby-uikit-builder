@@ -88,7 +88,9 @@ Pricing cards grid with features list, CTA button, badge, and highlighted plan s
 The per-plan `btn_url` field is gone: the same composite link fields as the
 [button](button.md) block replace it, resolved by `$item->linkHref()`. A plain path such
 as `/contact` was never valid in a `url` field, and one invalid row blocked every save of
-the whole page. Re-link each plan in the Panel, or rewrite its stored JSON:
+the whole page. A row with no `link_type` still renders its raw `btn_url`, but that
+fallback dies at the first save from the Panel, so re-link each plan when you next open
+it, or rewrite its stored JSON:
 
 ```diff
 - "btn_url": "/contact",

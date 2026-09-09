@@ -9,7 +9,12 @@ $alignment = $block->alignment()->value();
 $buttons = [];
 foreach (['btn1' => 'uk-button-primary', 'btn2' => 'uk-button-default'] as $key => $defaultStyle) {
     $label = $block->content()->get($key . '_label')->value();
-    $href  = $block->linkHref($key . '_');
+
+    // Contenu antérieur à 1.0.1 : pas de link_type, l'URL brute était dans btnN_url.
+    // Elle reste lue tant que le bloc n'a pas été réenregistré depuis le Panel.
+    $href = $block->content()->get($key . '_link_type')->isEmpty()
+        ? ($block->content()->get($key . '_url')->value() ?: null)
+        : $block->linkHref($key . '_');
 
     if (!$label || !$href) {
         continue;

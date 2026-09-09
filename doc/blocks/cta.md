@@ -64,9 +64,11 @@ An `anchor` link also gets the `uk-scroll` attribute for smooth scrolling.
 
 ## Migrating from 1.0.0
 
-The `btn1_url` and `btn2_url` fields are gone. Existing content keeps its raw value in
-the content file but the block no longer reads it, so each CTA has to be re-linked in the
-Panel, or its stored JSON rewritten:
+The `btn1_url` and `btn2_url` fields are gone from the blueprint. A block that still
+carries one keeps rendering it: with no `btn1_link_type` stored, the snippet falls back
+to the raw `btn1_url`. That fallback dies at the first save from the Panel, which only
+submits the fields the blueprint declares, so re-link each CTA when you next open it, or
+rewrite its stored JSON:
 
 ```diff
 - "btn1_url": "/contact",
