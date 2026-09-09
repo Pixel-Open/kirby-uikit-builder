@@ -19,7 +19,10 @@ $gridClass = 'uk-grid uk-grid-match uk-child-width-' . $colsTablet . '@s uk-chil
     $description = $item->description()->value();
     $features    = array_filter(array_map('trim', explode("\n", $item->features()->value() ?? '')));
     $btnLabel    = $item->btn_label()->value();
-    $btnUrl      = $item->btn_url()->value();
+    // Contenu antérieur à 1.0.1 : pas de link_type, l'URL brute était dans btn_url.
+    $btnUrl      = $item->link_type()->isEmpty()
+        ? ($item->btn_url()->value() ?: null)
+        : $item->linkHref();
 
     $cardClass = $highlighted
         ? 'uk-card uk-card-' . $highlightedStyle . ' uk-light uk-card-body'
@@ -45,7 +48,8 @@ $gridClass = 'uk-grid uk-grid-match uk-child-width-' . $colsTablet . '@s uk-chil
       <?php endif ?>
       <?php if ($btnLabel && $btnUrl): ?>
       <div class="uk-margin-top">
-        <a href="<?= html($btnUrl) ?>" class="uk-button <?= $cardBtnStyle ?> uk-width-1-1"><?= html($btnLabel) ?></a>
+        <a href="<?= html($btnUrl) ?>" class="uk-button <?= $cardBtnStyle ?> uk-width-1-1"
+           <?= str_starts_with($btnUrl, '#') ? 'uk-scroll ' : '' ?>role="button"><?= html($btnLabel) ?></a>
       </div>
       <?php endif ?>
     </div>

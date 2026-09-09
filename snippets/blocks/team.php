@@ -15,6 +15,7 @@ $aspectRatio = $ratioMap[$photoRatio] ?? '1/1';
 
 $gridClass = trim(implode(' ', array_filter([
     'uk-grid',
+    'uk-grid-match',
     'uk-child-width-' . $colsTablet . '@s',
     'uk-child-width-' . $colsDesktop . '@m',
     $gap ? 'uk-grid-' . $gap : '',

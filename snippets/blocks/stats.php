@@ -9,7 +9,7 @@ $iconColor   = $block->icon_color()->value();
 $countup     = $block->countup()->isTrue();
 $alignment   = $block->alignment()->value() ?: 'uk-text-center';
 
-$gridClass = 'uk-grid uk-child-width-' . $colsTablet . '@s uk-child-width-' . $colsDesktop . '@m';
+$gridClass = 'uk-grid uk-grid-match uk-child-width-' . $colsTablet . '@s uk-child-width-' . $colsDesktop . '@m';
 $boxClass  = $style === 'card' ? 'uk-card uk-card-default uk-card-body' : '';
 $iconColorClass = $iconColor ? 'uk-text-' . $iconColor : '';
 ?>

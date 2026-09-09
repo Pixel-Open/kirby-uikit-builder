@@ -10,7 +10,7 @@ For a full-featured render (ratio wrapper, lightbox, link, caption, lazy `uk-img
 |-----------|------|---------|-------------|
 | `image` | `Kirby\Cms\File` | `null` | Kirby file object: required, the snippet renders nothing otherwise |
 | `sizes` | `string` | `'100vw'` | `sizes` attribute for the srcset, e.g. `'(min-width: 960px) 50vw, 100vw'` |
-| `widths` | `array` | `Image::SRCSET_WIDTHS` | Srcset widths: pass `Image::COVER_WIDTHS` (640–1920) for full-bleed images |
+| `widths` | `array` | `Image::SRCSET_WIDTHS` | Srcset widths: pass `Image::COVER_WIDTHS` (640-1920) for full-bleed images |
 | `alt` | `string\|null` | `null` | Alt text (falls back to `$image->alt()`) |
 | `attrs` | `string` | `''` | Extra raw attributes for the `<img>` tag, e.g. `'uk-cover loading="lazy"'` |
 

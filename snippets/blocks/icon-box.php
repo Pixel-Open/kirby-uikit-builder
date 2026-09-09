@@ -12,6 +12,7 @@ $gap         = $block->gap()->value();
 
 $gridClasses = implode(' ', array_filter([
     'uk-grid',
+    'uk-grid-match',
     'uk-child-width-' . $colsTablet . '@s',
     'uk-child-width-' . $colsDesktop . '@m',
     $gap ? 'uk-grid-' . $gap : '',
@@ -28,7 +29,7 @@ $iconColorClass = $iconColor ? 'uk-text-' . $iconColor : '';
     $link  = $item->link()->value();
   ?>
   <div>
-    <?php if ($link): ?><a href="<?= html($link) ?>" class="uk-link-reset"><?php endif ?>
+    <?php if ($link): ?><a href="<?= html($link) ?>" class="uk-link-reset uk-grid-item-match"><?php endif ?>
     <div<?= $boxClass ? ' class="' . $boxClass . '"' : '' ?>>
       <?php if ($position === 'left' && $icon): ?>
       <div class="uk-flex uk-flex-middle">
