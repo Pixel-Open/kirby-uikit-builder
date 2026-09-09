@@ -107,6 +107,24 @@ $blueprints['fields/layout'] = function () use ($translateBlueprint) {
     return $translateBlueprint($blueprint);
 };
 
+// Résolution d'un lien composite link_type / link_page / link_url…
+// Le préfixe permet à un bloc de porter plusieurs liens : le CTA passe
+// "btn1_" et "btn2_", les blocs à lien unique ne passent rien.
+// Enregistré sur les blocs et sur les lignes de structure (bloc pricing).
+$linkHref = function (string $prefix = ''): ?string {
+    $field = fn(string $name) => $this->content()->get($prefix . $name);
+
+    return match ($field('link_type')->value()) {
+        'internal'  => $field('link_page')->toPage()?->url(),
+        'url'       => $field('link_url')->value() ?: null,
+        'anchor'    => ($anchor = $field('link_anchor')->value()) ? '#' . $anchor : null,
+        'file'      => $field('link_file')->toFile()?->url(),
+        'email'     => ($email = $field('link_email')->value()) ? 'mailto:' . $email : null,
+        'telephone' => ($phone = $field('link_phone')->value()) ? 'tel:' . $phone : null,
+        default     => null,
+    };
+};
+
 // Snippets : mapping automatique dossier/nom → fichier
 $snippets = [];
 foreach (['blocks', 'ui', 'layout'] as $dir) {
@@ -120,6 +138,12 @@ Kirby::plugin('pixelopen/kirby-uikit-builder', [
         'fr' => require __DIR__ . '/translations/fr.php',
         'en' => require __DIR__ . '/translations/en.php',
     ],
-    'blueprints' => $blueprints,
-    'snippets'   => $snippets,
+    'blueprints'   => $blueprints,
+    'snippets'     => $snippets,
+    'blockMethods' => [
+        'linkHref' => $linkHref,
+    ],
+    'structureObjectMethods' => [
+        'linkHref' => $linkHref,
+    ],
 ]);

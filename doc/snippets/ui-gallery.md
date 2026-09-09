@@ -10,7 +10,7 @@ Gallery grid with UIkit lightbox. Used by the `gallery` block and the `fields/ga
 | `cols` | `string` | `'three'` | Columns: `'two'` · `'three'` · `'four'` |
 | `masonry` | `bool` | `false` | Natural proportions (`uk-grid="masonry: true"`) instead of uniform crop |
 | `hover_style` | `string` | `'dark'` | Hover overlay: `'white'` · `'dark'` · `'primary'` · `'none'` |
-| `hover_opacity` | `int` | `70` | Overlay opacity (10–100) |
+| `hover_opacity` | `int` | `70` | Overlay opacity (10-100) |
 | `hover_icon` | `string` | `'expand'` | UIkit icon displayed on hover: `'plus'` · `'search'` · `'expand'` · `'eye'` · `''` |
 | `hover_caption` | `bool` | `false` | Show alt text on hover |
 | `gap` | `string` | `'small'` | Grid gap: `''` · `'small'` · `'medium'` |

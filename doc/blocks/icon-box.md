@@ -20,7 +20,7 @@ Grid of icon boxes, each with a UIkit icon, title, text, and optional link.
 |-------|---------|-------------|
 | `cols_tablet` | `1-2` | Columns from 640px (1 or 2) |
 | `cols_desktop` | `1-3` | Columns from 960px (2, 3, or 4) |
-| `icon_size` | `2` | UIkit icon ratio (1–5) |
+| `icon_size` | `2` | UIkit icon ratio (1-5) |
 | `icon_color` | `""` | Icon color: primary, success, warning, danger, muted |
 | `icon_position` | `top` | Icon position: top (stacked) or left (inline) |
 | `style` | `""` | Box style: plain or card |
@@ -30,7 +30,7 @@ Grid of icon boxes, each with a UIkit icon, title, text, and optional link.
 
 ```html
 <!-- 3 cols desktop, icon top, card style, primary color -->
-<div class="uk-grid uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
+<div class="uk-grid uk-grid-match uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
   <div>
     <div class="uk-card uk-card-default uk-card-body">
       <div class="uk-text-primary">
@@ -56,6 +56,11 @@ With `icon_position: left`:
   </div>
 </div>
 ```
+
+## Notes
+
+- `uk-grid-match` is always applied so all boxes share the same height within a row, whatever the length of their text
+- When a `link` is set, the wrapping `<a>` carries `uk-grid-item-match` so the card inside it stretches too
 
 ## UIkit icon names
 

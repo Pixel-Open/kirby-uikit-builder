@@ -24,8 +24,8 @@ Grid of team member cards with photo, bio, and social links.
 
 | Field | Default | Description |
 |-------|---------|-------------|
-| `cols_tablet` | `1-2` | Columns on tablet (1–3) |
-| `cols_desktop` | `1-4` | Columns on desktop (2–4) |
+| `cols_tablet` | `1-2` | Columns on tablet (1-3) |
+| `cols_desktop` | `1-4` | Columns on desktop (2-4) |
 | `photo_ratio` | `square` | Photo crop: square, portrait (3:4), landscape (4:3) |
 | `style` | plain | Card style: plain or card |
 | `gap` | default | Gap between items |
@@ -34,6 +34,7 @@ Grid of team member cards with photo, bio, and social links.
 
 ## Notes
 
+- `uk-grid-match` is always applied so all members share the same height within a row, whatever the length of their bio
 - Photos are rendered as circles using `border-radius: 50%` and `aspect-ratio`
 - When no photo is set, a fallback circle with the member's initial is shown
 - Social links render as `uk-icon-button`: only links that are set are displayed

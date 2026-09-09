@@ -30,7 +30,7 @@ Grid of stat counters with optional `uk-countup` animation, icon, prefix, and su
 
 ```html
 <!-- countup enabled, centered, card style -->
-<div class="uk-grid uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+<div class="uk-grid uk-grid-match uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
   <div>
     <div class="uk-card uk-card-default uk-card-body uk-text-center">
       <div class="uk-margin-small-bottom uk-text-primary">
@@ -48,6 +48,7 @@ Grid of stat counters with optional `uk-countup` animation, icon, prefix, and su
 
 ## Notes
 
+- `uk-grid-match` is always applied so all items share the same height within a row
 - `uk-countup` only activates when `countup` is enabled **and** the value is numeric
 - Non-numeric values (e.g. `Free`, `∞`) are rendered as plain text regardless of the `countup` toggle
 - `uk-countup` requires UIkit JS to be loaded

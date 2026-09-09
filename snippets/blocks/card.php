@@ -9,12 +9,7 @@ $blockClass = $block->block_class()->value();
 $img      = $block->media_enable()->isTrue() ? $block->media_image()->toFiles()->first() : null;
 $mediaPos = $block->media_position()->value() ?: 'top';
 
-$href = null;
-if ($block->link_enable()->isTrue()) {
-    $href = $block->link_type()->value() === 'internal'
-        ? (($p = $block->link_page()->toPage()) ? $p->url() : null)
-        : $block->link_url()->value();
-}
+$href = $block->link_enable()->isTrue() ? $block->linkHref() : null;
 
 $animation = '';
 if ($block->animation()->isTrue()) {

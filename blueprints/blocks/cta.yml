@@ -24,15 +24,81 @@ tabs:
         label: pixelopen.kirby-uikit-builder.cta.btn1.label
         width: 1/2
 
-      btn1_url:
-        type: url
-        label: pixelopen.kirby-uikit-builder.cta.btn1_url.label
+      btn1_link_type:
+        type: select
+        label: pixelopen.kirby-uikit-builder.cta.btn1_link.label
+        default: internal
+        width: 1/4
+        options:
+          - value: internal
+            text: pixelopen.kirby-uikit-builder.btn.link_type.internal
+          - value: url
+            text: URL
+          - value: anchor
+            text: pixelopen.kirby-uikit-builder.btn.link_type.anchor
+          - value: file
+            text: pixelopen.kirby-uikit-builder.btn.link_type.file
+          - value: email
+            text: pixelopen.kirby-uikit-builder.btn.link_type.email
+          - value: telephone
+            text: pixelopen.kirby-uikit-builder.btn.link_type.telephone
+
+      btn1_target:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.btn.target
+        default: false
+        width: 1/4
+
+      btn1_link_page:
+        type: pages
+        label: pixelopen.kirby-uikit-builder.btn.link_page
+        multiple: false
         width: 1/2
+        when:
+          btn1_link_type: internal
+
+      btn1_link_url:
+        type: url
+        label: URL
+        width: 1/2
+        when:
+          btn1_link_type: url
+
+      btn1_link_anchor:
+        type: slug
+        label: pixelopen.kirby-uikit-builder.btn.link_anchor
+        before: "#"
+        icon: none
+        width: 1/2
+        when:
+          btn1_link_type: anchor
+
+      btn1_link_file:
+        type: files
+        label: pixelopen.kirby-uikit-builder.btn.link_file
+        multiple: false
+        width: 1/2
+        when:
+          btn1_link_type: file
+
+      btn1_link_email:
+        type: email
+        label: pixelopen.kirby-uikit-builder.btn.link_email
+        width: 1/2
+        when:
+          btn1_link_type: email
+
+      btn1_link_phone:
+        type: tel
+        label: pixelopen.kirby-uikit-builder.btn.link_phone
+        width: 1/2
+        when:
+          btn1_link_type: telephone
 
       btn1_style:
         type: select
         label: pixelopen.kirby-uikit-builder.cta.btn1_style.label
-        width: 1/3
+        width: 1/2
         default: "uk-button-primary"
         options:
           - value: "uk-button-default"
@@ -53,15 +119,81 @@ tabs:
         label: pixelopen.kirby-uikit-builder.cta.btn2.label
         width: 1/2
 
-      btn2_url:
-        type: url
-        label: pixelopen.kirby-uikit-builder.cta.btn2_url.label
+      btn2_link_type:
+        type: select
+        label: pixelopen.kirby-uikit-builder.cta.btn2_link.label
+        default: internal
+        width: 1/4
+        options:
+          - value: internal
+            text: pixelopen.kirby-uikit-builder.btn.link_type.internal
+          - value: url
+            text: URL
+          - value: anchor
+            text: pixelopen.kirby-uikit-builder.btn.link_type.anchor
+          - value: file
+            text: pixelopen.kirby-uikit-builder.btn.link_type.file
+          - value: email
+            text: pixelopen.kirby-uikit-builder.btn.link_type.email
+          - value: telephone
+            text: pixelopen.kirby-uikit-builder.btn.link_type.telephone
+
+      btn2_target:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.btn.target
+        default: false
+        width: 1/4
+
+      btn2_link_page:
+        type: pages
+        label: pixelopen.kirby-uikit-builder.btn.link_page
+        multiple: false
         width: 1/2
+        when:
+          btn2_link_type: internal
+
+      btn2_link_url:
+        type: url
+        label: URL
+        width: 1/2
+        when:
+          btn2_link_type: url
+
+      btn2_link_anchor:
+        type: slug
+        label: pixelopen.kirby-uikit-builder.btn.link_anchor
+        before: "#"
+        icon: none
+        width: 1/2
+        when:
+          btn2_link_type: anchor
+
+      btn2_link_file:
+        type: files
+        label: pixelopen.kirby-uikit-builder.btn.link_file
+        multiple: false
+        width: 1/2
+        when:
+          btn2_link_type: file
+
+      btn2_link_email:
+        type: email
+        label: pixelopen.kirby-uikit-builder.btn.link_email
+        width: 1/2
+        when:
+          btn2_link_type: email
+
+      btn2_link_phone:
+        type: tel
+        label: pixelopen.kirby-uikit-builder.btn.link_phone
+        width: 1/2
+        when:
+          btn2_link_type: telephone
 
       btn2_style:
         type: select
         label: pixelopen.kirby-uikit-builder.cta.btn2_style.label
-        width: 1/3
+        width: 1/2
         default: "uk-button-default"
         options:
           - value: "uk-button-default"

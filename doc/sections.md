@@ -20,7 +20,7 @@ Each layout section exposes 4 settings tabs accessible via the ⚙ icon in the p
 | `bg_video_url` | url | External URL (YouTube `/embed/[id]` or direct file) |
 | `text_color` | select | Text color: auto · light · dark |
 | `overlay_color` | color | Overlay color on top of the background image |
-| `overlay_opacity` | number | Overlay opacity (0–100) |
+| `overlay_opacity` | number | Overlay opacity (0-100) |
 | `overlay_gradient` | toggle | Gradient overlay |
 | `overlay_color2` | color | Overlay gradient end color |
 | `overlay_gradient_dir` | select | Overlay gradient direction |
@@ -50,7 +50,7 @@ Each layout section exposes 4 settings tabs accessible via the ⚙ icon in the p
 |-------|------|---------|-------------|
 | `scrollspy` | toggle | `false` | Enable scroll animation (`uk-scrollspy`) |
 | `scrollspy_cls` | select | `fade` | UIkit animation class |
-| `scrollspy_delay` | number | `0` | Delay in ms (0–2000) |
+| `scrollspy_delay` | number | `0` | Delay in ms (0-2000) |
 | `scrollspy_repeat` | toggle | `false` | Replay on every viewport entry |
 
 Default animations:

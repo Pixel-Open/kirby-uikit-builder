@@ -40,9 +40,57 @@ tabs:
           btn_label:
             type: text
             label: pixelopen.kirby-uikit-builder.pricing.item.btn_label.label
-          btn_url:
+          link_type:
+            type: select
+            label: pixelopen.kirby-uikit-builder.pricing.item.link.label
+            default: internal
+            options:
+              - value: internal
+                text: pixelopen.kirby-uikit-builder.btn.link_type.internal
+              - value: url
+                text: URL
+              - value: anchor
+                text: pixelopen.kirby-uikit-builder.btn.link_type.anchor
+              - value: file
+                text: pixelopen.kirby-uikit-builder.btn.link_type.file
+              - value: email
+                text: pixelopen.kirby-uikit-builder.btn.link_type.email
+              - value: telephone
+                text: pixelopen.kirby-uikit-builder.btn.link_type.telephone
+          link_page:
+            type: pages
+            label: pixelopen.kirby-uikit-builder.btn.link_page
+            multiple: false
+            when:
+              link_type: internal
+          link_url:
             type: url
-            label: pixelopen.kirby-uikit-builder.pricing.item.btn_url.label
+            label: URL
+            when:
+              link_type: url
+          link_anchor:
+            type: slug
+            label: pixelopen.kirby-uikit-builder.btn.link_anchor
+            before: "#"
+            icon: none
+            when:
+              link_type: anchor
+          link_file:
+            type: files
+            label: pixelopen.kirby-uikit-builder.btn.link_file
+            multiple: false
+            when:
+              link_type: file
+          link_email:
+            type: email
+            label: pixelopen.kirby-uikit-builder.btn.link_email
+            when:
+              link_type: email
+          link_phone:
+            type: tel
+            label: pixelopen.kirby-uikit-builder.btn.link_phone
+            when:
+              link_type: telephone
           highlighted:
             type: toggle
             label: pixelopen.kirby-uikit-builder.pricing.item.highlighted.label

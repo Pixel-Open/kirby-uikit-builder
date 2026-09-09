@@ -52,6 +52,15 @@ UIkit blocks and layout helpers for Kirby CMS 5.
 | [fields/slider](fields/slider.md) | Reusable slider structure field |
 | [fields/carousel](fields/carousel.md) | Reusable carousel structure field |
 
+## Link resolution
+
+| Method | Description |
+|--------|-------------|
+| `$block->linkHref(string $prefix = '')`<br>`$structureItem->linkHref(string $prefix = '')` | Resolves the composite link fields (`link_type` plus `link_page`, `link_url`, `link_anchor`, `link_file`, `link_email`, `link_phone`) into a URL, or `null` when the link is incomplete. The prefix lets one block carry several links: the `cta` block passes `btn1_` and `btn2_`. |
+
+Anchors come back as `#id`, so a snippet can add `uk-scroll` with
+`str_starts_with($href, '#')`. Used by the `button`, `card`, `cta` and `pricing` snippets.
+
 ## Quick start
 
 1. Extend the layout field in a page blueprint:

@@ -1,17 +1,30 @@
 <?php
 $heading   = $block->heading()->value();
 $subtext   = $block->subtext()->kirbytext();
-$btn1Label = $block->btn1_label()->value();
-$btn1Url   = $block->btn1_url()->value();
-$btn1Style = $block->btn1_style()->value() ?: 'uk-button-primary';
-$btn2Label = $block->btn2_label()->value();
-$btn2Url   = $block->btn2_url()->value();
-$btn2Style = $block->btn2_style()->value() ?: 'uk-button-default';
 $style     = $block->style()->value();
 $alignment = $block->alignment()->value();
 
-$hasButtons = ($btn1Label && $btn1Url) || ($btn2Label && $btn2Url);
-if (!$heading && !$subtext && !$hasButtons) return;
+// Les deux boutons partagent le résolveur de lien du plugin (voir index.php),
+// via les préfixes btn1_ et btn2_. Un bouton sans libellé ou sans cible saute.
+$buttons = [];
+foreach (['btn1' => 'uk-button-primary', 'btn2' => 'uk-button-default'] as $key => $defaultStyle) {
+    $label = $block->content()->get($key . '_label')->value();
+    $href  = $block->linkHref($key . '_');
+
+    if (!$label || !$href) {
+        continue;
+    }
+
+    $buttons[] = [
+        'label'  => $label,
+        'href'   => $href,
+        'style'  => $block->content()->get($key . '_style')->value() ?: $defaultStyle,
+        'target' => $block->content()->get($key . '_target')->isTrue(),
+        'scroll' => str_starts_with($href, '#'),
+    ];
+}
+
+if (!$heading && !$subtext && !$buttons) return;
 
 $outerClass = trim(implode(' ', array_filter([
     match($style) {
@@ -26,10 +39,14 @@ $outerClass = trim(implode(' ', array_filter([
 <div<?= $outerClass ? ' class="' . $outerClass . '"' : '' ?>>
   <?php if ($heading): ?><h2><?= html($heading) ?></h2><?php endif ?>
   <?php if ($subtext): ?><div class="uk-margin"><?= $subtext ?></div><?php endif ?>
-  <?php if ($hasButtons): ?>
+  <?php if ($buttons): ?>
   <div class="uk-margin">
-    <?php if ($btn1Label && $btn1Url): ?><a href="<?= html($btn1Url) ?>" class="uk-button <?= $btn1Style ?>"><?= html($btn1Label) ?></a><?php endif ?>
-    <?php if ($btn2Label && $btn2Url): ?><a href="<?= html($btn2Url) ?>" class="uk-button <?= $btn2Style ?> uk-margin-small-left"><?= html($btn2Label) ?></a><?php endif ?>
+    <?php foreach ($buttons as $i => $button): ?>
+    <a href="<?= html($button['href']) ?>"
+       class="uk-button <?= $button['style'] ?><?= $i > 0 ? ' uk-margin-small-left' : '' ?>"
+       <?= $button['target'] ? 'target="_blank" rel="noopener"' : '' ?>
+       <?= $button['scroll'] ? 'uk-scroll' : '' ?>role="button"><?= html($button['label']) ?></a>
+    <?php endforeach ?>
   </div>
   <?php endif ?>
 </div>
