@@ -1,0 +1,112 @@
+name: pixelopen.kirby-uikit-builder.btn.name
+icon: bolt
+fields:
+  text:
+    type: text
+    label: pixelopen.kirby-uikit-builder.btn.text
+    width: 2/3
+  link_type:
+    type: select
+    label: pixelopen.kirby-uikit-builder.btn.link_type
+    default: url
+    width: 1/4
+    options:
+      - value: url
+        text: URL
+      - value: internal
+        text: pixelopen.kirby-uikit-builder.btn.link_type.internal
+      - value: anchor
+        text: pixelopen.kirby-uikit-builder.btn.link_type.anchor
+      - value: file
+        text: pixelopen.kirby-uikit-builder.btn.link_type.file
+      - value: email
+        text: pixelopen.kirby-uikit-builder.btn.link_type.email
+      - value: telephone
+        text: pixelopen.kirby-uikit-builder.btn.link_type.telephone
+  target:
+    type: toggle
+    label: pixelopen.kirby-uikit-builder.btn.target
+    default: false
+    width: 1/4
+  link_url:
+    type: url
+    label: URL
+    width: 1/2
+    when:
+      link_type: url
+  link_page:
+    type: pages
+    label: pixelopen.kirby-uikit-builder.btn.link_page
+    multiple: false
+    width: 1/2
+    when:
+      link_type: internal
+  link_anchor:
+    type: slug
+    label: pixelopen.kirby-uikit-builder.btn.link_anchor
+    before: "#"
+    icon: none
+    width: 1/2
+    when:
+      link_type: anchor
+  link_file:
+    type: files
+    label: pixelopen.kirby-uikit-builder.btn.link_file
+    multiple: false
+    width: 1/2
+    when:
+      link_type: file
+  link_email:
+    type: email
+    label: pixelopen.kirby-uikit-builder.btn.link_email
+    width: 1/2
+    when:
+      link_type: email
+  link_phone:
+    type: tel
+    label: pixelopen.kirby-uikit-builder.btn.link_phone
+    width: 1/2
+    when:
+      link_type: telephone
+  button_style:
+    type: select
+    label: pixelopen.kirby-uikit-builder.btn.style
+    default: " uk-button-default"
+    width: 1/3
+    options:
+      - value: " uk-button-default"
+        text: pixelopen.kirby-uikit-builder.btn.style.default
+      - value: " uk-button-primary"
+        text: pixelopen.kirby-uikit-builder.btn.style.primary
+      - value: " uk-button-secondary"
+        text: pixelopen.kirby-uikit-builder.btn.style.secondary
+      - value: " uk-button-text"
+        text: pixelopen.kirby-uikit-builder.btn.style.text
+      - value: " uk-button-link"
+        text: pixelopen.kirby-uikit-builder.btn.style.link
+      - value: " uk-button-danger"
+        text: pixelopen.kirby-uikit-builder.btn.style.danger
+  button_size:
+    type: select
+    label: pixelopen.kirby-uikit-builder.btn.size
+    width: 1/3
+    options:
+      - value: ""
+        text: pixelopen.kirby-uikit-builder.btn.size.default
+      - value: " uk-button-small"
+        text: pixelopen.kirby-uikit-builder.btn.size.small
+      - value: " uk-button-large"
+        text: pixelopen.kirby-uikit-builder.btn.size.large
+  margin_top:
+    type: select
+    label: pixelopen.kirby-uikit-builder.btn.margin_top
+    width: 1/3
+    options:
+      - value: ""
+        text: pixelopen.kirby-uikit-builder.btn.margin_top.none
+      - value: " uk-margin-small-top"
+        text: pixelopen.kirby-uikit-builder.btn.margin_top.small
+      - value: " uk-margin-top"
+        text: pixelopen.kirby-uikit-builder.btn.margin_top.medium
+      - value: " uk-margin-large-top"
+        text: pixelopen.kirby-uikit-builder.btn.margin_top.large

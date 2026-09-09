@@ -1,0 +1,28 @@
+/* Panel : sélecteur de blocs : réduire la verticalité.
+   Le Panel liste les types de blocs sur 1 colonne (.k-block-types
+   { grid-template-columns: repeat(1, 1fr) }), ce qui donne une très
+   longue modale avec 26 blocs. On passe à 2 colonnes, 3 quand
+   l'écran permet d'élargir le dialog. */
+
+/* 2 colonnes par défaut */
+.k-block-selector .k-block-types {
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 0.5rem;
+}
+
+/* Espacement entre groupes resserré (spacing-6 → spacing-4) */
+.k-dialog.k-block-selector details + details {
+  margin-top: var(--spacing-4);
+}
+
+/* Écran large : dialog élargi et 3 colonnes */
+@media screen and (min-width: 44rem) {
+  .k-dialog.k-block-selector,
+  .k-dialog.k-block-selector[data-size] {
+    --dialog-width: 42rem;
+  }
+
+  .k-block-selector .k-block-types {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

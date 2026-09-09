@@ -1,0 +1,190 @@
+name: pixelopen.kirby-uikit-builder.card.name
+icon: grid-full
+tabs:
+
+  content:
+    label: pixelopen.kirby-uikit-builder.tab.content
+    fields:
+      blocks:
+        type: blocks
+        label: pixelopen.kirby-uikit-builder.card.blocks.label
+        fieldsets:
+          - heading
+          - text
+          - image
+          - quote
+          - button
+
+  style:
+    label: pixelopen.kirby-uikit-builder.col.tab.style
+    fields:
+      card_color:
+        type: select
+        label: pixelopen.kirby-uikit-builder.card.color
+        default: uk-card-default
+        options:
+          - value: uk-card-default
+            text: pixelopen.kirby-uikit-builder.col.card.color.default
+          - value: uk-card-primary
+            text: pixelopen.kirby-uikit-builder.col.card.color.primary
+          - value: uk-card-secondary
+            text: pixelopen.kirby-uikit-builder.col.card.color.secondary
+          - value: custom
+            text: pixelopen.kirby-uikit-builder.background.custom
+      card_bg_color:
+        type: color
+        label: pixelopen.kirby-uikit-builder.card.bg_color
+        width: 1/2
+        when:
+          card_color: custom
+      card_text_color:
+        type: select
+        label: pixelopen.kirby-uikit-builder.text_color.label
+        width: 1/2
+        when:
+          card_color: custom
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.text_color.auto
+          - value: uk-light
+            text: pixelopen.kirby-uikit-builder.text_color.light
+          - value: uk-dark
+            text: pixelopen.kirby-uikit-builder.text_color.dark
+      card_size:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.card.size
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.col.card.size.default
+          - value: uk-card-small
+            text: pixelopen.kirby-uikit-builder.col.card.size.small
+          - value: uk-card-large
+            text: pixelopen.kirby-uikit-builder.col.card.size.large
+      card_hover:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.col.card.hover
+        default: false
+        width: 1/3
+      card_badge:
+        type: text
+        label: pixelopen.kirby-uikit-builder.card.badge
+        width: 1/3
+
+  media:
+    label: pixelopen.kirby-uikit-builder.card.tab.media
+    fields:
+      media_enable:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.card.media_enable
+        default: false
+      media_image:
+        type: files
+        label: pixelopen.kirby-uikit-builder.card.media_image
+        multiple: false
+        max: 1
+        query: page.files.filterBy("type", "image")
+        width: 1/2
+        when:
+          media_enable: true
+      media_position:
+        type: select
+        label: pixelopen.kirby-uikit-builder.card.media_position
+        default: top
+        width: 1/2
+        when:
+          media_enable: true
+        options:
+          - value: top
+            text: pixelopen.kirby-uikit-builder.card.media_position.top
+          - value: bottom
+            text: pixelopen.kirby-uikit-builder.card.media_position.bottom
+
+  link:
+    label: pixelopen.kirby-uikit-builder.card.tab.link
+    fields:
+      link_enable:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.card.link_enable
+        default: false
+      link_type:
+        type: select
+        label: pixelopen.kirby-uikit-builder.btn.link_type
+        default: internal
+        width: 1/3
+        when:
+          link_enable: true
+        options:
+          - value: internal
+            text: pixelopen.kirby-uikit-builder.btn.link_type.internal
+          - value: url
+            text: URL
+      link_page:
+        type: pages
+        label: pixelopen.kirby-uikit-builder.btn.link_page
+        multiple: false
+        width: 1/2
+        when:
+          link_enable: true
+          link_type: internal
+      link_url:
+        type: url
+        label: URL
+        width: 1/2
+        when:
+          link_enable: true
+          link_type: url
+      link_target:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.btn.target
+        default: false
+        width: 1/3
+        when:
+          link_enable: true
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+      block_class:
+        type: text
+        label: pixelopen.kirby-uikit-builder.col.class
+        placeholder: my-custom-class
+        width: 1/2
+      block_id:
+        type: text
+        label: pixelopen.kirby-uikit-builder.col.id
+        placeholder: my-custom-id
+        width: 1/2
+      animation:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.col.animation
+        default: false
+      animation_type:
+        type: select
+        label: pixelopen.kirby-uikit-builder.scrollspy_cls.label
+        width: 1/2
+        when:
+          animation: true
+        options:
+          - value: uk-animation-fade
+            text: pixelopen.kirby-uikit-builder.scrollspy_cls.fade
+          - value: uk-animation-scale-up
+            text: pixelopen.kirby-uikit-builder.scrollspy_cls.scale_up
+          - value: uk-animation-slide-top-medium
+            text: pixelopen.kirby-uikit-builder.scrollspy_cls.slide_top
+          - value: uk-animation-slide-bottom-medium
+            text: pixelopen.kirby-uikit-builder.scrollspy_cls.slide_bottom
+          - value: uk-animation-slide-left-medium
+            text: pixelopen.kirby-uikit-builder.scrollspy_cls.slide_left
+          - value: uk-animation-slide-right-medium
+            text: pixelopen.kirby-uikit-builder.scrollspy_cls.slide_right
+      animation_delay:
+        type: number
+        label: pixelopen.kirby-uikit-builder.scrollspy_delay.label
+        default: 0
+        min: 0
+        max: 2000
+        step: 100
+        width: 1/2
+        when:
+          animation: true

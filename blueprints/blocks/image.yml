@@ -1,0 +1,134 @@
+name: pixelopen.kirby-uikit-builder.image.name
+icon: image
+preview: image
+
+tabs:
+
+  image:
+    label: pixelopen.kirby-uikit-builder.image.tab.image
+    fields:
+      location:
+        type: radio
+        label: pixelopen.kirby-uikit-builder.image.location
+        columns: 2
+        default: kirby
+        required: true
+        options:
+          kirby: pixelopen.kirby-uikit-builder.image.location.kirby
+          web: pixelopen.kirby-uikit-builder.image.location.web
+      image:
+        type: files
+        label: pixelopen.kirby-uikit-builder.image.file
+        query: model.images
+        multiple: false
+        image:
+          back: black
+        when:
+          location: kirby
+      src:
+        type: url
+        label: pixelopen.kirby-uikit-builder.image.url
+        when:
+          location: web
+      alt:
+        type: text
+        label: pixelopen.kirby-uikit-builder.image.alt
+        icon: title
+      caption:
+        type: writer
+        label: pixelopen.kirby-uikit-builder.image.caption
+        icon: text
+        inline: true
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+
+      alignment:
+        type: select
+        label: pixelopen.kirby-uikit-builder.image.alignment
+        default: center
+        width: 1/3
+        options:
+          - value: left
+            text: pixelopen.kirby-uikit-builder.image.alignment.left
+          - value: center
+            text: pixelopen.kirby-uikit-builder.image.alignment.center
+          - value: right
+            text: pixelopen.kirby-uikit-builder.image.alignment.right
+
+      img_width:
+        type: select
+        label: pixelopen.kirby-uikit-builder.image.width
+        default: auto
+        width: 1/3
+        options:
+          - value: auto
+            text: pixelopen.kirby-uikit-builder.image.width.auto
+          - value: "1-4"
+            text: "1/4"
+          - value: "1-3"
+            text: "1/3"
+          - value: "1-2"
+            text: "1/2"
+          - value: "2-3"
+            text: "2/3"
+          - value: "1-1"
+            text: pixelopen.kirby-uikit-builder.image.width.full
+
+      ratio:
+        type: select
+        label: pixelopen.kirby-uikit-builder.image.ratio
+        placeholder: Auto
+        width: 1/3
+        options:
+          - value: "16/9"
+            text: "16:9"
+          - value: "4/3"
+            text: "4:3"
+          - value: "3/2"
+            text: "3:2"
+          - value: "1/1"
+            text: "1:1"
+          - value: "21/9"
+            text: "21:9"
+          - value: "3/1"
+            text: "3:1"
+
+      shadow:
+        type: select
+        label: pixelopen.kirby-uikit-builder.image.shadow
+        default: ""
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.image.shadow.none
+          - value: small
+            text: pixelopen.kirby-uikit-builder.image.shadow.small
+          - value: medium
+            text: pixelopen.kirby-uikit-builder.image.shadow.medium
+          - value: large
+            text: pixelopen.kirby-uikit-builder.image.shadow.large
+          - value: xlarge
+            text: pixelopen.kirby-uikit-builder.image.shadow.xlarge
+
+      lightbox:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.image.lightbox
+        default: false
+        width: 1/3
+
+      link:
+        type: url
+        label: pixelopen.kirby-uikit-builder.image.link
+        icon: url
+        width: 1/3
+        when:
+          lightbox: false
+
+      eager:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.eager_image.label
+        help: pixelopen.kirby-uikit-builder.eager_image.help
+        default: false
+        width: 1/3

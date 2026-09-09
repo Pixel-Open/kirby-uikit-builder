@@ -1,0 +1,26 @@
+type: structure
+label: pixelopen.kirby-uikit-builder.carousel.items.label
+columns:
+  item_image:
+    width: 1/4
+  item_title:
+    width: 1/4
+  item_text:
+    width: 1/4
+  item_link:
+    width: 1/4
+fields:
+  item_image:
+    type: files
+    label: pixelopen.kirby-uikit-builder.carousel.item.image
+    max: 1
+    query: page.files.filterBy("type", "image")
+  item_title:
+    type: text
+    label: pixelopen.kirby-uikit-builder.carousel.item.title
+  item_text:
+    type: textarea
+    label: pixelopen.kirby-uikit-builder.carousel.item.text
+  item_link:
+    type: url
+    label: pixelopen.kirby-uikit-builder.carousel.item.link

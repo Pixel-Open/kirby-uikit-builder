@@ -1,0 +1,94 @@
+name: Media Object
+icon: template
+
+tabs:
+
+  content:
+    label: pixelopen.kirby-uikit-builder.media_object.tab.content
+    fields:
+      media_image:
+        type: files
+        label: pixelopen.kirby-uikit-builder.media_object.image
+        max: 1
+        query: page.files.filterBy("type", "image")
+      content_blocks:
+        type: blocks
+        label: pixelopen.kirby-uikit-builder.media_object.content_blocks
+        fieldsets:
+          - heading
+          - text
+          - button
+          - spacer
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+
+      image_position:
+        type: select
+        label: pixelopen.kirby-uikit-builder.media_object.image_position
+        default: left
+        width: 1/3
+        options:
+          - value: left
+            text: pixelopen.kirby-uikit-builder.media_object.image_position.left
+          - value: right
+            text: pixelopen.kirby-uikit-builder.media_object.image_position.right
+
+      image_width:
+        type: select
+        label: pixelopen.kirby-uikit-builder.media_object.image_width
+        default: "1-2"
+        width: 1/3
+        options:
+          - value: "1-3"
+            text: "1/3"
+          - value: "1-2"
+            text: "1/2"
+          - value: "2-3"
+            text: "2/3"
+
+      valign:
+        type: select
+        label: pixelopen.kirby-uikit-builder.media_object.valign
+        default: middle
+        width: 1/3
+        options:
+          - value: top
+            text: pixelopen.kirby-uikit-builder.media_object.valign.top
+          - value: middle
+            text: pixelopen.kirby-uikit-builder.media_object.valign.middle
+          - value: bottom
+            text: pixelopen.kirby-uikit-builder.media_object.valign.bottom
+
+      gap:
+        type: select
+        label: pixelopen.kirby-uikit-builder.media_object.gap
+        default: " uk-grid-large"
+        width: 1/3
+        options:
+          - value: " uk-grid-collapse"
+            text: pixelopen.kirby-uikit-builder.carousel.gap.none
+          - value: " uk-grid-small"
+            text: pixelopen.kirby-uikit-builder.carousel.gap.small
+          - value: " uk-grid-medium"
+            text: pixelopen.kirby-uikit-builder.carousel.gap.medium
+          - value: " uk-grid-large"
+            text: pixelopen.kirby-uikit-builder.carousel.gap.large
+
+      image_ratio:
+        type: select
+        label: pixelopen.kirby-uikit-builder.media_object.image_ratio
+        default: ""
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.media_object.image_ratio.auto
+          - value: "16:9"
+            text: "16:9"
+          - value: "4:3"
+            text: "4:3"
+          - value: "3:2"
+            text: "3:2"
+          - value: "1:1"
+            text: "1:1"

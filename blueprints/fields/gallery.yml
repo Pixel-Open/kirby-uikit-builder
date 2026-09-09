@@ -1,0 +1,5 @@
+type: files
+label: pixelopen.kirby-uikit-builder.gallery.files
+multiple: true
+layout: cardlets
+query: page.files.filterBy("type", "image")

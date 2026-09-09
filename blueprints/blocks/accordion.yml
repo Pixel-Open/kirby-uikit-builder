@@ -1,0 +1,25 @@
+name: pixelopen.kirby-uikit-builder.accordion.name
+icon: bars
+fields:
+  items:
+    type: structure
+    label: pixelopen.kirby-uikit-builder.accordion.items
+    fields:
+      title:
+        type: writer
+        label: pixelopen.kirby-uikit-builder.accordion.item.title
+        inline: true
+        marks: false
+      content:
+        type: writer
+        label: pixelopen.kirby-uikit-builder.accordion.item.content
+  multiple:
+    type: toggle
+    label: pixelopen.kirby-uikit-builder.accordion.multiple
+    default: false
+    width: 1/2
+  first_open:
+    type: toggle
+    label: pixelopen.kirby-uikit-builder.accordion.first_open
+    default: false
+    width: 1/2

@@ -1,0 +1,93 @@
+name: pixelopen.kirby-uikit-builder.code.name
+icon: code
+
+tabs:
+
+  content:
+    label: pixelopen.kirby-uikit-builder.tab.content
+    fields:
+
+      code:
+        type: textarea
+        label: pixelopen.kirby-uikit-builder.code.code.label
+        buttons: false
+        font: monospace
+
+      language:
+        type: select
+        label: pixelopen.kirby-uikit-builder.code.language.label
+        default: text
+        width: 1/2
+        options:
+          - value: bash
+            text: Bash
+          - value: c
+            text: C
+          - value: cpp
+            text: C++
+          - value: csharp
+            text: C#
+          - value: css
+            text: CSS
+          - value: diff
+            text: Diff
+          - value: go
+            text: Go
+          - value: graphql
+            text: GraphQL
+          - value: html
+            text: HTML
+          - value: java
+            text: Java
+          - value: js
+            text: JavaScript
+          - value: json
+            text: JSON
+          - value: markdown
+            text: Markdown
+          - value: php
+            text: PHP
+          - value: python
+            text: Python
+          - value: ruby
+            text: Ruby
+          - value: rust
+            text: Rust
+          - value: scss
+            text: SCSS
+          - value: shell
+            text: Shell
+          - value: sql
+            text: SQL
+          - value: swift
+            text: Swift
+          - value: text
+            text: Plain Text
+          - value: typescript
+            text: TypeScript
+          - value: xml
+            text: XML
+          - value: yaml
+            text: YAML
+
+      filename:
+        type: text
+        label: pixelopen.kirby-uikit-builder.code.filename.label
+        width: 1/2
+        icon: file
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+
+      copy:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.code.copy.label
+        default: true
+        width: 1/2
+
+      line_numbers:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.code.line_numbers.label
+        default: false
+        width: 1/2

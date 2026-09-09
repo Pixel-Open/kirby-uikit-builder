@@ -1,0 +1,286 @@
+name: pixelopen.kirby-uikit-builder.col.name
+icon: settings
+tabs:
+
+  size:
+    label: pixelopen.kirby-uikit-builder.col.tab.size
+    fields:
+      column_width:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.width.desktop
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: "uk-width-expand@m"
+            text: Expand
+          - value: "uk-width-1-2@m"
+            text: "1/2"
+          - value: "uk-width-1-3@m"
+            text: "1/3"
+          - value: "uk-width-2-3@m"
+            text: "2/3"
+          - value: "uk-width-1-4@m"
+            text: "1/4"
+          - value: "uk-width-3-4@m"
+            text: "3/4"
+          - value: "uk-width-1-5@m"
+            text: "1/5"
+          - value: "uk-width-2-5@m"
+            text: "2/5"
+          - value: "uk-width-3-5@m"
+            text: "3/5"
+          - value: "uk-width-1-6@m"
+            text: "1/6"
+          - value: "uk-width-5-6@m"
+            text: "5/6"
+      tablet_width:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.width.tablet
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: "uk-width-1-1@s "
+            text: "1/1"
+          - value: "uk-width-1-2@s "
+            text: "1/2"
+          - value: "uk-width-1-3@s "
+            text: "1/3"
+          - value: "uk-width-2-3@s "
+            text: "2/3"
+          - value: "uk-width-1-4@s "
+            text: "1/4"
+          - value: "uk-width-expand@s "
+            text: Expand
+      mobile_width:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.width.mobile
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: "uk-width-1-2 "
+            text: "1/2"
+          - value: "uk-width-1-3 "
+            text: "1/3"
+          - value: "uk-width-expand "
+            text: Expand
+      column_height:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.height
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: " uk-height-small"
+            text: "Small (150px)"
+          - value: " uk-height-medium"
+            text: "Medium (300px)"
+          - value: " uk-height-large"
+            text: "Large (450px)"
+          - value: " uk-height-viewport"
+            text: Viewport
+      column_min_height:
+        type: text
+        label: pixelopen.kirby-uikit-builder.col.min_height
+        placeholder: "200px"
+        width: 1/3
+      column_max_height:
+        type: text
+        label: pixelopen.kirby-uikit-builder.col.max_height
+        placeholder: "600px"
+        width: 1/3
+      content_valign:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.content_valign
+        help: pixelopen.kirby-uikit-builder.col.content_valign.help
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: " uk-flex uk-flex-column uk-flex-middle"
+            text: pixelopen.kirby-uikit-builder.col.content_valign.middle
+          - value: " uk-flex uk-flex-column uk-flex-bottom"
+            text: pixelopen.kirby-uikit-builder.col.content_valign.bottom
+
+  style:
+    label: pixelopen.kirby-uikit-builder.col.tab.style
+    fields:
+      column_style:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.style
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.col.style.none
+          - value: card
+            text: pixelopen.kirby-uikit-builder.col.style.card
+          - value: tile
+            text: pixelopen.kirby-uikit-builder.col.style.tile
+      card_color:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.card.color
+        width: 1/3
+        when:
+          column_style: card
+        options:
+          - value: " uk-card-default"
+            text: pixelopen.kirby-uikit-builder.col.card.color.default
+          - value: " uk-card-primary"
+            text: pixelopen.kirby-uikit-builder.col.card.color.primary
+          - value: " uk-card-secondary"
+            text: pixelopen.kirby-uikit-builder.col.card.color.secondary
+      card_size:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.card.size
+        width: 1/3
+        when:
+          column_style: card
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.col.card.size.default
+          - value: " uk-card-small"
+            text: pixelopen.kirby-uikit-builder.col.card.size.small
+          - value: " uk-card-large"
+            text: pixelopen.kirby-uikit-builder.col.card.size.large
+      card_hover:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.col.card.hover
+        default: false
+        width: 1/3
+        when:
+          column_style: card
+      tile_color:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.tile.color
+        when:
+          column_style: tile
+        options:
+          - value: " uk-tile uk-tile-default"
+            text: pixelopen.kirby-uikit-builder.col.card.color.default
+          - value: " uk-tile uk-tile-muted"
+            text: pixelopen.kirby-uikit-builder.col.tile.muted
+          - value: " uk-tile uk-tile-primary"
+            text: pixelopen.kirby-uikit-builder.col.card.color.primary
+          - value: " uk-tile uk-tile-secondary"
+            text: pixelopen.kirby-uikit-builder.col.card.color.secondary
+      text_align:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.text_align.desktop
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: " uk-text-left@m"
+            text: pixelopen.kirby-uikit-builder.col.text_align.left
+          - value: " uk-text-center@m"
+            text: pixelopen.kirby-uikit-builder.col.text_align.center
+          - value: " uk-text-right@m"
+            text: pixelopen.kirby-uikit-builder.col.text_align.right
+      text_align_tablet:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.text_align.tablet
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: " uk-text-left@s"
+            text: pixelopen.kirby-uikit-builder.col.text_align.left
+          - value: " uk-text-center@s"
+            text: pixelopen.kirby-uikit-builder.col.text_align.center
+          - value: " uk-text-right@s"
+            text: pixelopen.kirby-uikit-builder.col.text_align.right
+      text_align_mobile:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.text_align.mobile
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: " uk-text-left"
+            text: pixelopen.kirby-uikit-builder.col.text_align.left
+          - value: " uk-text-center"
+            text: pixelopen.kirby-uikit-builder.col.text_align.center
+          - value: " uk-text-right"
+            text: pixelopen.kirby-uikit-builder.col.text_align.right
+
+  advanced:
+    label: pixelopen.kirby-uikit-builder.col.tab.advanced
+    fields:
+      column_padding:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.padding
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: " uk-padding-small"
+            text: pixelopen.kirby-uikit-builder.col.padding.small
+          - value: " uk-padding"
+            text: pixelopen.kirby-uikit-builder.col.padding.default
+          - value: " uk-padding-large"
+            text: pixelopen.kirby-uikit-builder.col.padding.large
+          - value: " uk-padding-remove"
+            text: pixelopen.kirby-uikit-builder.col.padding.none
+      item_order:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.order
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: " uk-flex-first@m"
+            text: pixelopen.kirby-uikit-builder.col.order.first_desktop
+          - value: " uk-flex-last@m"
+            text: pixelopen.kirby-uikit-builder.col.order.last_desktop
+          - value: " uk-flex-first@s"
+            text: pixelopen.kirby-uikit-builder.col.order.first_tablet
+          - value: " uk-flex-last@s"
+            text: pixelopen.kirby-uikit-builder.col.order.last_tablet
+          - value: " uk-flex-first"
+            text: pixelopen.kirby-uikit-builder.col.order.first_all
+          - value: " uk-flex-last"
+            text: pixelopen.kirby-uikit-builder.col.order.last_all
+      column_class:
+        type: text
+        label: pixelopen.kirby-uikit-builder.col.class
+        placeholder: "my-class"
+        width: 1/3
+      column_id:
+        type: text
+        label: pixelopen.kirby-uikit-builder.col.id
+        placeholder: "my-id"
+        width: 1/3
+      animation:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.col.animation
+        default: false
+      animation_type:
+        type: select
+        label: pixelopen.kirby-uikit-builder.scrollspy_cls.label
+        width: 1/2
+        when:
+          animation: true
+        options:
+          - value: uk-animation-fade
+            text: pixelopen.kirby-uikit-builder.scrollspy_cls.fade
+          - value: uk-animation-scale-up
+            text: pixelopen.kirby-uikit-builder.scrollspy_cls.scale_up
+          - value: uk-animation-slide-top-medium
+            text: pixelopen.kirby-uikit-builder.scrollspy_cls.slide_top
+          - value: uk-animation-slide-bottom-medium
+            text: pixelopen.kirby-uikit-builder.scrollspy_cls.slide_bottom
+          - value: uk-animation-slide-left-medium
+            text: pixelopen.kirby-uikit-builder.scrollspy_cls.slide_left
+          - value: uk-animation-slide-right-medium
+            text: pixelopen.kirby-uikit-builder.scrollspy_cls.slide_right
+      animation_delay:
+        type: number
+        label: pixelopen.kirby-uikit-builder.scrollspy_delay.label
+        default: 0
+        min: 0
+        max: 2000
+        step: 100
+        width: 1/2
+        when:
+          animation: true

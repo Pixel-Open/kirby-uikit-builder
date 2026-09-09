@@ -1,0 +1,32 @@
+name: FAQ
+icon: question
+
+fields:
+  title:
+    type: text
+    label: pixelopen.kirby-uikit-builder.faq.title.label
+
+  items:
+    type: structure
+    label: pixelopen.kirby-uikit-builder.faq.items.label
+    fields:
+      question:
+        type: text
+        label: pixelopen.kirby-uikit-builder.faq.question.label
+      answer:
+        type: writer
+        label: pixelopen.kirby-uikit-builder.faq.answer.label
+        marks:
+          - bold
+          - italic
+          - link
+
+  multiple:
+    type: toggle
+    label: pixelopen.kirby-uikit-builder.faq.multiple.label
+    default: false
+
+  first_open:
+    type: toggle
+    label: pixelopen.kirby-uikit-builder.faq.first_open.label
+    default: true

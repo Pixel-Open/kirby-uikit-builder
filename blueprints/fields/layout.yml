@@ -1,0 +1,470 @@
+type: layout
+layouts:
+  - "1/1"
+  - "1/2, 1/2"
+  - "1/3, 2/3"
+  - "2/3, 1/3"
+  - "1/3, 1/3, 1/3"
+  - "1/4, 1/4, 1/4, 1/4"
+
+settings:
+  tabs:
+
+    fond:
+      label: pixelopen.kirby-uikit-builder.tab.fond
+      fields:
+        background:
+          type: select
+          label: pixelopen.kirby-uikit-builder.background.label
+          options:
+            - value: ""
+              text: pixelopen.kirby-uikit-builder.background.none
+            - value: uk-section-default
+              text: pixelopen.kirby-uikit-builder.background.white
+            - value: uk-section-muted
+              text: pixelopen.kirby-uikit-builder.background.grey
+            - value: uk-section-primary
+              text: pixelopen.kirby-uikit-builder.background.primary
+            - value: uk-section-secondary
+              text: pixelopen.kirby-uikit-builder.background.dark
+            - value: custom
+              text: pixelopen.kirby-uikit-builder.background.custom
+        bg_custom_color:
+          type: color
+          label: pixelopen.kirby-uikit-builder.bg_custom_color.label
+          width: 1/2
+          when:
+            background: custom
+        bg_custom_gradient:
+          type: toggle
+          label: pixelopen.kirby-uikit-builder.bg_custom_gradient.label
+          default: false
+          when:
+            background: custom
+        bg_custom_color2:
+          type: color
+          label: pixelopen.kirby-uikit-builder.bg_custom_color2.label
+          width: 1/2
+          when:
+            background: custom
+            bg_custom_gradient: true
+        bg_gradient_dir:
+          type: select
+          label: pixelopen.kirby-uikit-builder.bg_gradient_dir.label
+          default: "to right"
+          width: 1/2
+          when:
+            background: custom
+            bg_custom_gradient: true
+          options:
+            - value: "to right"
+              text: pixelopen.kirby-uikit-builder.bg_gradient_dir.to_right
+            - value: "to bottom"
+              text: pixelopen.kirby-uikit-builder.bg_gradient_dir.to_bottom
+            - value: "to left"
+              text: pixelopen.kirby-uikit-builder.bg_gradient_dir.to_left
+            - value: "to top"
+              text: pixelopen.kirby-uikit-builder.bg_gradient_dir.to_top
+            - value: "to bottom right"
+              text: pixelopen.kirby-uikit-builder.bg_gradient_dir.to_bottom_right
+            - value: "to bottom left"
+              text: pixelopen.kirby-uikit-builder.bg_gradient_dir.to_bottom_left
+        bg_image:
+          type: files
+          label: pixelopen.kirby-uikit-builder.bg_image.label
+          max: 1
+          query: page.files.filterBy("type", "image")
+        bg_video_enable:
+          type: toggle
+          label: pixelopen.kirby-uikit-builder.bg_video_enable.label
+          help: pixelopen.kirby-uikit-builder.bg_video_enable.help
+          default: false
+        bg_video_source:
+          type: select
+          label: pixelopen.kirby-uikit-builder.bg_video_source.label
+          default: file
+          width: 1/2
+          when:
+            bg_video_enable: true
+          options:
+            - value: file
+              text: pixelopen.kirby-uikit-builder.bg_video_source.file
+            - value: url
+              text: pixelopen.kirby-uikit-builder.bg_video_source.url
+        bg_video_file:
+          type: files
+          label: pixelopen.kirby-uikit-builder.bg_video_file.label
+          max: 1
+          query: page.files.filterBy("type", "video")
+          when:
+            bg_video_enable: true
+            bg_video_source: file
+        bg_video_url:
+          type: url
+          label: pixelopen.kirby-uikit-builder.bg_video_url.label
+          placeholder: "https://www.youtube.com/embed/[id]"
+          help: pixelopen.kirby-uikit-builder.bg_video_url.help
+          when:
+            bg_video_enable: true
+            bg_video_source: url
+        text_color:
+          type: select
+          label: pixelopen.kirby-uikit-builder.text_color.label
+          default: ""
+          options:
+            - value: ""
+              text: pixelopen.kirby-uikit-builder.text_color.auto
+            - value: uk-light
+              text: pixelopen.kirby-uikit-builder.text_color.light
+            - value: uk-dark
+              text: pixelopen.kirby-uikit-builder.text_color.dark
+        overlay_color:
+          type: color
+          label: pixelopen.kirby-uikit-builder.overlay_color.label
+          help: pixelopen.kirby-uikit-builder.overlay_color.help
+          width: 1/2
+        overlay_opacity:
+          type: range
+          label: pixelopen.kirby-uikit-builder.overlay_opacity.label
+          min: 0
+          max: 100
+          step: 5
+          default: 40
+          width: 1/2
+        overlay_gradient:
+          type: toggle
+          label: pixelopen.kirby-uikit-builder.overlay_gradient.label
+          default: false
+        overlay_color2:
+          type: color
+          label: pixelopen.kirby-uikit-builder.overlay_color2.label
+          width: 1/2
+          when:
+            overlay_gradient: true
+        overlay_gradient_dir:
+          type: select
+          label: pixelopen.kirby-uikit-builder.overlay_gradient_dir.label
+          default: "to bottom"
+          width: 1/2
+          when:
+            overlay_gradient: true
+          options:
+            - value: "to right"
+              text: pixelopen.kirby-uikit-builder.bg_gradient_dir.to_right
+            - value: "to bottom"
+              text: pixelopen.kirby-uikit-builder.bg_gradient_dir.to_bottom
+            - value: "to left"
+              text: pixelopen.kirby-uikit-builder.bg_gradient_dir.to_left
+            - value: "to top"
+              text: pixelopen.kirby-uikit-builder.bg_gradient_dir.to_top
+            - value: "to bottom right"
+              text: pixelopen.kirby-uikit-builder.bg_gradient_dir.to_bottom_right
+            - value: "to bottom left"
+              text: pixelopen.kirby-uikit-builder.bg_gradient_dir.to_bottom_left
+
+    mise_en_page:
+      label: pixelopen.kirby-uikit-builder.tab.mise_en_page
+      fields:
+        padding:
+          type: select
+          label: pixelopen.kirby-uikit-builder.padding.label
+          default: ""
+          options:
+            - value: uk-section-xsmall
+              text: XS
+            - value: uk-section-small
+              text: S
+            - value: ""
+              text: pixelopen.kirby-uikit-builder.padding.m
+            - value: uk-section-large
+              text: L
+            - value: uk-section-xlarge
+              text: XL
+        padding_remove:
+          type: multiselect
+          label: pixelopen.kirby-uikit-builder.padding_remove.label
+          options:
+            - value: uk-padding-remove-top
+              text: pixelopen.kirby-uikit-builder.padding_remove.top
+            - value: uk-padding-remove-bottom
+              text: pixelopen.kirby-uikit-builder.padding_remove.bottom
+            - value: uk-padding-remove-left
+              text: pixelopen.kirby-uikit-builder.padding_remove.left
+            - value: uk-padding-remove-right
+              text: pixelopen.kirby-uikit-builder.padding_remove.right
+        container:
+          type: select
+          label: pixelopen.kirby-uikit-builder.container.label
+          default: ""
+          options:
+            - value: ""
+              text: pixelopen.kirby-uikit-builder.container.normal
+            - value: small
+              text: pixelopen.kirby-uikit-builder.container.narrow
+            - value: large
+              text: pixelopen.kirby-uikit-builder.container.large
+            - value: expand
+              text: pixelopen.kirby-uikit-builder.container.expand
+        grid_tablet:
+          type: toggle
+          label: pixelopen.kirby-uikit-builder.grid_tablet.label
+          default: false
+          help: pixelopen.kirby-uikit-builder.grid_tablet.help
+        grid_valign:
+          type: select
+          label: pixelopen.kirby-uikit-builder.grid_valign.label
+          default: ""
+          width: 1/2
+          options:
+            - value: ""
+              text: pixelopen.kirby-uikit-builder.grid_valign.stretch
+            - value: uk-flex-top
+              text: pixelopen.kirby-uikit-builder.grid_valign.top
+            - value: uk-flex-middle
+              text: pixelopen.kirby-uikit-builder.grid_valign.middle
+            - value: uk-flex-bottom
+              text: pixelopen.kirby-uikit-builder.grid_valign.bottom
+        grid_halign:
+          type: select
+          label: pixelopen.kirby-uikit-builder.grid_halign.label
+          default: ""
+          width: 1/2
+          options:
+            - value: ""
+              text: pixelopen.kirby-uikit-builder.grid_halign.left
+            - value: uk-flex-center
+              text: pixelopen.kirby-uikit-builder.grid_halign.center
+            - value: uk-flex-right
+              text: pixelopen.kirby-uikit-builder.grid_halign.right
+            - value: uk-flex-between
+              text: pixelopen.kirby-uikit-builder.grid_halign.between
+        grid_gap:
+          type: select
+          label: pixelopen.kirby-uikit-builder.grid_gap.label
+          default: uk-grid-large
+          width: 1/2
+          options:
+            - value: uk-grid-collapse
+              text: pixelopen.kirby-uikit-builder.grid_gap.collapse
+            - value: uk-grid-small
+              text: pixelopen.kirby-uikit-builder.grid_gap.small
+            - value: uk-grid-medium
+              text: pixelopen.kirby-uikit-builder.grid_gap.medium
+            - value: uk-grid-large
+              text: pixelopen.kirby-uikit-builder.grid_gap.large
+        grid_divider:
+          type: toggle
+          label: pixelopen.kirby-uikit-builder.grid_divider.label
+          default: false
+          width: 1/2
+        shape_divider:
+          type: toggle
+          label: pixelopen.kirby-uikit-builder.shape_divider.label
+          default: false
+        shape_divider_type:
+          type: select
+          label: pixelopen.kirby-uikit-builder.shape_divider_type.label
+          width: 1/2
+          when:
+            shape_divider: true
+          options:
+            - value: curve
+              text: pixelopen.kirby-uikit-builder.shape_divider_type.curve
+            - value: tilt
+              text: pixelopen.kirby-uikit-builder.shape_divider_type.tilt
+            - value: tilt-alt
+              text: pixelopen.kirby-uikit-builder.shape_divider_type.tilt_alt
+            - value: triangle
+              text: pixelopen.kirby-uikit-builder.shape_divider_type.triangle
+            - value: waves
+              text: pixelopen.kirby-uikit-builder.shape_divider_type.waves
+            - value: waves-opacity
+              text: pixelopen.kirby-uikit-builder.shape_divider_type.waves_opacity
+            - value: mountains
+              text: pixelopen.kirby-uikit-builder.shape_divider_type.mountains
+            - value: fan
+              text: pixelopen.kirby-uikit-builder.shape_divider_type.fan
+            - value: clouds
+              text: pixelopen.kirby-uikit-builder.shape_divider_type.clouds
+            - value: speech
+              text: pixelopen.kirby-uikit-builder.shape_divider_type.speech
+        shape_divider_position:
+          type: select
+          label: pixelopen.kirby-uikit-builder.shape_divider_position.label
+          default: bottom
+          width: 1/2
+          when:
+            shape_divider: true
+          options:
+            - value: bottom
+              text: pixelopen.kirby-uikit-builder.shape_divider_position.bottom
+            - value: top
+              text: pixelopen.kirby-uikit-builder.shape_divider_position.top
+            - value: both
+              text: pixelopen.kirby-uikit-builder.shape_divider_position.both
+        shape_divider_color:
+          type: color
+          label: pixelopen.kirby-uikit-builder.shape_divider_color.label
+          width: 1/2
+          when:
+            shape_divider: true
+        shape_divider_height:
+          type: text
+          label: pixelopen.kirby-uikit-builder.shape_divider_height.label
+          placeholder: "150px"
+          width: 1/2
+          when:
+            shape_divider: true
+
+    effets:
+      label: pixelopen.kirby-uikit-builder.tab.effets
+      fields:
+        parallax:
+          type: toggle
+          label: pixelopen.kirby-uikit-builder.parallax.label
+          default: false
+        parallax_speed:
+          type: number
+          label: pixelopen.kirby-uikit-builder.parallax_speed.label
+          default: -200
+          min: -600
+          max: 600
+          when:
+            parallax: true
+        eager_image:
+          type: toggle
+          label: pixelopen.kirby-uikit-builder.eager_image.label
+          default: false
+          help: pixelopen.kirby-uikit-builder.eager_image.help
+        scrollspy:
+          type: toggle
+          label: pixelopen.kirby-uikit-builder.scrollspy.label
+          default: false
+        scrollspy_cls:
+          type: select
+          label: pixelopen.kirby-uikit-builder.scrollspy_cls.label
+          default: uk-animation-fade
+          when:
+            scrollspy: true
+          options:
+            - value: uk-animation-fade
+              text: pixelopen.kirby-uikit-builder.scrollspy_cls.fade
+            - value: uk-animation-scale-up
+              text: pixelopen.kirby-uikit-builder.scrollspy_cls.scale_up
+            - value: uk-animation-slide-top-medium
+              text: pixelopen.kirby-uikit-builder.scrollspy_cls.slide_top
+            - value: uk-animation-slide-bottom-medium
+              text: pixelopen.kirby-uikit-builder.scrollspy_cls.slide_bottom
+            - value: uk-animation-slide-left-medium
+              text: pixelopen.kirby-uikit-builder.scrollspy_cls.slide_left
+            - value: uk-animation-slide-right-medium
+              text: pixelopen.kirby-uikit-builder.scrollspy_cls.slide_right
+        scrollspy_delay:
+          type: number
+          label: pixelopen.kirby-uikit-builder.scrollspy_delay.label
+          default: 0
+          min: 0
+          max: 2000
+          step: 100
+          width: 1/2
+          when:
+            scrollspy: true
+        scrollspy_repeat:
+          type: toggle
+          label: pixelopen.kirby-uikit-builder.scrollspy_repeat.label
+          default: false
+          width: 1/2
+          when:
+            scrollspy: true
+
+    avance:
+      label: pixelopen.kirby-uikit-builder.tab.avance
+      fields:
+        visibility:
+          type: select
+          label: pixelopen.kirby-uikit-builder.visibility.label
+          default: ""
+          options:
+            - value: ""
+              text: pixelopen.kirby-uikit-builder.visibility.all
+            - value: uk-visible@s
+              text: pixelopen.kirby-uikit-builder.visibility.tablet_up
+            - value: uk-visible@m
+              text: pixelopen.kirby-uikit-builder.visibility.desktop_up
+            - value: uk-visible@l
+              text: pixelopen.kirby-uikit-builder.visibility.large_up
+            - value: uk-hidden@s
+              text: pixelopen.kirby-uikit-builder.visibility.mobile_only
+            - value: uk-hidden@m
+              text: pixelopen.kirby-uikit-builder.visibility.mobile_tablet
+        section_id:
+          type: text
+          label: pixelopen.kirby-uikit-builder.section_id.label
+          help: pixelopen.kirby-uikit-builder.section_id.help
+          width: 1/2
+        aria_label:
+          type: text
+          label: pixelopen.kirby-uikit-builder.aria_label.label
+          help: pixelopen.kirby-uikit-builder.aria_label.help
+          width: 1/2
+        css_classes:
+          type: multiselect
+          label: pixelopen.kirby-uikit-builder.css_classes.label
+          options:
+            - value: uk-margin-remove-top
+              text: pixelopen.kirby-uikit-builder.css_classes.remove_top
+            - value: uk-margin-remove-bottom
+              text: pixelopen.kirby-uikit-builder.css_classes.remove_bottom
+            - value: uk-section-divider
+              text: pixelopen.kirby-uikit-builder.css_classes.divider
+            - value: uk-overflow-hidden
+              text: pixelopen.kirby-uikit-builder.css_classes.overflow
+            - value: uk-preserve-color
+              text: pixelopen.kirby-uikit-builder.css_classes.preserve
+        css_classes_custom:
+          type: text
+          label: pixelopen.kirby-uikit-builder.css_classes_custom.label
+          help: pixelopen.kirby-uikit-builder.css_classes_custom.help
+
+fieldsets:
+  layout:
+    label: pixelopen.kirby-uikit-builder.fieldsets.layout
+    type: group
+    fieldsets:
+      - column-options
+  content:
+    label: pixelopen.kirby-uikit-builder.fieldsets.content
+    type: group
+    fieldsets:
+      - heading
+      - text
+      - image
+      - quote
+      - code
+      - video
+      - button
+      - spacer
+  components:
+    label: pixelopen.kirby-uikit-builder.fieldsets.components
+    type: group
+    fieldsets:
+      - card
+      - gallery
+      - accordion
+      - slider
+      - carousel
+      - media-object
+      - testimonial
+      - tabs
+      - faq
+      - table
+      - cta
+      - icon-box
+      - alert
+      - list
+      - stats
+      - pricing
+      - video
+      - team
+      - logo-grid
+      - timeline

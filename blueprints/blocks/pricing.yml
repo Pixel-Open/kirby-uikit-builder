@@ -1,0 +1,108 @@
+name: pixelopen.kirby-uikit-builder.pricing.name
+icon: money
+
+tabs:
+
+  content:
+    label: pixelopen.kirby-uikit-builder.tab.content
+    fields:
+
+      items:
+        type: structure
+        label: pixelopen.kirby-uikit-builder.pricing.items.label
+        columns:
+          name:
+            width: 1/4
+          price:
+            width: 1/4
+          btn_label:
+            width: 1/4
+          highlighted:
+            width: 1/4
+        fields:
+          name:
+            type: text
+            label: pixelopen.kirby-uikit-builder.pricing.item.name.label
+          price:
+            type: text
+            label: pixelopen.kirby-uikit-builder.pricing.item.price.label
+          period:
+            type: text
+            label: pixelopen.kirby-uikit-builder.pricing.item.period.label
+          description:
+            type: text
+            label: pixelopen.kirby-uikit-builder.pricing.item.description.label
+          features:
+            type: textarea
+            label: pixelopen.kirby-uikit-builder.pricing.item.features.label
+            help: pixelopen.kirby-uikit-builder.pricing.item.features.help
+            buttons: false
+          btn_label:
+            type: text
+            label: pixelopen.kirby-uikit-builder.pricing.item.btn_label.label
+          btn_url:
+            type: url
+            label: pixelopen.kirby-uikit-builder.pricing.item.btn_url.label
+          highlighted:
+            type: toggle
+            label: pixelopen.kirby-uikit-builder.pricing.item.highlighted.label
+            default: false
+          badge:
+            type: text
+            label: pixelopen.kirby-uikit-builder.pricing.item.badge.label
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+
+      cols_tablet:
+        type: select
+        label: pixelopen.kirby-uikit-builder.icon_box.cols.tablet
+        width: 1/3
+        default: "1-2"
+        options:
+          - value: "1-1"
+            text: "1"
+          - value: "1-2"
+            text: "2"
+          - value: "1-3"
+            text: "3"
+
+      cols_desktop:
+        type: select
+        label: pixelopen.kirby-uikit-builder.icon_box.cols.desktop
+        width: 1/3
+        default: "1-3"
+        options:
+          - value: "1-2"
+            text: "2"
+          - value: "1-3"
+            text: "3"
+          - value: "1-4"
+            text: "4"
+
+      btn_style:
+        type: select
+        label: pixelopen.kirby-uikit-builder.pricing.btn_style.label
+        width: 1/3
+        default: "uk-button-primary"
+        options:
+          - value: "uk-button-default"
+            text: pixelopen.kirby-uikit-builder.btn.style.default
+          - value: "uk-button-primary"
+            text: pixelopen.kirby-uikit-builder.btn.style.primary
+          - value: "uk-button-secondary"
+            text: pixelopen.kirby-uikit-builder.btn.style.secondary
+          - value: "uk-button-danger"
+            text: pixelopen.kirby-uikit-builder.btn.style.danger
+
+      highlighted_style:
+        type: select
+        label: pixelopen.kirby-uikit-builder.pricing.highlighted_style.label
+        width: 1/3
+        default: primary
+        options:
+          - value: primary
+            text: pixelopen.kirby-uikit-builder.cta.style.primary
+          - value: secondary
+            text: pixelopen.kirby-uikit-builder.cta.style.secondary

@@ -1,0 +1,71 @@
+name: pixelopen.kirby-uikit-builder.list.name
+icon: list-bullet
+
+tabs:
+
+  content:
+    label: pixelopen.kirby-uikit-builder.tab.content
+    fields:
+
+      items:
+        type: structure
+        label: pixelopen.kirby-uikit-builder.list.items.label
+        fields:
+          text:
+            type: writer
+            label: pixelopen.kirby-uikit-builder.list.item.text.label
+            marks:
+              - bold
+              - italic
+              - link
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+
+      list_type:
+        type: select
+        label: pixelopen.kirby-uikit-builder.list.type.label
+        width: 1/3
+        default: bullet
+        options:
+          - value: bullet
+            text: pixelopen.kirby-uikit-builder.list.type.bullet
+          - value: disc
+            text: pixelopen.kirby-uikit-builder.list.type.disc
+          - value: decimal
+            text: pixelopen.kirby-uikit-builder.list.type.decimal
+          - value: hyphen
+            text: pixelopen.kirby-uikit-builder.list.type.hyphen
+          - value: check
+            text: pixelopen.kirby-uikit-builder.list.type.check
+
+      divider:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.list.divider.label
+        default: false
+        width: 1/3
+
+      large:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.list.large.label
+        default: false
+        width: 1/3
+
+      color:
+        type: select
+        label: pixelopen.kirby-uikit-builder.list.color.label
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.list.color.none
+          - value: primary
+            text: pixelopen.kirby-uikit-builder.list.color.primary
+          - value: success
+            text: pixelopen.kirby-uikit-builder.list.color.success
+          - value: warning
+            text: pixelopen.kirby-uikit-builder.list.color.warning
+          - value: danger
+            text: pixelopen.kirby-uikit-builder.list.color.danger
+          - value: muted
+            text: pixelopen.kirby-uikit-builder.list.color.muted

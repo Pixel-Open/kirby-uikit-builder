@@ -1,0 +1,21 @@
+type: structure
+label: pixelopen.kirby-uikit-builder.slider.slides.label
+columns:
+  slide_image:
+    width: 1/3
+  slide_caption:
+    width: 1/3
+  slide_link:
+    width: 1/3
+fields:
+  slide_image:
+    type: files
+    label: pixelopen.kirby-uikit-builder.slider.image.label
+    max: 1
+    query: page.files.filterBy("type", "image")
+  slide_caption:
+    type: text
+    label: pixelopen.kirby-uikit-builder.slider.caption.label
+  slide_link:
+    type: url
+    label: pixelopen.kirby-uikit-builder.slider.link.label

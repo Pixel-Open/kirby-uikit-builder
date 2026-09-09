@@ -1,0 +1,49 @@
+label: pixelopen.kirby-uikit-builder.tab.content
+fields:
+
+  content_position:
+    type: select
+    label: pixelopen.kirby-uikit-builder.content.position.label
+    default: bottom
+    options:
+      - value: bottom
+        text: pixelopen.kirby-uikit-builder.content.position.bottom
+      - value: bottom-left
+        text: pixelopen.kirby-uikit-builder.content.position.bottom_left
+      - value: bottom-center
+        text: pixelopen.kirby-uikit-builder.content.position.bottom_center
+      - value: bottom-right
+        text: pixelopen.kirby-uikit-builder.content.position.bottom_right
+      - value: center
+        text: pixelopen.kirby-uikit-builder.content.position.center
+      - value: top
+        text: pixelopen.kirby-uikit-builder.content.position.top
+      - value: top-left
+        text: pixelopen.kirby-uikit-builder.content.position.top_left
+      - value: top-center
+        text: pixelopen.kirby-uikit-builder.content.position.top_center
+      - value: top-right
+        text: pixelopen.kirby-uikit-builder.content.position.top_right
+
+  content_padding:
+    type: select
+    label: pixelopen.kirby-uikit-builder.content.padding.label
+    default: medium
+    options:
+      - value: small
+        text: pixelopen.kirby-uikit-builder.content.padding.small
+      - value: medium
+        text: pixelopen.kirby-uikit-builder.content.padding.medium
+      - value: large
+        text: pixelopen.kirby-uikit-builder.content.padding.large
+
+  content_color:
+    type: select
+    label: pixelopen.kirby-uikit-builder.content.color.label
+    default: light
+    options:
+      - value: light
+        text: pixelopen.kirby-uikit-builder.content.color.light
+      - value: dark
+        text: pixelopen.kirby-uikit-builder.content.color.dark
+

@@ -1,0 +1,11 @@
+# Normalisation des fins de ligne (cf. .editorconfig du projet : LF)
+* text=auto eol=lf
+
+# Fichiers de dépôt sans valeur dans un vendor/ : exclus des archives dist.
+# La doc (doc/) est volontairement conservée : elle est consultée au point
+# d'usage, dans site/plugins/kirby-uikit-builder/doc/.
+/.gitattributes export-ignore
+/.gitignore     export-ignore
+/.editorconfig  export-ignore
+/.github        export-ignore
+/tests          export-ignore

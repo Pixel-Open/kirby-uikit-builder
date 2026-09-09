@@ -1,0 +1,258 @@
+name: Slider
+icon: play
+
+tabs:
+
+  slides:
+    label: pixelopen.kirby-uikit-builder.slider.tab.slides
+    fields:
+      slides:
+        type: structure
+        label: pixelopen.kirby-uikit-builder.slider.slides.label
+        columns:
+          slide_image:
+            width: 1/4
+          content_blocks:
+            width: 1/4
+          slide_position:
+            width: 1/4
+          slide_width:
+            width: 1/4
+        fields:
+          slide_image:
+            type: files
+            label: pixelopen.kirby-uikit-builder.slider.image.label
+            max: 1
+            query: page.files.filterBy("type", "image")
+          content_blocks:
+            type: blocks
+            label: pixelopen.kirby-uikit-builder.slider.content_blocks
+            fieldsets:
+              - heading
+              - text
+              - button
+          slide_position:
+            type: select
+            label: pixelopen.kirby-uikit-builder.slider.slide_position
+            options:
+              - value: ""
+                text: pixelopen.kirby-uikit-builder.slider.position.global
+              - value: bottom
+                text: pixelopen.kirby-uikit-builder.content.position.bottom
+              - value: bottom-left
+                text: pixelopen.kirby-uikit-builder.content.position.bottom_left
+              - value: bottom-center
+                text: pixelopen.kirby-uikit-builder.content.position.bottom_center
+              - value: bottom-right
+                text: pixelopen.kirby-uikit-builder.content.position.bottom_right
+              - value: center
+                text: pixelopen.kirby-uikit-builder.content.position.center
+              - value: top
+                text: pixelopen.kirby-uikit-builder.content.position.top
+              - value: top-left
+                text: pixelopen.kirby-uikit-builder.content.position.top_left
+              - value: top-center
+                text: pixelopen.kirby-uikit-builder.content.position.top_center
+              - value: top-right
+                text: pixelopen.kirby-uikit-builder.content.position.top_right
+          slide_width:
+            type: select
+            label: pixelopen.kirby-uikit-builder.slider.slide_width
+            options:
+              - value: ""
+                text: pixelopen.kirby-uikit-builder.slider.slide_width.auto
+              - value: " uk-width-1-3@s"
+                text: "1/3"
+              - value: " uk-width-1-2@s"
+                text: "1/2"
+              - value: " uk-width-2-3@s"
+                text: "2/3"
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+
+      animation:
+        type: select
+        label: pixelopen.kirby-uikit-builder.slider.animation.label
+        default: fade
+        width: 1/3
+        options:
+          - value: slide
+            text: pixelopen.kirby-uikit-builder.slider.animation.slide
+          - value: fade
+            text: pixelopen.kirby-uikit-builder.slider.animation.fade
+          - value: scale
+            text: pixelopen.kirby-uikit-builder.slider.animation.scale
+          - value: pull
+            text: pixelopen.kirby-uikit-builder.slider.animation.pull
+          - value: push
+            text: pixelopen.kirby-uikit-builder.slider.animation.push
+
+      kenburns:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.slider.kenburns.label
+        default: false
+        width: 1/3
+
+      show_arrows:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.arrows.show.label
+        default: true
+        width: 1/3
+
+      navigation_type:
+        type: select
+        label: pixelopen.kirby-uikit-builder.slider.navigation_type
+        default: ""
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.slider.navigation_type.none
+          - value: dotnav
+            text: pixelopen.kirby-uikit-builder.slider.navigation_type.dotnav
+          - value: thumbnails
+            text: pixelopen.kirby-uikit-builder.slider.navigation_type.thumbnails
+
+      arrows_color:
+        type: select
+        label: pixelopen.kirby-uikit-builder.arrows.color.label
+        default: light
+        width: 1/3
+        when:
+          show_arrows: true
+        options:
+          - value: light
+            text: pixelopen.kirby-uikit-builder.arrows.color.light
+          - value: dark
+            text: pixelopen.kirby-uikit-builder.arrows.color.dark
+
+      arrows_large:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.arrows.large.label
+        default: false
+        width: 1/3
+        when:
+          show_arrows: true
+
+      arrows_position:
+        type: select
+        label: pixelopen.kirby-uikit-builder.arrows.position.label
+        default: center
+        width: 1/3
+        when:
+          show_arrows: true
+        options:
+          - value: center
+            text: pixelopen.kirby-uikit-builder.arrows.position.center
+          - value: top
+            text: pixelopen.kirby-uikit-builder.arrows.position.top
+          - value: bottom
+            text: pixelopen.kirby-uikit-builder.arrows.position.bottom
+
+      arrows_offset:
+        type: select
+        label: pixelopen.kirby-uikit-builder.arrows.offset.label
+        default: " uk-position-small"
+        width: 1/3
+        when:
+          show_arrows: true
+        options:
+          - value: " uk-position-small"
+            text: pixelopen.kirby-uikit-builder.col.card.size.small
+          - value: " uk-position-medium"
+            text: pixelopen.kirby-uikit-builder.col.card.size.default
+          - value: " uk-position-large"
+            text: pixelopen.kirby-uikit-builder.col.card.size.large
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.arrows.offset.none
+
+      dotnav_color:
+        type: select
+        label: pixelopen.kirby-uikit-builder.dotnav.color.label
+        default: light
+        width: 1/3
+        when:
+          navigation_type: dotnav
+        options:
+          - value: light
+            text: pixelopen.kirby-uikit-builder.dotnav.color.light
+          - value: dark
+            text: pixelopen.kirby-uikit-builder.dotnav.color.dark
+
+      dotnav_vertical:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.dotnav.vertical.label
+        default: false
+        width: 1/3
+        when:
+          navigation_type: dotnav
+
+      content_style:
+        type: select
+        label: pixelopen.kirby-uikit-builder.slider.content_style
+        default: gradient
+        width: 1/3
+        options:
+          - value: gradient
+            text: pixelopen.kirby-uikit-builder.slider.content_style.gradient
+          - value: default
+            text: pixelopen.kirby-uikit-builder.slider.content_style.default
+          - value: primary
+            text: pixelopen.kirby-uikit-builder.slider.content_style.primary
+          - value: none
+            text: pixelopen.kirby-uikit-builder.slider.content_style.none
+
+      content_position_size:
+        type: select
+        label: pixelopen.kirby-uikit-builder.slider.content_position_size
+        default: " uk-position-medium"
+        width: 1/3
+        options:
+          - value: " uk-position-small"
+            text: pixelopen.kirby-uikit-builder.col.card.size.small
+          - value: " uk-position-medium"
+            text: pixelopen.kirby-uikit-builder.col.card.size.default
+          - value: " uk-position-large"
+            text: pixelopen.kirby-uikit-builder.col.card.size.large
+
+      size_mode:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.slider.size_mode
+        default: false
+        width: 1/3
+
+      ratio:
+        type: select
+        label: pixelopen.kirby-uikit-builder.slider.ratio.label
+        default: "16:9"
+        width: 1/3
+        when:
+          size_mode: false
+        options:
+          - value: "16:9"
+            text: pixelopen.kirby-uikit-builder.slider.ratio.landscape
+          - value: "4:3"
+            text: pixelopen.kirby-uikit-builder.slider.ratio.standard
+          - value: "21:9"
+            text: pixelopen.kirby-uikit-builder.slider.ratio.cinema
+          - value: "1:1"
+            text: pixelopen.kirby-uikit-builder.slider.ratio.square
+          - value: "3:2"
+            text: "3:2"
+          - value: "3:1"
+            text: pixelopen.kirby-uikit-builder.slider.ratio.panoramic
+
+      min_height:
+        type: number
+        label: pixelopen.kirby-uikit-builder.slider.min_height
+        placeholder: "300"
+        after: px
+        width: 1/3
+
+      max_height:
+        type: number
+        label: pixelopen.kirby-uikit-builder.slider.max_height
+        placeholder: "800"
+        after: px
+        width: 1/3

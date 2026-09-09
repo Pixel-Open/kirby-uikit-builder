@@ -1,0 +1,46 @@
+name: pixelopen.kirby-uikit-builder.alert.name
+icon: alert
+
+tabs:
+
+  content:
+    label: pixelopen.kirby-uikit-builder.tab.content
+    fields:
+
+      alert_type:
+        type: select
+        label: pixelopen.kirby-uikit-builder.alert.type.label
+        default: primary
+        options:
+          - value: primary
+            text: pixelopen.kirby-uikit-builder.alert.type.primary
+          - value: success
+            text: pixelopen.kirby-uikit-builder.alert.type.success
+          - value: warning
+            text: pixelopen.kirby-uikit-builder.alert.type.warning
+          - value: danger
+            text: pixelopen.kirby-uikit-builder.alert.type.danger
+
+      title:
+        type: text
+        label: pixelopen.kirby-uikit-builder.alert.title.label
+
+      body:
+        type: writer
+        label: pixelopen.kirby-uikit-builder.alert.body.label
+        marks:
+          - bold
+          - italic
+          - link
+
+      closable:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.alert.closable.label
+        default: false
+        width: 1/2
+
+      show_icon:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.alert.icon.label
+        default: false
+        width: 1/2

@@ -1,0 +1,71 @@
+name: pixelopen.kirby-uikit-builder.timeline.name
+icon: clock
+
+tabs:
+
+  content:
+    label: pixelopen.kirby-uikit-builder.tab.content
+    fields:
+
+      items:
+        type: structure
+        label: pixelopen.kirby-uikit-builder.timeline.items.label
+        columns:
+          date:
+            width: 1/4
+          title:
+            width: 3/4
+        fields:
+          date:
+            type: text
+            label: pixelopen.kirby-uikit-builder.timeline.item.date.label
+            help: pixelopen.kirby-uikit-builder.timeline.item.date.help
+            width: 1/2
+          icon:
+            type: text
+            label: pixelopen.kirby-uikit-builder.timeline.item.icon.label
+            help: pixelopen.kirby-uikit-builder.timeline.item.icon.help
+            width: 1/2
+          title:
+            type: text
+            label: pixelopen.kirby-uikit-builder.timeline.item.title.label
+          text:
+            type: writer
+            label: pixelopen.kirby-uikit-builder.timeline.item.text.label
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+
+      style:
+        type: select
+        label: pixelopen.kirby-uikit-builder.icon_box.style.label
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.icon_box.style.plain
+          - value: card
+            text: pixelopen.kirby-uikit-builder.icon_box.style.card
+
+      marker_color:
+        type: select
+        label: pixelopen.kirby-uikit-builder.timeline.marker_color.label
+        width: 1/3
+        default: primary
+        options:
+          - value: primary
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.primary
+          - value: success
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.success
+          - value: warning
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.warning
+          - value: danger
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.danger
+          - value: muted
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.muted
+
+      alternate:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.timeline.alternate.label
+        help: pixelopen.kirby-uikit-builder.timeline.alternate.help
+        width: 1/3

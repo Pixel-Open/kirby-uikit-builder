@@ -1,0 +1,102 @@
+name: pixelopen.kirby-uikit-builder.table.name
+icon: table
+
+tabs:
+
+  data:
+    label: pixelopen.kirby-uikit-builder.tab.content
+    fields:
+
+      caption:
+        type: text
+        label: pixelopen.kirby-uikit-builder.table.caption.label
+
+      columns:
+        type: structure
+        label: pixelopen.kirby-uikit-builder.table.columns.label
+        columns:
+          label:
+            width: 1/2
+          align:
+            width: 1/4
+          shrink:
+            width: 1/4
+        fields:
+          label:
+            type: text
+            label: pixelopen.kirby-uikit-builder.table.column.label
+          align:
+            type: select
+            label: pixelopen.kirby-uikit-builder.table.column.align.label
+            options:
+              - value: ""
+                text: pixelopen.kirby-uikit-builder.table.column.align.left
+              - value: "uk-text-center"
+                text: pixelopen.kirby-uikit-builder.table.column.align.center
+              - value: "uk-text-right"
+                text: pixelopen.kirby-uikit-builder.table.column.align.right
+          shrink:
+            type: toggle
+            label: pixelopen.kirby-uikit-builder.table.column.shrink.label
+            default: false
+
+      rows:
+        type: structure
+        label: pixelopen.kirby-uikit-builder.table.rows.label
+        fields:
+          cells:
+            type: text
+            label: pixelopen.kirby-uikit-builder.table.row.cells.label
+            help: pixelopen.kirby-uikit-builder.table.row.cells.help
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+
+      divider:
+        type: select
+        label: pixelopen.kirby-uikit-builder.table.divider.label
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.table.divider.none
+          - value: " uk-table-divider"
+            text: pixelopen.kirby-uikit-builder.table.style.divider
+          - value: " uk-table-striped"
+            text: pixelopen.kirby-uikit-builder.table.style.striped
+
+      size:
+        type: select
+        label: pixelopen.kirby-uikit-builder.table.size.label
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.table.size.default
+          - value: " uk-table-small"
+            text: pixelopen.kirby-uikit-builder.table.style.small
+          - value: " uk-table-large"
+            text: pixelopen.kirby-uikit-builder.table.style.large
+
+      hover:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.table.hover.label
+        default: false
+        width: 1/3
+
+      justify:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.table.justify.label
+        default: false
+        width: 1/3
+
+      responsive:
+        type: select
+        label: pixelopen.kirby-uikit-builder.table.responsive.label
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.table.responsive.none
+          - value: overflow
+            text: pixelopen.kirby-uikit-builder.table.responsive.overflow
+          - value: stack
+            text: pixelopen.kirby-uikit-builder.table.responsive.stack

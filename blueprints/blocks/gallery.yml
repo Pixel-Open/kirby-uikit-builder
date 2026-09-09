@@ -1,0 +1,76 @@
+name: pixelopen.kirby-uikit-builder.gallery.name
+icon: images
+fields:
+  gallery:
+    type: files
+    label: pixelopen.kirby-uikit-builder.gallery.files
+    multiple: true
+    layout: cardlets
+    query: page.files.filterBy("type", "image")
+  gallery_grid:
+    type: select
+    label: pixelopen.kirby-uikit-builder.gallery.grid
+    default: three
+    width: 1/2
+    options:
+      - value: two
+        text: pixelopen.kirby-uikit-builder.gallery.grid.two
+      - value: three
+        text: pixelopen.kirby-uikit-builder.gallery.grid.three
+      - value: four
+        text: pixelopen.kirby-uikit-builder.gallery.grid.four
+  gallery_style:
+    type: select
+    label: pixelopen.kirby-uikit-builder.gallery.style
+    default: cropped
+    width: 1/2
+    options:
+      - value: cropped
+        text: pixelopen.kirby-uikit-builder.gallery.style.cropped
+      - value: masonry
+        text: pixelopen.kirby-uikit-builder.gallery.style.masonry
+  hover_style:
+    type: select
+    label: pixelopen.kirby-uikit-builder.gallery.hover_style
+    default: white
+    width: 1/3
+    options:
+      - value: white
+        text: pixelopen.kirby-uikit-builder.gallery.hover_style.white
+      - value: dark
+        text: pixelopen.kirby-uikit-builder.gallery.hover_style.dark
+      - value: primary
+        text: pixelopen.kirby-uikit-builder.col.card.color.primary
+      - value: none
+        text: pixelopen.kirby-uikit-builder.gallery.hover_style.none
+  hover_opacity:
+    type: range
+    label: pixelopen.kirby-uikit-builder.gallery.hover_opacity
+    default: 70
+    min: 10
+    max: 100
+    step: 5
+    after: "%"
+    width: 1/3
+  hover_icon:
+    type: select
+    label: pixelopen.kirby-uikit-builder.gallery.hover_icon
+    default: plus
+    width: 1/3
+    options:
+      - value: plus
+        text: pixelopen.kirby-uikit-builder.gallery.hover_icon.plus
+      - value: search
+        text: pixelopen.kirby-uikit-builder.gallery.hover_icon.search
+      - value: expand
+        text: pixelopen.kirby-uikit-builder.gallery.hover_icon.expand
+      - value: eye
+        text: pixelopen.kirby-uikit-builder.gallery.hover_icon.eye
+      - value: link
+        text: pixelopen.kirby-uikit-builder.gallery.hover_icon.link
+      - value: ""
+        text: pixelopen.kirby-uikit-builder.gallery.hover_icon.none
+  hover_caption:
+    type: toggle
+    label: pixelopen.kirby-uikit-builder.gallery.hover_caption
+    default: false

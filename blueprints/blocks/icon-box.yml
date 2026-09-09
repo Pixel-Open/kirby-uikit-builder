@@ -1,0 +1,126 @@
+name: pixelopen.kirby-uikit-builder.icon_box.name
+icon: star
+
+tabs:
+
+  content:
+    label: pixelopen.kirby-uikit-builder.tab.content
+    fields:
+
+      items:
+        type: structure
+        label: pixelopen.kirby-uikit-builder.icon_box.items.label
+        columns:
+          icon:
+            width: 1/4
+          title:
+            width: 3/4
+        fields:
+          icon:
+            type: text
+            label: pixelopen.kirby-uikit-builder.icon_box.item.icon.label
+            help: pixelopen.kirby-uikit-builder.icon_box.item.icon.help
+          title:
+            type: text
+            label: pixelopen.kirby-uikit-builder.icon_box.item.title.label
+          text:
+            type: writer
+            label: pixelopen.kirby-uikit-builder.icon_box.item.text.label
+            marks:
+              - bold
+              - italic
+              - link
+          link:
+            type: url
+            label: pixelopen.kirby-uikit-builder.icon_box.item.link.label
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+
+      cols_tablet:
+        type: select
+        label: pixelopen.kirby-uikit-builder.icon_box.cols.tablet
+        width: 1/3
+        default: "1-2"
+        options:
+          - value: "1-1"
+            text: "1"
+          - value: "1-2"
+            text: "2"
+
+      cols_desktop:
+        type: select
+        label: pixelopen.kirby-uikit-builder.icon_box.cols.desktop
+        width: 1/3
+        default: "1-3"
+        options:
+          - value: "1-2"
+            text: "2"
+          - value: "1-3"
+            text: "3"
+          - value: "1-4"
+            text: "4"
+
+      icon_size:
+        type: number
+        label: pixelopen.kirby-uikit-builder.icon_box.icon_size.label
+        width: 1/3
+        default: 2
+        min: 1
+        max: 5
+
+      icon_color:
+        type: select
+        label: pixelopen.kirby-uikit-builder.icon_box.icon_color.label
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.none
+          - value: primary
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.primary
+          - value: success
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.success
+          - value: warning
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.warning
+          - value: danger
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.danger
+          - value: muted
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.muted
+
+      icon_position:
+        type: select
+        label: pixelopen.kirby-uikit-builder.icon_box.icon_position.label
+        width: 1/3
+        default: top
+        options:
+          - value: top
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_position.top
+          - value: left
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_position.left
+
+      style:
+        type: select
+        label: pixelopen.kirby-uikit-builder.icon_box.style.label
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.icon_box.style.plain
+          - value: card
+            text: pixelopen.kirby-uikit-builder.icon_box.style.card
+
+      gap:
+        type: select
+        label: pixelopen.kirby-uikit-builder.carousel.gap.label
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.carousel.gap.default
+          - value: collapse
+            text: pixelopen.kirby-uikit-builder.carousel.gap.none
+          - value: small
+            text: pixelopen.kirby-uikit-builder.carousel.gap.small
+          - value: medium
+            text: pixelopen.kirby-uikit-builder.carousel.gap.medium
+          - value: large
+            text: pixelopen.kirby-uikit-builder.carousel.gap.large

@@ -1,0 +1,39 @@
+{
+  "name": "pixelopen/kirby-uikit-builder",
+  "description": "UIkit blocks and layout helpers for Kirby CMS",
+  "type": "kirby-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "PIXEL Open",
+      "email": "matthieu@pixel-developpement.com"
+    }
+  ],
+  "require": {
+    "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
+    "getkirby/composer-installer": "^1.2"
+  },
+  "require-dev": {
+    "getkirby/cms": "^5.0"
+  },
+  "conflict": {
+    "getkirby/cms": "<5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "PixelOpen\\KirbyUikitBuilder\\": "src/"
+    }
+  },
+  "extra": {
+    "installer-name": "kirby-uikit-builder",
+    "kirby-cms-path": false
+  },
+  "config": {
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    }
+  },
+  "scripts": {
+    "test": "php tests/smoke.php"
+  }
+}

@@ -1,0 +1,13 @@
+type: structure
+label: pixelopen.kirby-uikit-builder.faq.items.label
+fields:
+  question:
+    type: text
+    label: pixelopen.kirby-uikit-builder.faq.question.label
+  answer:
+    type: writer
+    label: pixelopen.kirby-uikit-builder.faq.answer.label
+    marks:
+      - bold
+      - italic
+      - link

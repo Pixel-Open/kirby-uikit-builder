@@ -1,0 +1,65 @@
+name: Tabs
+icon: window
+
+tabs:
+
+  items:
+    label: pixelopen.kirby-uikit-builder.tabs.tab.items
+    fields:
+      tabs:
+        type: structure
+        label: pixelopen.kirby-uikit-builder.tabs.items.label
+        columns:
+          tab_title:
+            width: 1/1
+        fields:
+          tab_title:
+            type: text
+            label: pixelopen.kirby-uikit-builder.tabs.item.title
+          content_blocks:
+            type: blocks
+            label: pixelopen.kirby-uikit-builder.tabs.item.content
+            fieldsets:
+              - heading
+              - text
+              - image
+              - button
+              - spacer
+              - accordion
+              - gallery
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+
+      vertical:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.tabs.vertical
+        default: false
+        width: 1/3
+
+      alignment:
+        type: select
+        label: pixelopen.kirby-uikit-builder.tabs.alignment
+        default: left
+        width: 1/3
+        when:
+          vertical: false
+        options:
+          - value: left
+            text: pixelopen.kirby-uikit-builder.tabs.alignment.left
+          - value: center
+            text: pixelopen.kirby-uikit-builder.tabs.alignment.center
+          - value: right
+            text: pixelopen.kirby-uikit-builder.tabs.alignment.right
+
+      animation:
+        type: select
+        label: pixelopen.kirby-uikit-builder.tabs.animation
+        default: "uk-animation-fade"
+        width: 1/3
+        options:
+          - value: "uk-animation-fade"
+            text: pixelopen.kirby-uikit-builder.tabs.animation.fade
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.tabs.animation.none

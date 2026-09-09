@@ -1,0 +1,194 @@
+name: Carousel
+icon: shuffle
+
+tabs:
+
+  items:
+    label: pixelopen.kirby-uikit-builder.carousel.tab.items
+    fields:
+      items:
+        type: structure
+        label: pixelopen.kirby-uikit-builder.carousel.items.label
+        columns:
+          item_image:
+            width: 1/2
+          item_link:
+            width: 1/2
+        fields:
+          item_image:
+            type: files
+            label: pixelopen.kirby-uikit-builder.carousel.item.image
+            max: 1
+            query: page.files.filterBy("type", "image")
+          content_blocks:
+            type: blocks
+            label: pixelopen.kirby-uikit-builder.carousel.item.content
+            fieldsets:
+              - heading
+              - text
+              - button
+          item_link:
+            type: url
+            label: pixelopen.kirby-uikit-builder.carousel.item.link
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+
+      cols_mobile:
+        type: select
+        label: pixelopen.kirby-uikit-builder.carousel.cols.mobile
+        default: "1"
+        width: 1/4
+        options:
+          - value: "1"
+            text: "1"
+          - value: "2"
+            text: "2"
+
+      cols_tablet:
+        type: select
+        label: pixelopen.kirby-uikit-builder.carousel.cols.tablet
+        default: "2"
+        width: 1/4
+        options:
+          - value: "1"
+            text: "1"
+          - value: "2"
+            text: "2"
+          - value: "3"
+            text: "3"
+          - value: "4"
+            text: "4"
+
+      cols_desktop:
+        type: select
+        label: pixelopen.kirby-uikit-builder.carousel.cols.desktop
+        default: "3"
+        width: 1/4
+        options:
+          - value: "1"
+            text: "1"
+          - value: "2"
+            text: "2"
+          - value: "3"
+            text: "3"
+          - value: "4"
+            text: "4"
+          - value: "5"
+            text: "5"
+
+      cols_large:
+        type: select
+        label: pixelopen.kirby-uikit-builder.carousel.cols.large
+        default: ""
+        width: 1/4
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.carousel.cols.inherit
+          - value: "1"
+            text: "1"
+          - value: "2"
+            text: "2"
+          - value: "3"
+            text: "3"
+          - value: "4"
+            text: "4"
+          - value: "5"
+            text: "5"
+          - value: "6"
+            text: "6"
+
+      gap:
+        type: select
+        label: pixelopen.kirby-uikit-builder.carousel.gap.label
+        default: ""
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.carousel.gap.default
+          - value: " uk-grid-small"
+            text: pixelopen.kirby-uikit-builder.carousel.gap.small
+          - value: " uk-grid-medium"
+            text: pixelopen.kirby-uikit-builder.carousel.gap.medium
+          - value: " uk-grid-large"
+            text: pixelopen.kirby-uikit-builder.carousel.gap.large
+          - value: " uk-grid-collapse"
+            text: pixelopen.kirby-uikit-builder.carousel.gap.none
+
+      item_ratio:
+        type: select
+        label: pixelopen.kirby-uikit-builder.carousel.item_ratio.label
+        default: ""
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.carousel.item_ratio.auto
+          - value: "16:9"
+            text: "16:9"
+          - value: "4:3"
+            text: "4:3"
+          - value: "3:2"
+            text: "3:2"
+          - value: "1:1"
+            text: "1:1"
+
+      center:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.carousel.center.label
+        default: false
+        width: 1/3
+
+      show_arrows:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.arrows.show.label
+        default: true
+        width: 1/3
+
+      arrows_outside:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.carousel.arrows_outside.label
+        default: false
+        width: 1/3
+        when:
+          show_arrows: true
+
+      arrows_color:
+        type: select
+        label: pixelopen.kirby-uikit-builder.arrows.color.label
+        default: dark
+        width: 1/3
+        when:
+          show_arrows: true
+        options:
+          - value: light
+            text: pixelopen.kirby-uikit-builder.arrows.color.light
+          - value: dark
+            text: pixelopen.kirby-uikit-builder.arrows.color.dark
+
+      arrows_large:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.arrows.large.label
+        default: false
+        width: 1/3
+        when:
+          show_arrows: true
+
+      show_dotnav:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.dotnav.show.label
+        default: false
+        width: 1/3
+
+      dotnav_color:
+        type: select
+        label: pixelopen.kirby-uikit-builder.dotnav.color.label
+        default: dark
+        width: 1/3
+        when:
+          show_dotnav: true
+        options:
+          - value: light
+            text: pixelopen.kirby-uikit-builder.dotnav.color.light
+          - value: dark
+            text: pixelopen.kirby-uikit-builder.dotnav.color.dark

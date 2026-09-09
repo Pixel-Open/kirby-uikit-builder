@@ -1,0 +1,41 @@
+name: pixelopen.kirby-uikit-builder.quote.name
+icon: quote
+
+tabs:
+
+  content:
+    label: pixelopen.kirby-uikit-builder.tab.content
+    fields:
+
+      text:
+        type: writer
+        inline: true
+        icon: quote
+        label: pixelopen.kirby-uikit-builder.quote.text.label
+        placeholder: pixelopen.kirby-uikit-builder.quote.text.placeholder
+
+      citation:
+        type: writer
+        inline: true
+        icon: user
+        label: pixelopen.kirby-uikit-builder.quote.citation.label
+        placeholder: pixelopen.kirby-uikit-builder.quote.citation.placeholder
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+
+      style:
+        type: select
+        label: pixelopen.kirby-uikit-builder.quote.style.label
+        default: plain
+        width: 1/2
+        options:
+          - value: plain
+            text: pixelopen.kirby-uikit-builder.quote.style.plain
+          - value: large
+            text: pixelopen.kirby-uikit-builder.quote.style.large
+          - value: border
+            text: pixelopen.kirby-uikit-builder.quote.style.border
+          - value: center
+            text: pixelopen.kirby-uikit-builder.quote.style.center

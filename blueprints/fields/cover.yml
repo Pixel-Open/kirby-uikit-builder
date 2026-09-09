@@ -1,0 +1,7 @@
+type: files
+label: Image de couverture
+max: 1
+query: page.files.filterBy("type", "image")
+image:
+  back: black
+  ratio: 16/9

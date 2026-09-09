@@ -1,0 +1,116 @@
+name: pixelopen.kirby-uikit-builder.stats.name
+icon: chart
+
+tabs:
+
+  content:
+    label: pixelopen.kirby-uikit-builder.tab.content
+    fields:
+
+      items:
+        type: structure
+        label: pixelopen.kirby-uikit-builder.stats.items.label
+        columns:
+          value:
+            width: 1/3
+          suffix:
+            width: 1/3
+          label:
+            width: 1/3
+        fields:
+          value:
+            type: text
+            label: pixelopen.kirby-uikit-builder.stats.item.value.label
+          prefix:
+            type: text
+            label: pixelopen.kirby-uikit-builder.stats.item.prefix.label
+            width: 1/2
+          suffix:
+            type: text
+            label: pixelopen.kirby-uikit-builder.stats.item.suffix.label
+            width: 1/2
+          label:
+            type: text
+            label: pixelopen.kirby-uikit-builder.stats.item.label.label
+          icon:
+            type: text
+            label: pixelopen.kirby-uikit-builder.stats.item.icon.label
+            help: pixelopen.kirby-uikit-builder.stats.item.icon.help
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+
+      cols_tablet:
+        type: select
+        label: pixelopen.kirby-uikit-builder.icon_box.cols.tablet
+        width: 1/4
+        default: "1-2"
+        options:
+          - value: "1-1"
+            text: "1"
+          - value: "1-2"
+            text: "2"
+          - value: "1-3"
+            text: "3"
+
+      cols_desktop:
+        type: select
+        label: pixelopen.kirby-uikit-builder.icon_box.cols.desktop
+        width: 1/4
+        default: "1-4"
+        options:
+          - value: "1-2"
+            text: "2"
+          - value: "1-3"
+            text: "3"
+          - value: "1-4"
+            text: "4"
+
+      style:
+        type: select
+        label: pixelopen.kirby-uikit-builder.icon_box.style.label
+        width: 1/4
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.icon_box.style.plain
+          - value: card
+            text: pixelopen.kirby-uikit-builder.icon_box.style.card
+
+      icon_color:
+        type: select
+        label: pixelopen.kirby-uikit-builder.icon_box.icon_color.label
+        width: 1/4
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.none
+          - value: primary
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.primary
+          - value: success
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.success
+          - value: warning
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.warning
+          - value: danger
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.danger
+          - value: muted
+            text: pixelopen.kirby-uikit-builder.icon_box.icon_color.muted
+
+      countup:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.stats.countup.label
+        help: pixelopen.kirby-uikit-builder.stats.countup.help
+        default: true
+        width: 1/4
+
+      alignment:
+        type: select
+        label: pixelopen.kirby-uikit-builder.cta.alignment.label
+        width: 1/4
+        default: "uk-text-center"
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.grid_halign.left
+          - value: "uk-text-center"
+            text: pixelopen.kirby-uikit-builder.grid_halign.center
+          - value: "uk-text-right"
+            text: pixelopen.kirby-uikit-builder.grid_halign.right

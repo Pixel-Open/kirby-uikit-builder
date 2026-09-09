@@ -1,0 +1,125 @@
+name: Testimonial
+icon: chat
+
+tabs:
+
+  items:
+    label: pixelopen.kirby-uikit-builder.testimonial.tab.items
+    fields:
+      items:
+        type: structure
+        label: pixelopen.kirby-uikit-builder.testimonial.items.label
+        columns:
+          author_name:
+            width: 1/3
+          author_role:
+            width: 1/3
+          rating:
+            width: 1/3
+        fields:
+          quote_text:
+            type: textarea
+            label: pixelopen.kirby-uikit-builder.testimonial.item.quote
+            buttons: false
+          author_name:
+            type: text
+            label: pixelopen.kirby-uikit-builder.testimonial.item.author
+            width: 1/2
+          author_role:
+            type: text
+            label: pixelopen.kirby-uikit-builder.testimonial.item.role
+            width: 1/2
+          author_avatar:
+            type: files
+            label: pixelopen.kirby-uikit-builder.testimonial.item.avatar
+            max: 1
+            query: page.files.filterBy("type", "image")
+            width: 1/2
+          rating:
+            type: select
+            label: pixelopen.kirby-uikit-builder.testimonial.item.rating
+            default: "0"
+            width: 1/2
+            options:
+              - value: "0"
+                text: pixelopen.kirby-uikit-builder.testimonial.rating.none
+              - value: "1"
+                text: "★"
+              - value: "2"
+                text: "★★"
+              - value: "3"
+                text: "★★★"
+              - value: "4"
+                text: "★★★★"
+              - value: "5"
+                text: "★★★★★"
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+
+      cols_tablet:
+        type: select
+        label: pixelopen.kirby-uikit-builder.testimonial.cols.tablet
+        default: "1-2"
+        width: 1/3
+        options:
+          - value: "1-1"
+            text: "1"
+          - value: "1-2"
+            text: "2"
+
+      cols_desktop:
+        type: select
+        label: pixelopen.kirby-uikit-builder.testimonial.cols.desktop
+        default: "1-3"
+        width: 1/3
+        options:
+          - value: "1-1"
+            text: "1"
+          - value: "1-2"
+            text: "2"
+          - value: "1-3"
+            text: "3"
+          - value: "1-4"
+            text: "4"
+
+      gap:
+        type: select
+        label: pixelopen.kirby-uikit-builder.testimonial.gap
+        default: ""
+        width: 1/3
+        options:
+          - value: ""
+            text: pixelopen.kirby-uikit-builder.carousel.gap.default
+          - value: " uk-grid-small"
+            text: pixelopen.kirby-uikit-builder.carousel.gap.small
+          - value: " uk-grid-medium"
+            text: pixelopen.kirby-uikit-builder.carousel.gap.medium
+          - value: " uk-grid-large"
+            text: pixelopen.kirby-uikit-builder.carousel.gap.large
+
+      style:
+        type: select
+        label: pixelopen.kirby-uikit-builder.testimonial.style
+        default: card
+        width: 1/3
+        options:
+          - value: plain
+            text: pixelopen.kirby-uikit-builder.testimonial.style.plain
+          - value: card
+            text: pixelopen.kirby-uikit-builder.testimonial.style.card
+          - value: primary
+            text: pixelopen.kirby-uikit-builder.testimonial.style.primary
+
+      show_rating:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.testimonial.show_rating
+        default: true
+        width: 1/3
+
+      show_avatar:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.testimonial.show_avatar
+        default: true
+        width: 1/3

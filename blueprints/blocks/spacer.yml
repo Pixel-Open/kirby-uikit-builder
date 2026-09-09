@@ -1,0 +1,11 @@
+name: pixelopen.kirby-uikit-builder.spacer.name
+icon: expand
+fields:
+  height:
+    type: range
+    label: pixelopen.kirby-uikit-builder.spacer.height
+    default: 40
+    min: 4
+    max: 400
+    step: 4
+    after: px

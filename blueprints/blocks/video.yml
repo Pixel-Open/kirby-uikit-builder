@@ -1,0 +1,112 @@
+name: pixelopen.kirby-uikit-builder.video.name
+icon: video
+
+tabs:
+
+  content:
+    label: pixelopen.kirby-uikit-builder.tab.content
+    fields:
+
+      source:
+        type: select
+        label: pixelopen.kirby-uikit-builder.video.source.label
+        default: youtube
+        options:
+          - value: youtube
+            text: pixelopen.kirby-uikit-builder.video.source.youtube
+          - value: vimeo
+            text: pixelopen.kirby-uikit-builder.video.source.vimeo
+          - value: file
+            text: pixelopen.kirby-uikit-builder.video.source.file
+
+      youtube_url:
+        type: text
+        label: pixelopen.kirby-uikit-builder.video.youtube_url.label
+        help: pixelopen.kirby-uikit-builder.video.youtube_url.help
+        when:
+          source: youtube
+
+      vimeo_url:
+        type: text
+        label: pixelopen.kirby-uikit-builder.video.vimeo_url.label
+        help: pixelopen.kirby-uikit-builder.video.vimeo_url.help
+        when:
+          source: vimeo
+
+      video_file:
+        type: files
+        label: pixelopen.kirby-uikit-builder.video.file.label
+        max: 1
+        query: page.files.filterBy("type", "video")
+        when:
+          source: file
+
+      thumbnail:
+        type: files
+        label: pixelopen.kirby-uikit-builder.video.thumbnail.label
+        help: pixelopen.kirby-uikit-builder.video.thumbnail.help
+        max: 1
+        query: page.files.filterBy("type", "image")
+
+      autoplay:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.autoplay.label
+        default: false
+        width: 1/3
+        when:
+          source: file
+
+      loop:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.video.loop.label
+        default: false
+        width: 1/3
+        when:
+          source: file
+
+      muted:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.video.muted.label
+        help: pixelopen.kirby-uikit-builder.video.muted.help
+        default: false
+        width: 1/3
+        when:
+          source: file
+
+      video_title:
+        type: text
+        label: pixelopen.kirby-uikit-builder.video.title.label
+        help: pixelopen.kirby-uikit-builder.video.title.help
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+
+      ratio:
+        type: select
+        label: pixelopen.kirby-uikit-builder.video.ratio.label
+        width: 1/3
+        default: "16:9"
+        options:
+          - value: "16:9"
+            text: pixelopen.kirby-uikit-builder.slider.ratio.landscape
+          - value: "4:3"
+            text: pixelopen.kirby-uikit-builder.slider.ratio.standard
+          - value: "21:9"
+            text: pixelopen.kirby-uikit-builder.slider.ratio.cinema
+          - value: "1:1"
+            text: pixelopen.kirby-uikit-builder.slider.ratio.square
+
+      nocookie:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.video.nocookie.label
+        help: pixelopen.kirby-uikit-builder.video.nocookie.help
+        default: true
+        width: 1/3
+
+      click_to_play:
+        type: toggle
+        label: pixelopen.kirby-uikit-builder.video.click_to_play.label
+        help: pixelopen.kirby-uikit-builder.video.click_to_play.help
+        default: false
+        width: 1/3
