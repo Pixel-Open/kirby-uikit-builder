@@ -1,0 +1,96 @@
+{
+  "slug": "onglets",
+  "title": "Onglets",
+  "intro": "Des onglets horizontaux ou verticaux, chaque panneau pouvant contenir n'importe quels blocs.",
+  "variants": [
+    {
+      "name": "horizontal",
+      "label": "Onglets horizontaux centrés",
+      "block": {
+        "type": "tabs",
+        "content": {
+          "alignment": "center",
+          "vertical": false,
+          "animation": "uk-animation-fade",
+          "tabs": [
+            {
+              "tab_title": "Présentation",
+              "content_blocks": [
+                {
+                  "type": "heading",
+                  "content": {
+                    "level": "h3",
+                    "text": "Présentation"
+                  }
+                },
+                {
+                  "type": "text",
+                  "content": {
+                    "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                  }
+                }
+              ]
+            },
+            {
+              "tab_title": "Tarifs",
+              "content_blocks": [
+                {
+                  "type": "text",
+                  "content": {
+                    "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                  }
+                }
+              ]
+            },
+            {
+              "tab_title": "Contact",
+              "content_blocks": [
+                {
+                  "type": "text",
+                  "content": {
+                    "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "vertical",
+      "label": "Onglets verticaux",
+      "block": {
+        "type": "tabs",
+        "content": {
+          "vertical": true,
+          "alignment": "left",
+          "tabs": [
+            {
+              "tab_title": "Étape 1",
+              "content_blocks": [
+                {
+                  "type": "text",
+                  "content": {
+                    "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                  }
+                }
+              ]
+            },
+            {
+              "tab_title": "Étape 2",
+              "content_blocks": [
+                {
+                  "type": "text",
+                  "content": {
+                    "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

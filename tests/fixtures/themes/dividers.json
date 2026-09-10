@@ -1,0 +1,453 @@
+{
+  "slug": "separateurs",
+  "title": "Séparateurs de forme",
+  "intro": "Les dix tracés disponibles, présentés comme ils s'utilisent : en transition entre deux sections de fonds différents. La couleur d'un séparateur est toujours celle du fond qui le suit.",
+  "display": "flow",
+  "variants": [
+    {
+      "name": "curve",
+      "label": "Courbe",
+      "note": "La forme par défaut : un arc doux sur toute la largeur.",
+      "layout": {
+        "attrs": {
+          "background": "uk-section-muted",
+          "shape_divider": true,
+          "shape_divider_type": "curve",
+          "shape_divider_position": "bottom",
+          "shape_divider_color": "#ffffff",
+          "shape_divider_height": "150px",
+          "padding": "uk-section-large"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Courbe",
+                  "heading_size": " uk-heading-medium"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>La forme par défaut : un arc doux sur toute la largeur.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "tilt",
+      "label": "Inclinaison",
+      "note": "Une diagonale simple, du bas gauche vers le haut droit.",
+      "layout": {
+        "attrs": {
+          "background": "uk-section-default",
+          "shape_divider": true,
+          "shape_divider_type": "tilt",
+          "shape_divider_position": "bottom",
+          "shape_divider_color": "#f8f8f8",
+          "shape_divider_height": "150px",
+          "padding": "uk-section-large"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Inclinaison",
+                  "heading_size": " uk-heading-medium"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Une diagonale simple, du bas gauche vers le haut droit.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "tilt-alt",
+      "label": "Inclinaison inverse",
+      "note": "La même diagonale, dans l'autre sens.",
+      "layout": {
+        "attrs": {
+          "background": "uk-section-muted",
+          "shape_divider": true,
+          "shape_divider_type": "tilt-alt",
+          "shape_divider_position": "bottom",
+          "shape_divider_color": "#ffffff",
+          "shape_divider_height": "150px",
+          "padding": "uk-section-large"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Inclinaison inverse",
+                  "heading_size": " uk-heading-medium"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>La même diagonale, dans l'autre sens.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "triangle",
+      "label": "Triangle",
+      "note": "Une pointe centrée, utile pour désigner la suite du contenu.",
+      "layout": {
+        "attrs": {
+          "background": "uk-section-default",
+          "shape_divider": true,
+          "shape_divider_type": "triangle",
+          "shape_divider_position": "bottom",
+          "shape_divider_color": "#f8f8f8",
+          "shape_divider_height": "150px",
+          "padding": "uk-section-large"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Triangle",
+                  "heading_size": " uk-heading-medium"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Une pointe centrée, utile pour désigner la suite du contenu.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "waves",
+      "label": "Vagues",
+      "note": "Une ondulation asymétrique, la plus organique du jeu.",
+      "layout": {
+        "attrs": {
+          "background": "uk-section-muted",
+          "shape_divider": true,
+          "shape_divider_type": "waves",
+          "shape_divider_position": "bottom",
+          "shape_divider_color": "#ffffff",
+          "shape_divider_height": "150px",
+          "padding": "uk-section-large"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Vagues",
+                  "heading_size": " uk-heading-medium"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Une ondulation asymétrique, la plus organique du jeu.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "waves-opacity",
+      "label": "Vagues superposées",
+      "note": "Deux vagues, la seconde en demi-opacité, pour donner de la profondeur.",
+      "layout": {
+        "attrs": {
+          "background": "uk-section-default",
+          "shape_divider": true,
+          "shape_divider_type": "waves-opacity",
+          "shape_divider_position": "bottom",
+          "shape_divider_color": "#f8f8f8",
+          "shape_divider_height": "150px",
+          "padding": "uk-section-large"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Vagues superposées",
+                  "heading_size": " uk-heading-medium"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Deux vagues, la seconde en demi-opacité, pour donner de la profondeur.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mountains",
+      "label": "Montagnes",
+      "note": "Trois crêtes superposées, du plus clair au plus dense.",
+      "layout": {
+        "attrs": {
+          "background": "uk-section-muted",
+          "shape_divider": true,
+          "shape_divider_type": "mountains",
+          "shape_divider_position": "bottom",
+          "shape_divider_color": "#ffffff",
+          "shape_divider_height": "150px",
+          "padding": "uk-section-large"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Montagnes",
+                  "heading_size": " uk-heading-medium"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Trois crêtes superposées, du plus clair au plus dense.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fan",
+      "label": "Éventail",
+      "note": "Deux plans en pointe, avec un liseré plus clair.",
+      "layout": {
+        "attrs": {
+          "background": "uk-section-default",
+          "shape_divider": true,
+          "shape_divider_type": "fan",
+          "shape_divider_position": "bottom",
+          "shape_divider_color": "#f8f8f8",
+          "shape_divider_height": "150px",
+          "padding": "uk-section-large"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Éventail",
+                  "heading_size": " uk-heading-medium"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Deux plans en pointe, avec un liseré plus clair.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "clouds",
+      "label": "Nuages",
+      "note": "Une silhouette découpée, à réserver aux fonds unis.",
+      "layout": {
+        "attrs": {
+          "background": "uk-section-muted",
+          "shape_divider": true,
+          "shape_divider_type": "clouds",
+          "shape_divider_position": "bottom",
+          "shape_divider_color": "#ffffff",
+          "shape_divider_height": "150px",
+          "padding": "uk-section-large"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Nuages",
+                  "heading_size": " uk-heading-medium"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Une silhouette découpée, à réserver aux fonds unis.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "speech",
+      "label": "Bulle",
+      "note": "Un ergot central, comme une bulle de dialogue.",
+      "layout": {
+        "attrs": {
+          "background": "uk-section-default",
+          "shape_divider": true,
+          "shape_divider_type": "speech",
+          "shape_divider_position": "bottom",
+          "shape_divider_color": "#f8f8f8",
+          "shape_divider_height": "150px",
+          "padding": "uk-section-large"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Bulle",
+                  "heading_size": " uk-heading-medium"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Un ergot central, comme une bulle de dialogue.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "custom-height",
+      "label": "Hauteur personnalisée",
+      "note": "La hauteur est un champ libre validé comme longueur CSS : 220px ici, 150px par défaut.",
+      "layout": {
+        "attrs": {
+          "background": "uk-section-muted",
+          "padding": "uk-section-xlarge",
+          "shape_divider": true,
+          "shape_divider_type": "waves",
+          "shape_divider_position": "bottom",
+          "shape_divider_color": "#1e87f0",
+          "shape_divider_height": "220px"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Hauteur personnalisée",
+                  "heading_size": " uk-heading-medium"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Une vague de 220 pixels de haut. Le conteneur réserve automatiquement cette hauteur pour que le texte ne passe pas dessous.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "top-and-bottom",
+      "label": "En haut et en bas",
+      "note": "Position « both » : le même tracé est retourné pour le bord supérieur. Les deux bords partagent une seule couleur, donc les sections qui les encadrent doivent avoir le même fond.",
+      "layout": {
+        "attrs": {
+          "background": "uk-section-primary",
+          "text_color": "uk-light",
+          "padding": "uk-section-xlarge",
+          "shape_divider": true,
+          "shape_divider_type": "curve",
+          "shape_divider_position": "both",
+          "shape_divider_color": "#f8f8f8",
+          "shape_divider_height": "150px"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "En haut et en bas",
+                  "heading_size": " uk-heading-medium"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Le même tracé est retourné pour le bord supérieur. Une seule couleur sert aux deux bords : ici le gris des sections qui précèdent et qui suivent.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

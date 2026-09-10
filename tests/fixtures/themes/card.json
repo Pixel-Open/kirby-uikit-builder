@@ -1,0 +1,92 @@
+{
+  "title": "Carte",
+  "intro": "Le bloc card : couleurs UIkit ou personnalisée, image de média, badge, lien sur toute la carte, animation à l'entrée.",
+  "variants": [
+    {
+      "name": "default",
+      "label": "Carte par défaut",
+      "block": {
+        "type": "card",
+        "content": {
+          "card_color": "uk-card-default",
+          "blocks": [
+            {
+              "type": "heading",
+              "content": {
+                "level": "h3",
+                "text": "Une carte"
+              }
+            },
+            {
+              "type": "text",
+              "content": {
+                "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "media-and-link",
+      "label": "Carte avec image, badge et lien",
+      "block": {
+        "type": "card",
+        "content": {
+          "card_color": "uk-card-primary",
+          "card_size": " uk-card-large",
+          "card_hover": true,
+          "card_badge": "Nouveau",
+          "media_enable": true,
+          "media_image": [
+            "slider-1.jpg"
+          ],
+          "media_position": "top",
+          "link_enable": true,
+          "link_type": "url",
+          "link_url": "https://example.test/offre",
+          "link_target": true,
+          "blocks": [
+            {
+              "type": "heading",
+              "content": {
+                "level": "h3",
+                "text": "Offre découverte"
+              }
+            },
+            {
+              "type": "text",
+              "content": {
+                "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "custom-color",
+      "label": "Carte de couleur personnalisée",
+      "block": {
+        "type": "card",
+        "content": {
+          "card_color": "custom",
+          "card_bg_color": "#1e3a5f",
+          "card_text_color": "uk-light",
+          "animation": true,
+          "animation_type": "uk-animation-slide-bottom-medium",
+          "animation_delay": 200,
+          "blocks": [
+            {
+              "type": "heading",
+              "content": {
+                "level": "h3",
+                "text": "Fond sur mesure"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -7,7 +7,7 @@ $imageFile = null;
 $src       = '';
 
 if ($location === 'web') {
-    $src = $block->src()->value();
+    $src = PixelOpen\KirbyUikitBuilder\Url::safe($block->src()->value()) ?? '';
 } else {
     $imageFile = $block->image()->toFile();
 }
@@ -17,7 +17,7 @@ $imgWidth  = $block->img_width()->or('auto')->value();
 $ratio     = $block->ratio()->value() ?: null;
 $shadow    = $block->shadow()->value();
 $lightbox  = $block->lightbox()->isTrue();
-$link      = $lightbox ? '' : $block->link()->value();
+$link      = $lightbox ? '' : PixelOpen\KirbyUikitBuilder\Url::safe($block->link()->value());
 $eager     = $block->eager()->isTrue();
 
 $alignClass = match($alignment) {

@@ -1,0 +1,73 @@
+{
+  "title": "Image",
+  "intro": "Le bloc image : alignement, largeur, ratio forcé, ombre, lightbox, légende, chargement anticipé, source distante.",
+  "variants": [
+    {
+      "name": "centered",
+      "label": "Image centrée",
+      "block": {
+        "type": "image",
+        "content": {
+          "location": "kirby",
+          "image": [
+            "slider-1.jpg"
+          ],
+          "alt": "Un dégradé de démonstration",
+          "alignment": "center",
+          "img_width": "auto"
+        }
+      }
+    },
+    {
+      "name": "ratio-lightbox",
+      "label": "Image recadrée avec lightbox et légende",
+      "block": {
+        "type": "image",
+        "content": {
+          "location": "kirby",
+          "image": [
+            "slider-1.jpg"
+          ],
+          "alt": "Vue recadrée",
+          "ratio": "16/9",
+          "shadow": "large",
+          "lightbox": true,
+          "img_width": "1-1",
+          "caption": "<p>Une légende sous l'image.</p>"
+        }
+      }
+    },
+    {
+      "name": "left-aligned-link",
+      "label": "Image alignée à gauche, cliquable",
+      "block": {
+        "type": "image",
+        "content": {
+          "location": "kirby",
+          "image": [
+            "small-image.jpg"
+          ],
+          "alt": "Petite image",
+          "alignment": "left",
+          "img_width": "1-3",
+          "link": "https://example.test/article",
+          "eager": true
+        }
+      }
+    },
+    {
+      "name": "remote",
+      "label": "Image hébergée ailleurs",
+      "note": "Le mode web ne génère aucune variante responsive : la source est utilisée telle quelle.",
+      "block": {
+        "type": "image",
+        "content": {
+          "location": "web",
+          "src": "https://example.test/photo.jpg",
+          "alt": "Image distante",
+          "alignment": "center"
+        }
+      }
+    }
+  ]
+}

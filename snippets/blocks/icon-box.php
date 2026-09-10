@@ -26,7 +26,7 @@ $iconColorClass = $iconColor ? 'uk-text-' . $iconColor : '';
     $icon  = $item->icon()->value();
     $title = $item->title()->value();
     $text  = $item->text()->kirbytext();
-    $link  = $item->link()->value();
+    $link  = PixelOpen\KirbyUikitBuilder\Url::safe($item->link()->value());
   ?>
   <div>
     <?php if ($link): ?><a href="<?= html($link) ?>" class="uk-link-reset uk-grid-item-match"><?php endif ?>

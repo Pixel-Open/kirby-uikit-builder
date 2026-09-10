@@ -4,16 +4,16 @@ $subtext   = $block->subtext()->kirbytext();
 $style     = $block->style()->value();
 $alignment = $block->alignment()->value();
 
-// Les deux boutons partagent le résolveur de lien du plugin (voir index.php),
-// via les préfixes btn1_ et btn2_. Un bouton sans libellé ou sans cible saute.
+// Both buttons share the plugin's link resolver (see index.php), through the
+// btn1_ and btn2_ prefixes. A button without a label or a target is skipped.
 $buttons = [];
 foreach (['btn1' => 'uk-button-primary', 'btn2' => 'uk-button-default'] as $key => $defaultStyle) {
     $label = $block->content()->get($key . '_label')->value();
 
-    // Contenu antérieur à 1.0.1 : pas de link_type, l'URL brute était dans btnN_url.
-    // Elle reste lue tant que le bloc n'a pas été réenregistré depuis le Panel.
+    // Content predating 1.0.1: no link_type, the raw URL was in btnN_url.
+    // It is still read until the block is saved again from the Panel.
     $href = $block->content()->get($key . '_link_type')->isEmpty()
-        ? ($block->content()->get($key . '_url')->value() ?: null)
+        ? PixelOpen\KirbyUikitBuilder\Url::safe($block->content()->get($key . '_url')->value())
         : $block->linkHref($key . '_');
 
     if (!$label || !$href) {

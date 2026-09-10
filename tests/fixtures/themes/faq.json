@@ -1,0 +1,100 @@
+{
+  "title": "FAQ et accordéon",
+  "intro": "Deux blocs proches : la FAQ ajoute un titre et des données structurées, l'accordéon reste générique.",
+  "variants": [
+    {
+      "name": "faq-first-open",
+      "label": "FAQ, premier volet ouvert",
+      "block": {
+        "type": "faq",
+        "content": {
+          "title": "Questions fréquentes",
+          "first_open": true,
+          "multiple": false,
+          "items": [
+            {
+              "question": "Quels sont les délais ?",
+              "answer": "<p>Comptez deux à trois semaines.</p>"
+            },
+            {
+              "question": "Proposez-vous un hébergement ?",
+              "answer": "<p>Oui, sur nos serveurs en France.</p>"
+            },
+            {
+              "question": "Puis-je modifier le site moi-même ?",
+              "answer": "<p>Oui, via le Panel Kirby.</p>"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "faq-multiple",
+      "label": "FAQ, plusieurs volets ouvrables",
+      "block": {
+        "type": "faq",
+        "content": {
+          "title": "Support",
+          "multiple": true,
+          "first_open": false,
+          "items": [
+            {
+              "question": "Comment vous joindre ?",
+              "answer": "<p>Par courriel ou par téléphone.</p>"
+            },
+            {
+              "question": "Quelles heures ?",
+              "answer": "<p>Du lundi au vendredi, de 9h à 18h.</p>"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "accordion-single",
+      "label": "Accordéon, un seul volet à la fois",
+      "block": {
+        "type": "accordion",
+        "content": {
+          "multiple": false,
+          "first_open": true,
+          "items": [
+            {
+              "title": "<p>Étape 1</p>",
+              "content": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+            },
+            {
+              "title": "<p>Étape 2</p>",
+              "content": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "accordion-multiple",
+      "label": "Accordéon, volets cumulables",
+      "block": {
+        "type": "accordion",
+        "content": {
+          "multiple": true,
+          "first_open": false,
+          "items": [
+            {
+              "title": "<p>Conditions générales</p>",
+              "content": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+            },
+            {
+              "title": "<p>Mentions légales</p>",
+              "content": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+            },
+            {
+              "title": "<p>Confidentialité</p>",
+              "content": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

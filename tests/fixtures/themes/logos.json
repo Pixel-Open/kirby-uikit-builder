@@ -1,0 +1,72 @@
+{
+  "title": "Bandeau de logos",
+  "intro": "Une grille de logos, avec hauteur imposée, niveaux de gris et opacité réglables.",
+  "variants": [
+    {
+      "name": "default",
+      "label": "Bandeau de logos",
+      "block": {
+        "type": "logo-grid",
+        "content": {
+          "cols_desktop": "1-5",
+          "cols_tablet": "1-4",
+          "cols_mobile": "1-3",
+          "height": 60,
+          "items": [
+            {
+              "logo": [
+                "logo-1.svg"
+              ],
+              "name": "Alpha",
+              "url": "https://example.test/alpha"
+            },
+            {
+              "logo": [
+                "logo-2.svg"
+              ],
+              "name": "Beta",
+              "url": ""
+            },
+            {
+              "logo": [
+                "logo-3.png"
+              ],
+              "name": "Gamma",
+              "url": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "grayscale",
+      "label": "Logos en niveaux de gris",
+      "block": {
+        "type": "logo-grid",
+        "content": {
+          "grayscale": true,
+          "opacity": 60,
+          "height": 40,
+          "gap": "large",
+          "cols_desktop": "1-6",
+          "items": [
+            {
+              "logo": [
+                "logo-4.svg"
+              ],
+              "name": "Delta",
+              "url": ""
+            },
+            {
+              "logo": [
+                "logo-1.svg"
+              ],
+              "name": "Epsilon",
+              "url": ""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

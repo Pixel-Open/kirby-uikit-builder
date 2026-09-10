@@ -19,7 +19,7 @@ if ($vertical):
   <div class="uk-width-auto">
     <ul class="uk-tab-left" uk-tab="<?= $ukTabOptions ?>">
       <?php foreach ($tabs as $i => $tab): ?>
-      <li><a href><?= htmlspecialchars($tab->tab_title()->value()) ?></a></li>
+      <li><a href><?= htmlspecialchars($tab->tab_title()->value() ?? '') ?></a></li>
       <?php endforeach ?>
     </ul>
   </div>
@@ -40,7 +40,7 @@ if ($vertical):
 ?>
 <ul class="uk-tab<?= $alignClass ?>" uk-tab="<?= $ukTabOptions ?>">
   <?php foreach ($tabs as $tab): ?>
-  <li><a href><?= htmlspecialchars($tab->tab_title()->value()) ?></a></li>
+  <li><a href><?= htmlspecialchars($tab->tab_title()->value() ?? '') ?></a></li>
   <?php endforeach ?>
 </ul>
 <ul id="<?= $tabId ?>" class="uk-switcher uk-margin">

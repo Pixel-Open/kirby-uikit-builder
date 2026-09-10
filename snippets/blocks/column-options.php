@@ -1,1 +1,1 @@
-<?php // Bloc de configuration de colonne : ne génère aucun HTML ?>
+<?php // Column configuration block: outputs no HTML ?>

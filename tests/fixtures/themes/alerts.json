@@ -1,0 +1,59 @@
+{
+  "slug": "alertes",
+  "title": "Alertes",
+  "intro": "Les quatre tonalités UIkit, avec ou sans titre, icône et bouton de fermeture.",
+  "variants": [
+    {
+      "name": "primary-with-icon",
+      "label": "Alerte primaire avec icône",
+      "block": {
+        "type": "alert",
+        "content": {
+          "alert_type": "primary",
+          "title": "Bon à savoir",
+          "body": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>",
+          "show_icon": true
+        }
+      }
+    },
+    {
+      "name": "success-closable",
+      "label": "Alerte de succès, fermable",
+      "block": {
+        "type": "alert",
+        "content": {
+          "alert_type": "success",
+          "title": "Enregistré",
+          "body": "<p>Vos modifications sont en ligne.</p>",
+          "closable": true,
+          "show_icon": true
+        }
+      }
+    },
+    {
+      "name": "warning-no-title",
+      "label": "Avertissement sans titre",
+      "block": {
+        "type": "alert",
+        "content": {
+          "alert_type": "warning",
+          "body": "<p>Cette page n'est pas encore publiée.</p>"
+        }
+      }
+    },
+    {
+      "name": "danger",
+      "label": "Alerte de danger",
+      "block": {
+        "type": "alert",
+        "content": {
+          "alert_type": "danger",
+          "title": "Attention",
+          "body": "<p>Action irréversible.</p>",
+          "show_icon": true,
+          "closable": true
+        }
+      }
+    }
+  ]
+}

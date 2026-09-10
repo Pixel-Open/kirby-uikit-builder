@@ -1,0 +1,18 @@
+<div style="aspect-ratio: 21/9; overflow: hidden; position: relative;">
+  <div id="video-vimeo-poster-video-preview" style="position: absolute; inset: 0; cursor: pointer;">
+    <img src="/media/@/slider-1.jpg" alt="Bande d&eacute;mo"
+         style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center;">
+      <span uk-icon="icon: play-circle; ratio: 4" class="uk-text-white"></span>
+    </div>
+  </div>
+  <div id="video-vimeo-poster-video-player" style="position: absolute; inset: 0; display: none;">
+    <iframe src="https://player.vimeo.com/video/76979871?dnt=1&amp;autoplay=1" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="autoplay; encrypted-media; picture-in-picture"
+            title="Bande d&eacute;mo"></iframe>
+  </div>
+  <button type="button"
+    onclick="document.getElementById('video-vimeo-poster-video-preview').style.display='none'; document.getElementById('video-vimeo-poster-video-player').style.display='block'; this.remove();"
+    style="position: absolute; inset: 0; background: transparent; border: none; cursor: pointer; width: 100%; height: 100%;"
+    aria-label="Bande d&eacute;mo"></button>
+</div>

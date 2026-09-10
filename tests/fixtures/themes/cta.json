@@ -1,0 +1,65 @@
+{
+  "title": "Appels à l'action",
+  "intro": "Le bloc cta réunit un titre, un texte et jusqu'à deux boutons, dont les liens acceptent les six types du champ composite.",
+  "variants": [
+    {
+      "name": "centered",
+      "label": "Deux boutons, centré",
+      "block": {
+        "type": "cta",
+        "content": {
+          "heading": "Prêt à démarrer ?",
+          "subtext": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>",
+          "alignment": "uk-text-center",
+          "btn1_label": "Demander un devis",
+          "btn1_link_type": "url",
+          "btn1_link_url": "https://example.test/devis",
+          "btn1_style": "uk-button-primary",
+          "btn2_label": "Voir nos réalisations",
+          "btn2_link_type": "anchor",
+          "btn2_link_anchor": "realisations",
+          "btn2_style": "uk-button-default"
+        }
+      }
+    },
+    {
+      "name": "card",
+      "label": "En carte, un seul bouton",
+      "block": {
+        "type": "cta",
+        "content": {
+          "heading": "Une question ?",
+          "subtext": "<p>Nous répondons sous 24 heures.</p>",
+          "style": "card",
+          "alignment": "uk-text-center",
+          "btn1_label": "Nous écrire",
+          "btn1_link_type": "email",
+          "btn1_link_email": "bonjour@example.test",
+          "btn1_style": "uk-button-secondary"
+        }
+      }
+    },
+    {
+      "name": "primary-right-aligned",
+      "label": "Fond primaire, aligné à droite",
+      "block": {
+        "type": "cta",
+        "content": {
+          "heading": "Téléchargez la plaquette",
+          "subtext": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>",
+          "style": "primary",
+          "alignment": "uk-text-right",
+          "btn1_label": "Télécharger",
+          "btn1_link_type": "url",
+          "btn1_link_url": "https://example.test/plaquette.pdf",
+          "btn1_target": true,
+          "btn1_style": "uk-button-default",
+          "btn2_label": "Nous appeler",
+          "btn2_link_type": "telephone",
+          "btn2_link_phone": "+33123456789",
+          "btn2_style": "uk-button-text"
+        }
+      }
+    }
+  ]
+}

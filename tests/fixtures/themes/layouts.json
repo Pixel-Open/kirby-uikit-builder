@@ -1,0 +1,518 @@
+{
+  "slug": "mises-en-page",
+  "title": "Mises en page",
+  "intro": "Les réglages de section : fonds, conteneurs, grilles et options de colonne. Les séparateurs de forme ont leur propre page.",
+  "variants": [
+    {
+      "name": "muted-background",
+      "label": "Fond gris, conteneur étroit",
+      "layout": {
+        "attrs": {
+          "background": "uk-section-muted",
+          "container": "small",
+          "padding": "uk-section-large"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Section sur fond gris"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "dark-background",
+      "label": "Fond sombre, texte clair",
+      "layout": {
+        "attrs": {
+          "background": "uk-section-secondary",
+          "text_color": "uk-light"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Section sombre"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "custom-color-background",
+      "label": "Couleur personnalisée",
+      "layout": {
+        "attrs": {
+          "background": "custom",
+          "bg_custom_color": "#1e3a5f",
+          "text_color": "uk-light"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Couleur sur mesure"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "custom-gradient-background",
+      "label": "Dégradé personnalisé",
+      "layout": {
+        "attrs": {
+          "background": "custom",
+          "bg_custom_gradient": true,
+          "bg_custom_color": "#1e3a5f",
+          "bg_custom_color2": "#7b2d8e",
+          "bg_gradient_dir": "to bottom right",
+          "text_color": "uk-light"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Dégradé"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "background-image-overlay",
+      "label": "Image de fond avec voile",
+      "layout": {
+        "attrs": {
+          "bg_image": [
+            "slider-1.jpg"
+          ],
+          "overlay_color": "#000000",
+          "overlay_opacity": 50,
+          "text_color": "uk-light",
+          "padding": "uk-section-xlarge"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Titre sur image"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "background-image-gradient-overlay",
+      "label": "Image de fond, voile en dégradé",
+      "layout": {
+        "attrs": {
+          "bg_image": [
+            "slider-1.jpg"
+          ],
+          "overlay_color": "#000000",
+          "overlay_color2": "#1e3a5f",
+          "overlay_gradient": true,
+          "overlay_gradient_dir": "to top",
+          "overlay_opacity": 60,
+          "text_color": "uk-light"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Voile dégradé"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "background-video",
+      "label": "Vidéo de fond",
+      "layout": {
+        "attrs": {
+          "bg_video_enable": true,
+          "bg_video_source": "file",
+          "bg_video_file": [
+            "video.mp4"
+          ],
+          "overlay_color": "#000000",
+          "overlay_opacity": 40,
+          "text_color": "uk-light"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Section vidéo"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "two-columns",
+      "label": "Deux colonnes égales",
+      "layout": {
+        "attrs": {
+          "grid_gap": "uk-grid-large",
+          "grid_valign": "uk-flex-middle"
+        },
+        "columns": [
+          {
+            "width": "1/2",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h3",
+                  "text": "Colonne de gauche"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "width": "1/2",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h3",
+                  "text": "Colonne de droite"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "three-columns-divided",
+      "label": "Trois colonnes avec séparateurs",
+      "layout": {
+        "attrs": {
+          "grid_divider": true,
+          "grid_gap": "uk-grid-medium",
+          "container": "large"
+        },
+        "columns": [
+          {
+            "width": "1/3",
+            "blocks": [
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "width": "1/3",
+            "blocks": [
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "width": "1/3",
+            "blocks": [
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "asymmetric-columns",
+      "label": "Deux tiers, un tiers, bascule dès la tablette",
+      "layout": {
+        "attrs": {
+          "grid_tablet": true,
+          "grid_gap": "uk-grid-small"
+        },
+        "columns": [
+          {
+            "width": "2/3",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h3",
+                  "text": "Contenu principal"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "width": "1/3",
+            "blocks": [
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "columns-as-cards",
+      "label": "Colonnes stylées en cartes",
+      "layout": {
+        "attrs": {
+          "background": "uk-section-muted",
+          "grid_gap": "uk-grid-medium"
+        },
+        "columns": [
+          {
+            "width": "1/2",
+            "blocks": [
+              {
+                "type": "column-options",
+                "content": {
+                  "column_style": "card",
+                  "card_color": " uk-card-primary",
+                  "card_size": " uk-card-large",
+                  "card_hover": true,
+                  "text_align": " uk-text-center@m"
+                }
+              },
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h3",
+                  "text": "Carte primaire"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "width": "1/2",
+            "blocks": [
+              {
+                "type": "column-options",
+                "content": {
+                  "column_style": "tile",
+                  "tile_color": " uk-tile uk-tile-muted",
+                  "column_padding": " uk-padding-large"
+                }
+              },
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h3",
+                  "text": "Tuile"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "column-width-and-height",
+      "label": "Colonne à largeur et hauteur imposées",
+      "layout": {
+        "attrs": {},
+        "columns": [
+          {
+            "width": "1/2",
+            "blocks": [
+              {
+                "type": "column-options",
+                "content": {
+                  "column_width": "uk-width-2-5@m",
+                  "column_height": " uk-height-medium",
+                  "content_valign": " uk-flex uk-flex-column uk-flex-middle",
+                  "column_id": "colonne-cadree",
+                  "column_class": "ma-colonne"
+                }
+              },
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h3",
+                  "text": "Colonne cadrée"
+                }
+              }
+            ]
+          },
+          {
+            "width": "1/2",
+            "blocks": [
+              {
+                "type": "column-options",
+                "content": {
+                  "item_order": " uk-flex-first@m",
+                  "column_min_height": "200px",
+                  "column_max_height": "400px"
+                }
+              },
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "padding-removed",
+      "label": "Marges supprimées, pleine largeur",
+      "layout": {
+        "attrs": {
+          "container": "expand",
+          "padding": "uk-section-xsmall",
+          "padding_remove": "uk-padding-remove-top, uk-padding-remove-bottom",
+          "css_classes": "uk-margin-remove-top, uk-overflow-hidden",
+          "css_classes_custom": "ma-section"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "desktop-only",
+      "label": "Section réservée au bureau",
+      "layout": {
+        "attrs": {
+          "visibility": "uk-visible@m",
+          "section_id": "bureau-seulement",
+          "aria_label": "Contenu complémentaire"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "text",
+                "content": {
+                  "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -24,9 +24,9 @@ $behaviorTab = [
     ),
 ];
 
-// Blocs : chaque YAML de blueprints/blocks/ est enregistré automatiquement,
-// en closure pour la traduction des options de select (voir $translateBlueprint).
-// Slider et carousel reçoivent en plus leurs tabs partagés.
+// Blocks: every YAML in blueprints/blocks/ is registered automatically, as a
+// closure so select options get translated (see $translateBlueprint).
+// Slider and carousel also receive their shared tabs.
 $blueprints = [];
 foreach (glob(__DIR__ . '/blueprints/blocks/*.yml') as $file) {
     $name = 'blocks/' . basename($file, '.yml');
@@ -42,8 +42,8 @@ foreach (glob(__DIR__ . '/blueprints/blocks/*.yml') as $file) {
     };
 }
 
-// Champs réutilisables : fields/layout est enregistré à part plus bas
-// (surcharge des options via config.php).
+// Reusable fields: fields/layout is registered separately below (its options
+// can be overridden from config.php).
 foreach (glob(__DIR__ . '/blueprints/fields/*.yml') as $file) {
     $name = 'fields/' . basename($file, '.yml');
     if ($name === 'fields/layout') {
@@ -107,14 +107,17 @@ $blueprints['fields/layout'] = function () use ($translateBlueprint) {
     return $translateBlueprint($blueprint);
 };
 
-// Résolution d'un lien composite link_type / link_page / link_url…
-// Le préfixe permet à un bloc de porter plusieurs liens : le CTA passe
-// "btn1_" et "btn2_", les blocs à lien unique ne passent rien.
-// Enregistré sur les blocs et sur les lignes de structure (bloc pricing).
+// Resolves a composite link_type / link_page / link_url… value.
+// The prefix lets a block carry several links: the CTA passes "btn1_" and
+// "btn2_", blocks with a single link pass nothing.
+// Registered on blocks and on structure rows (pricing block).
 $linkHref = function (string $prefix = ''): ?string {
     $field = fn(string $name) => $this->content()->get($prefix . $name);
 
-    return match ($field('link_type')->value()) {
+    // The result goes through Url::safe: escaping an href does not neutralise
+    // "javascript:", which still runs on click. Scheme validation is applied to
+    // the output of the match so it also covers link types added later.
+    return \PixelOpen\KirbyUikitBuilder\Url::safe(match ($field('link_type')->value()) {
         'internal'  => $field('link_page')->toPage()?->url(),
         'url'       => $field('link_url')->value() ?: null,
         'anchor'    => ($anchor = $field('link_anchor')->value()) ? '#' . $anchor : null,
@@ -122,10 +125,10 @@ $linkHref = function (string $prefix = ''): ?string {
         'email'     => ($email = $field('link_email')->value()) ? 'mailto:' . $email : null,
         'telephone' => ($phone = $field('link_phone')->value()) ? 'tel:' . $phone : null,
         default     => null,
-    };
+    });
 };
 
-// Snippets : mapping automatique dossier/nom → fichier
+// Snippets: automatic folder/name to file mapping
 $snippets = [];
 foreach (['blocks', 'ui', 'layout'] as $dir) {
     foreach (glob(__DIR__ . '/snippets/' . $dir . '/*.php') as $file) {

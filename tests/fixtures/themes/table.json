@@ -1,0 +1,74 @@
+{
+  "slug": "tableau",
+  "title": "Tableau",
+  "intro": "Colonnes alignables et rétrécissables, lignes séparées ou rayées, comportement responsive au choix.",
+  "variants": [
+    {
+      "name": "striped-hover",
+      "label": "Tableau rayé avec survol",
+      "block": {
+        "type": "table",
+        "content": {
+          "caption": "Comparatif des offres",
+          "divider": " uk-table-striped",
+          "hover": true,
+          "size": " uk-table-small",
+          "responsive": "overflow",
+          "columns": [
+            {
+              "label": "Offre"
+            },
+            {
+              "label": "Prix",
+              "align": "uk-text-right"
+            },
+            {
+              "label": "Sites",
+              "align": "uk-text-center",
+              "shrink": true
+            }
+          ],
+          "rows": [
+            {
+              "cells": "Essentiel | 29 € | 1"
+            },
+            {
+              "cells": "Pro | 59 € | 3"
+            },
+            {
+              "cells": "Sur mesure | Sur devis | Illimité"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "stacked-mobile",
+      "label": "Tableau empilé sur mobile",
+      "block": {
+        "type": "table",
+        "content": {
+          "divider": " uk-table-divider",
+          "justify": true,
+          "responsive": "stack",
+          "columns": [
+            {
+              "label": "Critère"
+            },
+            {
+              "label": "Valeur"
+            }
+          ],
+          "rows": [
+            {
+              "cells": "Disponibilité | 99,9 %"
+            },
+            {
+              "cells": "Sauvegarde | Quotidienne"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

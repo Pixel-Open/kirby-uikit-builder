@@ -1,0 +1,145 @@
+{
+  "title": "Carousel",
+  "intro": "Le carrousel multi-colonnes (uk-slider) : nombre de colonnes par palier, ratio, centrage.",
+  "variants": [
+    {
+      "name": "three-columns",
+      "label": "Trois colonnes au bureau",
+      "block": {
+        "type": "carousel",
+        "content": {
+          "cols_mobile": "1",
+          "cols_tablet": "2",
+          "cols_desktop": "3",
+          "gap": " uk-grid-medium",
+          "item_ratio": "4:3",
+          "show_arrows": true,
+          "arrows_color": "dark",
+          "items": [
+            {
+              "item_image": [
+                "slider-1.jpg"
+              ],
+              "item_link": "",
+              "content_blocks": []
+            },
+            {
+              "item_image": [
+                "slider-2.jpg"
+              ],
+              "item_link": "",
+              "content_blocks": []
+            },
+            {
+              "item_image": [
+                "slider-3.jpg"
+              ],
+              "item_link": "",
+              "content_blocks": []
+            },
+            {
+              "item_image": [
+                "slider-1.jpg"
+              ],
+              "item_link": "",
+              "content_blocks": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "centered-with-dotnav",
+      "label": "Centré, avec points",
+      "block": {
+        "type": "carousel",
+        "content": {
+          "cols_desktop": "2",
+          "cols_tablet": "1",
+          "center": true,
+          "show_dotnav": true,
+          "dotnav_color": "dark",
+          "show_arrows": false,
+          "item_ratio": "16:9",
+          "items": [
+            {
+              "item_image": [
+                "slider-2.jpg"
+              ],
+              "item_link": "",
+              "content_blocks": []
+            },
+            {
+              "item_image": [
+                "slider-3.jpg"
+              ],
+              "item_link": "",
+              "content_blocks": []
+            },
+            {
+              "item_image": [
+                "slider-1.jpg"
+              ],
+              "item_link": "",
+              "content_blocks": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "five-columns-thumbnails",
+      "label": "Cinq colonnes, vignettes cliquables",
+      "block": {
+        "type": "carousel",
+        "content": {
+          "cols_desktop": "5",
+          "cols_large": "6",
+          "cols_tablet": "4",
+          "cols_mobile": "2",
+          "gap": " uk-grid-small",
+          "arrows_outside": true,
+          "arrows_large": true,
+          "item_ratio": "1:1",
+          "items": [
+            {
+              "item_image": [
+                "slider-2.jpg"
+              ],
+              "item_link": "https://example.test/a",
+              "content_blocks": []
+            },
+            {
+              "item_image": [
+                "slider-3.jpg"
+              ],
+              "item_link": "https://example.test/b",
+              "content_blocks": []
+            },
+            {
+              "item_image": [
+                "slider-1.jpg"
+              ],
+              "item_link": "",
+              "content_blocks": []
+            },
+            {
+              "item_image": [
+                "slider-2.jpg"
+              ],
+              "item_link": "",
+              "content_blocks": []
+            },
+            {
+              "item_image": [
+                "slider-3.jpg"
+              ],
+              "item_link": "",
+              "content_blocks": []
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

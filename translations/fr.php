@@ -2,7 +2,7 @@
 
 return [
 
-    // Onglets (génériques)
+    // Tabs (generic)
     'pixelopen.kirby-uikit-builder.tab.fond'            => 'Fond',
     'pixelopen.kirby-uikit-builder.tab.mise_en_page'    => 'Mise en page',
     'pixelopen.kirby-uikit-builder.tab.effets'          => 'Effets',
@@ -11,12 +11,12 @@ return [
     'pixelopen.kirby-uikit-builder.tab.navigation'      => 'Navigation',
     'pixelopen.kirby-uikit-builder.tab.behavior'        => 'Comportement',
 
-    // Sections (génériques, partagées entre blocs)
+    // Sections (generic, shared across blocks)
     'pixelopen.kirby-uikit-builder.section.display'     => 'Affichage',
     'pixelopen.kirby-uikit-builder.section.navigation'  => 'Navigation',
     'pixelopen.kirby-uikit-builder.section.behavior'    => 'Comportement',
 
-    // Onglet Contenu (générique, partagé entre blocs)
+    // Content tab (generic, shared across blocks)
     'pixelopen.kirby-uikit-builder.tab.content'                   => 'Contenu',
     'pixelopen.kirby-uikit-builder.content.position.label'        => 'Position',
     'pixelopen.kirby-uikit-builder.content.position.bottom'       => 'Bas (pleine largeur)',
@@ -41,7 +41,7 @@ return [
     'pixelopen.kirby-uikit-builder.content.overlay.dark'          => 'Noir semi-transparent',
     'pixelopen.kirby-uikit-builder.content.overlay.primary'       => 'Couleur primaire',
 
-    // Couleur de fond
+    // Background color
     'pixelopen.kirby-uikit-builder.background.label'    => 'Couleur',
     'pixelopen.kirby-uikit-builder.background.none'     => 'Aucun',
     'pixelopen.kirby-uikit-builder.background.white'    => 'Blanc',
@@ -60,10 +60,10 @@ return [
     'pixelopen.kirby-uikit-builder.bg_gradient_dir.to_bottom_right' => 'Diagonal (↘)',
     'pixelopen.kirby-uikit-builder.bg_gradient_dir.to_bottom_left'  => 'Diagonal (↙)',
 
-    // Image de fond
+    // Background image
     'pixelopen.kirby-uikit-builder.bg_image.label'          => 'Image de fond',
 
-    // Vidéo de fond
+    // Background video
     'pixelopen.kirby-uikit-builder.bg_video_enable.label'   => 'Vidéo de fond',
     'pixelopen.kirby-uikit-builder.bg_video_enable.help'    => 'Remplace l\'image de fond si activé',
     'pixelopen.kirby-uikit-builder.bg_video_source.label'   => 'Source',
@@ -73,7 +73,7 @@ return [
     'pixelopen.kirby-uikit-builder.bg_video_url.label'      => 'URL de la vidéo',
     'pixelopen.kirby-uikit-builder.bg_video_url.help'       => 'YouTube : utiliser l\'URL /embed/[id]. Pour les vidéos en fond, préférez un fichier uploadé.',
 
-    // Couleur du texte
+    // Text color
     'pixelopen.kirby-uikit-builder.text_color.label'    => 'Couleur du texte',
     'pixelopen.kirby-uikit-builder.text_color.auto'     => 'Auto',
     'pixelopen.kirby-uikit-builder.text_color.light'    => 'Clair (texte blanc)',
@@ -87,7 +87,7 @@ return [
     'pixelopen.kirby-uikit-builder.overlay_color2.label'        => 'Couleur d\'arrivée',
     'pixelopen.kirby-uikit-builder.overlay_gradient_dir.label'  => 'Direction du dégradé',
 
-    // Espacement
+    // Padding
     'pixelopen.kirby-uikit-builder.padding.label'          => 'Espacement vertical',
     'pixelopen.kirby-uikit-builder.padding.m'              => 'M (défaut)',
     'pixelopen.kirby-uikit-builder.padding_remove.label'   => 'Supprimer le padding',
@@ -96,18 +96,18 @@ return [
     'pixelopen.kirby-uikit-builder.padding_remove.left'    => 'Gauche',
     'pixelopen.kirby-uikit-builder.padding_remove.right'   => 'Droite',
 
-    // Largeur du contenu
+    // Container
     'pixelopen.kirby-uikit-builder.container.label'     => 'Largeur du contenu',
     'pixelopen.kirby-uikit-builder.container.normal'    => 'Normal',
     'pixelopen.kirby-uikit-builder.container.narrow'    => 'Étroit',
     'pixelopen.kirby-uikit-builder.container.large'     => 'Large',
     'pixelopen.kirby-uikit-builder.container.expand'    => 'Pleine largeur',
 
-    // Colonnes tablette
+    // Tablet grid
     'pixelopen.kirby-uikit-builder.grid_tablet.label'   => 'Colonnes actives sur tablette',
     'pixelopen.kirby-uikit-builder.grid_tablet.help'    => 'Applique le gabarit dès 640px au lieu de 960px',
 
-    // Alignement vertical
+    // Vertical alignment
     'pixelopen.kirby-uikit-builder.grid_valign.label'   => 'Alignement vertical',
     'pixelopen.kirby-uikit-builder.grid_valign.stretch' => 'Étirer (défaut)',
     'pixelopen.kirby-uikit-builder.grid_valign.top'     => 'Haut',
@@ -134,17 +134,17 @@ return [
     'pixelopen.kirby-uikit-builder.shape_divider_color.label'        => 'Couleur',
     'pixelopen.kirby-uikit-builder.shape_divider_height.label'       => 'Hauteur (ex: 100px)',
 
-    // Espacement entre colonnes
+    // Column gap
     'pixelopen.kirby-uikit-builder.grid_gap.label'      => 'Espacement entre colonnes',
     'pixelopen.kirby-uikit-builder.grid_gap.collapse'   => 'Aucun',
     'pixelopen.kirby-uikit-builder.grid_gap.small'      => 'Petit',
     'pixelopen.kirby-uikit-builder.grid_gap.medium'     => 'Moyen',
     'pixelopen.kirby-uikit-builder.grid_gap.large'      => 'Grand (défaut)',
 
-    // Séparateur de colonnes
+    // Column divider
     'pixelopen.kirby-uikit-builder.grid_divider.label'  => 'Séparateur entre colonnes',
 
-    // Alignement horizontal
+    // Horizontal alignment
     'pixelopen.kirby-uikit-builder.grid_halign.label'   => 'Alignement horizontal',
     'pixelopen.kirby-uikit-builder.grid_halign.left'    => 'Gauche (défaut)',
     'pixelopen.kirby-uikit-builder.grid_halign.center'  => 'Centre',
@@ -155,7 +155,7 @@ return [
     'pixelopen.kirby-uikit-builder.parallax.label'       => 'Parallax (image de fond)',
     'pixelopen.kirby-uikit-builder.parallax_speed.label' => 'Vitesse du parallax',
 
-    // Image prioritaire
+    // Eager image
     'pixelopen.kirby-uikit-builder.eager_image.label'   => 'Image prioritaire',
     'pixelopen.kirby-uikit-builder.eager_image.help'    => 'Désactive le chargement différé, à activer pour les sections visibles au chargement (above the fold)',
 
@@ -171,7 +171,7 @@ return [
     'pixelopen.kirby-uikit-builder.scrollspy_delay.label'        => 'Délai (ms)',
     'pixelopen.kirby-uikit-builder.scrollspy_repeat.label'       => 'Répéter à chaque passage',
 
-    // Visibilité
+    // Visibility
     'pixelopen.kirby-uikit-builder.visibility.label'         => 'Visibilité',
     'pixelopen.kirby-uikit-builder.visibility.all'           => 'Tous les supports',
     'pixelopen.kirby-uikit-builder.visibility.tablet_up'     => 'Tablette et plus (≥ 640px)',
@@ -180,7 +180,7 @@ return [
     'pixelopen.kirby-uikit-builder.visibility.mobile_only'   => 'Mobile uniquement (< 640px)',
     'pixelopen.kirby-uikit-builder.visibility.mobile_tablet' => 'Mobile et tablette (< 960px)',
 
-    // Ancre
+    // Anchor
     'pixelopen.kirby-uikit-builder.section_id.label'    => 'Ancre (ID)',
     'pixelopen.kirby-uikit-builder.section_id.help'     => 'Ex: contact → lien #contact dans la page',
 
@@ -188,7 +188,7 @@ return [
     'pixelopen.kirby-uikit-builder.aria_label.label'    => 'Label ARIA',
     'pixelopen.kirby-uikit-builder.aria_label.help'     => 'Description de la section pour les lecteurs d\'écran (si pas de titre visible)',
 
-    // Classes CSS
+    // CSS classes
     'pixelopen.kirby-uikit-builder.css_classes.label'         => 'Classes CSS prédéfinies',
     'pixelopen.kirby-uikit-builder.css_classes.remove_top'    => 'Supprimer l\'espacement haut',
     'pixelopen.kirby-uikit-builder.css_classes.remove_bottom' => 'Supprimer l\'espacement bas',
@@ -198,12 +198,12 @@ return [
     'pixelopen.kirby-uikit-builder.css_classes_custom.label'  => 'Classes CSS personnalisées',
     'pixelopen.kirby-uikit-builder.css_classes_custom.help'   => 'Séparées par des espaces',
 
-    // Groupes de blocs
+    // Fieldset groups
     'pixelopen.kirby-uikit-builder.fieldsets.layout'     => 'Mise en page',
     'pixelopen.kirby-uikit-builder.fieldsets.content'    => 'Contenu',
     'pixelopen.kirby-uikit-builder.fieldsets.components' => 'Composants',
 
-    // Bloc Options de colonne
+    // Column options block
     'pixelopen.kirby-uikit-builder.col.name'              => 'Options de colonne',
     'pixelopen.kirby-uikit-builder.col.tab.size'          => 'Taille',
     'pixelopen.kirby-uikit-builder.col.tab.style'         => 'Style',
@@ -256,7 +256,7 @@ return [
     'pixelopen.kirby-uikit-builder.col.content_valign.middle' => 'Centré',
     'pixelopen.kirby-uikit-builder.col.content_valign.bottom' => 'Bas',
 
-    // Bloc Slider
+    // Slider block
     'pixelopen.kirby-uikit-builder.slider.tab.slides'              => 'Slides',
     'pixelopen.kirby-uikit-builder.slider.slides.label'            => 'Slides',
     'pixelopen.kirby-uikit-builder.slider.image.label'             => 'Image',
@@ -275,23 +275,23 @@ return [
     'pixelopen.kirby-uikit-builder.slider.animation.scale'         => 'Zoom',
     'pixelopen.kirby-uikit-builder.slider.animation.pull'          => 'Tirée',
     'pixelopen.kirby-uikit-builder.slider.animation.push'          => 'Poussée',
-    // Groupe autoplay (partagé)
+    // Autoplay group (shared)
     'pixelopen.kirby-uikit-builder.autoplay.label'          => 'Lecture automatique',
     'pixelopen.kirby-uikit-builder.autoplay_interval.label' => 'Intervalle (ms)',
     'pixelopen.kirby-uikit-builder.pause_on_hover.label'    => 'Pause au survol',
 
-    // Groupe playback (partagé)
+    // Playback group (shared)
     'pixelopen.kirby-uikit-builder.finite.label'            => 'Pas de boucle (défilement fini)',
     'pixelopen.kirby-uikit-builder.draggable.label'         => 'Navigation par glissé-déposé',
 
-    // Groupe dotnav (partagé)
+    // Dotnav group (shared)
     'pixelopen.kirby-uikit-builder.dotnav.show.label'       => 'Afficher les points de navigation',
     'pixelopen.kirby-uikit-builder.dotnav.vertical.label'   => 'Points verticaux',
     'pixelopen.kirby-uikit-builder.dotnav.color.label'      => 'Couleur des points',
     'pixelopen.kirby-uikit-builder.dotnav.color.light'      => 'Clair (blanc)',
     'pixelopen.kirby-uikit-builder.dotnav.color.dark'       => 'Foncé (noir)',
 
-    // Groupe arrows (partagé)
+    // Arrows group (shared)
     'pixelopen.kirby-uikit-builder.arrows.show.label'        => 'Afficher les flèches',
     'pixelopen.kirby-uikit-builder.arrows.color.label'       => 'Couleur des flèches',
     'pixelopen.kirby-uikit-builder.arrows.color.light'       => 'Clair (blanc)',
@@ -326,7 +326,7 @@ return [
     'pixelopen.kirby-uikit-builder.slider.min_height'              => 'Hauteur minimale',
     'pixelopen.kirby-uikit-builder.slider.max_height'              => 'Hauteur maximale',
 
-    // Bloc Galerie
+    // Gallery block
     'pixelopen.kirby-uikit-builder.gallery.name'           => 'Galerie',
     'pixelopen.kirby-uikit-builder.gallery.files'          => 'Images',
     'pixelopen.kirby-uikit-builder.gallery.grid'           => 'Nombre de colonnes',
@@ -350,7 +350,7 @@ return [
     'pixelopen.kirby-uikit-builder.gallery.hover_icon.none'     => 'Aucune',
     'pixelopen.kirby-uikit-builder.gallery.hover_caption'       => 'Afficher le texte alternatif',
 
-    // Bloc Accordéon
+    // Accordion block
     'pixelopen.kirby-uikit-builder.accordion.name'         => 'Accordéon',
     'pixelopen.kirby-uikit-builder.accordion.items'        => 'Éléments',
     'pixelopen.kirby-uikit-builder.accordion.item.title'   => 'Titre',
@@ -358,7 +358,7 @@ return [
     'pixelopen.kirby-uikit-builder.accordion.multiple'     => 'Ouvrir plusieurs éléments simultanément',
     'pixelopen.kirby-uikit-builder.accordion.first_open'   => 'Premier élément ouvert par défaut',
 
-    // Bloc Heading
+    // Heading block
     'pixelopen.kirby-uikit-builder.heading.size'           => 'Taille visuelle',
     'pixelopen.kirby-uikit-builder.heading.size.small'     => 'Small',
     'pixelopen.kirby-uikit-builder.heading.size.medium'    => 'Medium',
@@ -375,7 +375,7 @@ return [
     'pixelopen.kirby-uikit-builder.heading.color.success'  => 'Succès',
     'pixelopen.kirby-uikit-builder.heading.color.warning'  => 'Avertissement',
 
-    // Bloc Card
+    // Card block
     'pixelopen.kirby-uikit-builder.card.name'               => 'Carte',
     'pixelopen.kirby-uikit-builder.card.blocks.label'        => 'Contenu',
     'pixelopen.kirby-uikit-builder.card.color'               => 'Couleur',
@@ -390,11 +390,11 @@ return [
     'pixelopen.kirby-uikit-builder.card.tab.link'            => 'Lien',
     'pixelopen.kirby-uikit-builder.card.link_enable'         => 'Rendre la carte cliquable',
 
-    // Bloc Espaceur
+    // Spacer block
     'pixelopen.kirby-uikit-builder.spacer.name'   => 'Espaceur',
     'pixelopen.kirby-uikit-builder.spacer.height' => 'Hauteur',
 
-    // Bloc Bouton
+    // Button block
     'pixelopen.kirby-uikit-builder.btn.name'                => 'Bouton',
     'pixelopen.kirby-uikit-builder.btn.text'                => 'Libellé',
     'pixelopen.kirby-uikit-builder.btn.link_type'           => 'Type de lien',
@@ -426,7 +426,7 @@ return [
     'pixelopen.kirby-uikit-builder.btn.margin_top.medium'   => 'Moyenne',
     'pixelopen.kirby-uikit-builder.btn.margin_top.large'    => 'Grande',
 
-    // Bloc Image (surcharge native)
+    // Image block (native override)
     'pixelopen.kirby-uikit-builder.image.name'                => 'Image',
     'pixelopen.kirby-uikit-builder.image.tab.image'           => 'Image',
     'pixelopen.kirby-uikit-builder.image.location'            => 'Source',
@@ -453,7 +453,7 @@ return [
     'pixelopen.kirby-uikit-builder.image.lightbox'            => 'Lightbox au clic',
     'pixelopen.kirby-uikit-builder.image.link'                => 'Lien',
 
-    // Bloc Media Object
+    // Media Object block
     'pixelopen.kirby-uikit-builder.media_object.name'                => 'Bloc média',
     'pixelopen.kirby-uikit-builder.media_object.tab.content'         => 'Contenu',
     'pixelopen.kirby-uikit-builder.media_object.image'               => 'Image',
@@ -470,7 +470,7 @@ return [
     'pixelopen.kirby-uikit-builder.media_object.image_ratio'         => 'Format image',
     'pixelopen.kirby-uikit-builder.media_object.image_ratio.auto'    => 'Auto (naturel)',
 
-    // Bloc Testimonial
+    // Testimonial block
     'pixelopen.kirby-uikit-builder.testimonial.name'           => 'Témoignages',
     'pixelopen.kirby-uikit-builder.testimonial.tab.items'      => 'Témoignages',
     'pixelopen.kirby-uikit-builder.testimonial.items.label'    => 'Témoignages',
@@ -490,7 +490,7 @@ return [
     'pixelopen.kirby-uikit-builder.testimonial.show_avatar'    => 'Afficher la photo',
     'pixelopen.kirby-uikit-builder.testimonial.gap'            => 'Espacement',
 
-    // Bloc Tabs
+    // Tabs block
     'pixelopen.kirby-uikit-builder.tabs.name'              => 'Onglets',
     'pixelopen.kirby-uikit-builder.tabs.tab.items'         => 'Onglets',
     'pixelopen.kirby-uikit-builder.tabs.items.label'       => 'Onglets',
@@ -505,7 +505,7 @@ return [
     'pixelopen.kirby-uikit-builder.tabs.animation.none'    => 'Aucune',
     'pixelopen.kirby-uikit-builder.tabs.animation.fade'    => 'Fondu',
 
-    // Bloc Carousel
+    // Carousel block
     'pixelopen.kirby-uikit-builder.carousel.tab.items'        => 'Items',
     'pixelopen.kirby-uikit-builder.carousel.items.label'      => 'Items',
     'pixelopen.kirby-uikit-builder.carousel.item.image'       => 'Image',
@@ -529,7 +529,7 @@ return [
     'pixelopen.kirby-uikit-builder.carousel.center.label'     => 'Mode centré',
     'pixelopen.kirby-uikit-builder.carousel.arrows_outside.label' => 'Flèches à l\'extérieur',
 
-    // Bloc FAQ
+    // FAQ block
     'pixelopen.kirby-uikit-builder.faq.title.label'      => 'Titre de la section',
     'pixelopen.kirby-uikit-builder.faq.items.label'      => 'Questions / Réponses',
     'pixelopen.kirby-uikit-builder.faq.question.label'   => 'Question',
@@ -565,7 +565,7 @@ return [
     'pixelopen.kirby-uikit-builder.table.responsive.overflow'   => 'Défilement horizontal',
     'pixelopen.kirby-uikit-builder.table.responsive.stack'      => 'Empilement vertical (mobile)',
 
-    // Bloc CTA
+    // CTA block
     'pixelopen.kirby-uikit-builder.cta.name'             => 'Appel à l\'action (CTA)',
     'pixelopen.kirby-uikit-builder.cta.heading.label'    => 'Titre',
     'pixelopen.kirby-uikit-builder.cta.subtext.label'    => 'Texte',
@@ -582,7 +582,7 @@ return [
     'pixelopen.kirby-uikit-builder.cta.style.secondary'  => 'Secondaire',
     'pixelopen.kirby-uikit-builder.cta.alignment.label'  => 'Alignement',
 
-    // Bloc Icon box
+    // Icon box block
     'pixelopen.kirby-uikit-builder.icon_box.name'                => 'Blocs icône',
     'pixelopen.kirby-uikit-builder.icon_box.items.label'         => 'Items',
     'pixelopen.kirby-uikit-builder.icon_box.item.icon.label'     => 'Nom de l\'icône',
@@ -607,7 +607,7 @@ return [
     'pixelopen.kirby-uikit-builder.icon_box.style.plain'         => 'Simple',
     'pixelopen.kirby-uikit-builder.icon_box.style.card'          => 'Carte',
 
-    // Bloc Alerte
+    // Alert block
     'pixelopen.kirby-uikit-builder.alert.name'           => 'Alerte',
     'pixelopen.kirby-uikit-builder.alert.type.label'     => 'Type',
     'pixelopen.kirby-uikit-builder.alert.type.primary'   => 'Information',
@@ -619,7 +619,7 @@ return [
     'pixelopen.kirby-uikit-builder.alert.closable.label' => 'Fermable',
     'pixelopen.kirby-uikit-builder.alert.icon.label'     => 'Afficher une icône',
 
-    // Bloc Liste
+    // List block
     'pixelopen.kirby-uikit-builder.list.name'               => 'Liste',
     'pixelopen.kirby-uikit-builder.list.items.label'        => 'Items',
     'pixelopen.kirby-uikit-builder.list.item.text.label'    => 'Contenu',
@@ -639,7 +639,7 @@ return [
     'pixelopen.kirby-uikit-builder.list.color.danger'       => 'Danger',
     'pixelopen.kirby-uikit-builder.list.color.muted'        => 'Atténué',
 
-    // Bloc Stats
+    // Stats block
     'pixelopen.kirby-uikit-builder.stats.name'              => 'Stats / Chiffres clés',
     'pixelopen.kirby-uikit-builder.stats.items.label'       => 'Items',
     'pixelopen.kirby-uikit-builder.stats.item.value.label'  => 'Valeur',
@@ -651,7 +651,7 @@ return [
     'pixelopen.kirby-uikit-builder.stats.countup.label'     => 'Animation compteur',
     'pixelopen.kirby-uikit-builder.stats.countup.help'      => 'Nécessite une valeur numérique',
 
-    // Bloc Pricing
+    // Pricing block
     'pixelopen.kirby-uikit-builder.pricing.name'                      => 'Tarification',
     'pixelopen.kirby-uikit-builder.pricing.items.label'               => 'Formules',
     'pixelopen.kirby-uikit-builder.pricing.item.name.label'           => 'Nom de la formule',
@@ -667,7 +667,7 @@ return [
     'pixelopen.kirby-uikit-builder.pricing.btn_style.label'           => 'Style du bouton',
     'pixelopen.kirby-uikit-builder.pricing.highlighted_style.label'   => 'Style de la carte mise en avant',
 
-    // Bloc Citation
+    // Quote block
     'pixelopen.kirby-uikit-builder.quote.name'                => 'Citation',
     'pixelopen.kirby-uikit-builder.quote.text.label'          => 'Texte de la citation',
     'pixelopen.kirby-uikit-builder.quote.text.placeholder'    => 'Citation…',
@@ -679,7 +679,7 @@ return [
     'pixelopen.kirby-uikit-builder.quote.style.border'        => 'Bordure gauche',
     'pixelopen.kirby-uikit-builder.quote.style.center'        => 'Centré',
 
-    // Bloc Code
+    // Code block
     'pixelopen.kirby-uikit-builder.code.name'                 => 'Code',
     'pixelopen.kirby-uikit-builder.code.code.label'           => 'Code',
     'pixelopen.kirby-uikit-builder.code.language.label'       => 'Langage',
@@ -689,7 +689,7 @@ return [
     'pixelopen.kirby-uikit-builder.code.btn.copy'             => 'Copier',
     'pixelopen.kirby-uikit-builder.code.btn.copied'           => '✓ Copié',
 
-    // Bloc Team
+    // Team block
     'pixelopen.kirby-uikit-builder.team.name'                   => 'Équipe',
     'pixelopen.kirby-uikit-builder.team.items.label'            => 'Membres',
     'pixelopen.kirby-uikit-builder.team.item.photo.label'       => 'Photo',
@@ -711,7 +711,7 @@ return [
     'pixelopen.kirby-uikit-builder.team.show_bio.label'         => 'Afficher la bio',
     'pixelopen.kirby-uikit-builder.team.show_social.label'      => 'Afficher les liens sociaux',
 
-    // Bloc Grille de logos
+    // Logo grid block
     'pixelopen.kirby-uikit-builder.logo_grid.name'              => 'Grille de logos',
     'pixelopen.kirby-uikit-builder.logo_grid.items.label'       => 'Logos',
     'pixelopen.kirby-uikit-builder.logo_grid.item.logo.label'   => 'Logo',
@@ -724,7 +724,7 @@ return [
     'pixelopen.kirby-uikit-builder.logo_grid.grayscale.label'   => 'Niveaux de gris',
     'pixelopen.kirby-uikit-builder.logo_grid.opacity.label'     => 'Opacité (%)',
 
-    // Bloc Vidéo
+    // Video block
     'pixelopen.kirby-uikit-builder.video.name'              => 'Vidéo',
     'pixelopen.kirby-uikit-builder.video.source.label'      => 'Source',
     'pixelopen.kirby-uikit-builder.video.source.youtube'    => 'YouTube',
@@ -748,7 +748,7 @@ return [
     'pixelopen.kirby-uikit-builder.video.click_to_play.label' => 'Clic pour lire',
     'pixelopen.kirby-uikit-builder.video.click_to_play.help'  => 'Affiche une vignette, le player ne se charge qu\'au clic',
 
-    // Bloc Timeline
+    // Timeline block
     'pixelopen.kirby-uikit-builder.timeline.name'               => 'Timeline / Étapes',
     'pixelopen.kirby-uikit-builder.timeline.items.label'        => 'Étapes',
     'pixelopen.kirby-uikit-builder.timeline.item.date.label'    => 'Date / Étape',

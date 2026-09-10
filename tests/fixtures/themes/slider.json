@@ -1,0 +1,207 @@
+{
+  "title": "Slider",
+  "intro": "Le slideshow pleine largeur (uk-slideshow) : animations, navigation, ratios et contenu superposé.",
+  "variants": [
+    {
+      "name": "fade-dotnav",
+      "label": "Fondu, navigation par points",
+      "block": {
+        "type": "slider",
+        "content": {
+          "animation": "fade",
+          "navigation_type": "dotnav",
+          "show_arrows": true,
+          "arrows_color": "light",
+          "dotnav_color": "light",
+          "content_style": "gradient",
+          "ratio": "16:9",
+          "slides": [
+            {
+              "slide_image": [
+                "slider-3.jpg"
+              ],
+              "slide_position": "bottom-left",
+              "slide_width": "",
+              "content_blocks": [
+                {
+                  "type": "heading",
+                  "content": {
+                    "level": "h2",
+                    "text": "Première diapositive",
+                    "heading_size": " uk-heading-medium"
+                  }
+                }
+              ]
+            },
+            {
+              "slide_image": [
+                "slider-1.jpg"
+              ],
+              "slide_position": "center",
+              "slide_width": "",
+              "content_blocks": [
+                {
+                  "type": "heading",
+                  "content": {
+                    "level": "h2",
+                    "text": "Deuxième diapositive",
+                    "heading_size": " uk-heading-medium"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "slide-thumbnails",
+      "label": "Glissement, vignettes",
+      "block": {
+        "type": "slider",
+        "content": {
+          "animation": "slide",
+          "navigation_type": "thumbnails",
+          "show_arrows": true,
+          "arrows_color": "dark",
+          "arrows_large": true,
+          "ratio": "21:9",
+          "slides": [
+            {
+              "slide_image": [
+                "slider-2.jpg"
+              ],
+              "slide_position": "",
+              "slide_width": "",
+              "content_blocks": []
+            },
+            {
+              "slide_image": [
+                "slider-3.jpg"
+              ],
+              "slide_position": "",
+              "slide_width": "",
+              "content_blocks": []
+            },
+            {
+              "slide_image": [
+                "slider-1.jpg"
+              ],
+              "slide_position": "",
+              "slide_width": "",
+              "content_blocks": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "kenburns",
+      "label": "Effet Ken Burns",
+      "block": {
+        "type": "slider",
+        "content": {
+          "animation": "fade",
+          "kenburns": true,
+          "navigation_type": "",
+          "show_arrows": false,
+          "content_style": "primary",
+          "ratio": "4:3",
+          "slides": [
+            {
+              "slide_image": [
+                "slider-2.jpg"
+              ],
+              "slide_position": "center",
+              "slide_width": "",
+              "content_blocks": [
+                {
+                  "type": "heading",
+                  "content": {
+                    "level": "h2",
+                    "text": "Zoom lent",
+                    "heading_size": " uk-heading-medium"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "fixed-height",
+      "label": "Hauteur fixe plutôt que ratio",
+      "block": {
+        "type": "slider",
+        "content": {
+          "animation": "pull",
+          "size_mode": true,
+          "min_height": 400,
+          "max_height": 600,
+          "navigation_type": "dotnav",
+          "dotnav_vertical": true,
+          "content_style": "none",
+          "slides": [
+            {
+              "slide_image": [
+                "slider-3.jpg"
+              ],
+              "slide_position": "top-right",
+              "slide_width": " uk-width-1-2@s",
+              "content_blocks": [
+                {
+                  "type": "heading",
+                  "content": {
+                    "level": "h2",
+                    "text": "Contenu à droite",
+                    "heading_size": " uk-heading-medium"
+                  }
+                }
+              ]
+            },
+            {
+              "slide_image": [
+                "slider-1.jpg"
+              ],
+              "slide_position": "bottom-center",
+              "slide_width": "",
+              "content_blocks": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "no-navigation",
+      "label": "Sans flèches ni points",
+      "block": {
+        "type": "slider",
+        "content": {
+          "animation": "scale",
+          "show_arrows": false,
+          "navigation_type": "",
+          "ratio": "1:1",
+          "slides": [
+            {
+              "slide_image": [
+                "slider-2.jpg"
+              ],
+              "slide_position": "",
+              "slide_width": "",
+              "content_blocks": []
+            },
+            {
+              "slide_image": [
+                "slider-3.jpg"
+              ],
+              "slide_position": "",
+              "slide_width": "",
+              "content_blocks": []
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

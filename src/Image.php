@@ -6,26 +6,26 @@ use Kirby\Cms\File;
 
 class Image
 {
-    // Largeurs générées pour le srcset des images de contenu
+    // Widths generated for the srcset of content images
     public const SRCSET_WIDTHS = [480, 768, 1024, 1366, 1600];
 
-    // Largeurs pour les images plein écran (slideshows, covers)
+    // Widths for full-screen images (slideshows, covers)
     public const COVER_WIDTHS = [640, 1024, 1366, 1920];
 
     /**
-     * Variantes responsive d'un fichier image.
+     * Responsive variants of an image file.
      *
-     * - src : variante de secours (la plus grande générée), jamais l'upload brut
-     * - srcset / webpSrcset : chaînes srcset au format d'origine et en WebP
-     * - full : grande variante (1920px) pour lightbox ou lien vers l'image
+     * - src: fallback variant (the largest one generated), never the raw upload
+     * - srcset / webpSrcset: srcset strings in the original format and in WebP
+     * - full: large variant (1920px) for a lightbox or a link to the image
      *
-     * Les largeurs supérieures à la largeur réelle du fichier sont écartées.
-     * SVG (non redimensionnable) et GIF (animation perdue au resize) sont
-     * servis tels quels, sans variantes. Une image plus petite que la
-     * première borne reçoit une simple conversion WebP sans srcset.
+     * Widths above the file's actual width are dropped. SVG (not resizable)
+     * and GIF (animation lost on resize) are served as is, with no variants.
+     * An image smaller than the first breakpoint only gets a WebP conversion,
+     * without a srcset.
      *
-     * width / height : dimensions intrinsèques de la variante src (attributs
-     * anti-CLS), null quand elles sont inconnues (certains SVG).
+     * width / height: intrinsic dimensions of the src variant (anti-CLS
+     * attributes), null when unknown (some SVGs).
      *
      * @return array{src: string, srcset: string|null, webpSrcset: string|null, full: string, width: int|null, height: int|null}
      */

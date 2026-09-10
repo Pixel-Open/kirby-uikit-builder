@@ -1,6 +1,9 @@
 <?php
+// The geometry belongs to the container, in layout/section: the SVG just
+// fills it. preserveAspectRatio="none" then stretches the shape to exactly the
+// requested height instead of keeping the viewBox ratio.
 $fill = htmlspecialchars($color ?? '#ffffff');
-$svgAttr = 'aria-hidden="true" fill="' . $fill . '" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="position:absolute;bottom:0;width:100%;display:block;"';
+$svgAttr = 'aria-hidden="true" fill="' . $fill . '" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:100%;"';
 ?>
 <?php switch ($type ?? 'curve'): case 'tilt': ?>
 <svg <?= $svgAttr ?> viewBox="0 0 100 10"><polygon points="104 10 0 0 0 10"/></svg>

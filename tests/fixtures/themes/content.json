@@ -1,0 +1,272 @@
+{
+  "slug": "contenu",
+  "title": "Contenu",
+  "intro": "Les blocs de texte de base : titres, paragraphes, citations, listes, boutons, code et espacement.",
+  "variants": [
+    {
+      "name": "heading-medium",
+      "label": "Titre, taille medium",
+      "block": {
+        "type": "heading",
+        "content": {
+          "level": "h2",
+          "text": "Un titre de section",
+          "heading_size": " uk-heading-medium"
+        }
+      }
+    },
+    {
+      "name": "heading-line",
+      "label": "Titre barré d'une ligne",
+      "block": {
+        "type": "heading",
+        "content": {
+          "level": "h2",
+          "text": "Titre sur une ligne",
+          "heading_style": "uk-heading-line",
+          "text_align": " uk-text-center@m"
+        }
+      }
+    },
+    {
+      "name": "heading-bullet-primary",
+      "label": "Titre à puce, couleur primaire",
+      "block": {
+        "type": "heading",
+        "content": {
+          "level": "h3",
+          "text": "Sous-titre à puce",
+          "heading_style": "uk-heading-bullet",
+          "heading_color": " uk-text-primary"
+        }
+      }
+    },
+    {
+      "name": "heading-display",
+      "label": "Titre display",
+      "block": {
+        "type": "heading",
+        "content": {
+          "level": "h1",
+          "text": "Display",
+          "heading_size": " uk-heading-xlarge"
+        }
+      }
+    },
+    {
+      "name": "paragraph",
+      "label": "Paragraphe",
+      "block": {
+        "type": "text",
+        "content": {
+          "text": "<p>Un paragraphe de démonstration avec un <a href=\"https://getkirby.com\">lien</a>, du <strong>gras</strong> et de l'<em>italique</em>.</p>"
+        }
+      }
+    },
+    {
+      "name": "quote-simple",
+      "label": "Citation simple",
+      "block": {
+        "type": "quote",
+        "content": {
+          "text": "<p>La simplicité est la sophistication suprême.</p>",
+          "citation": "<p>Léonard de Vinci</p>",
+          "style": "plain"
+        }
+      }
+    },
+    {
+      "name": "quote-large",
+      "label": "Citation en grand",
+      "block": {
+        "type": "quote",
+        "content": {
+          "text": "<p>Le mieux est l'ennemi du bien.</p>",
+          "citation": "<p>Voltaire</p>",
+          "style": "large"
+        }
+      }
+    },
+    {
+      "name": "quote-bordered",
+      "label": "Citation bordée",
+      "block": {
+        "type": "quote",
+        "content": {
+          "text": "<p>Un texte cité, avec une bordure latérale.</p>",
+          "style": "border"
+        }
+      }
+    },
+    {
+      "name": "quote-centered",
+      "label": "Citation centrée",
+      "block": {
+        "type": "quote",
+        "content": {
+          "text": "<p>Un texte cité, centré.</p>",
+          "citation": "<p>Anonyme</p>",
+          "style": "center"
+        }
+      }
+    },
+    {
+      "name": "list-bullet",
+      "label": "Liste à puces",
+      "block": {
+        "type": "list",
+        "content": {
+          "list_type": "bullet",
+          "items": [
+            {
+              "text": "<p>Premier élément</p>"
+            },
+            {
+              "text": "<p>Deuxième élément</p>"
+            },
+            {
+              "text": "<p>Troisième élément</p>"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "list-check-divider",
+      "label": "Liste cochée avec séparateurs",
+      "block": {
+        "type": "list",
+        "content": {
+          "list_type": "check",
+          "divider": true,
+          "large": true,
+          "color": "success",
+          "items": [
+            {
+              "text": "<p>Hébergement inclus</p>"
+            },
+            {
+              "text": "<p>Certificat TLS</p>"
+            },
+            {
+              "text": "<p>Sauvegardes quotidiennes</p>"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "list-numbered",
+      "label": "Liste numérotée",
+      "block": {
+        "type": "list",
+        "content": {
+          "list_type": "decimal",
+          "items": [
+            {
+              "text": "<p>Analyser</p>"
+            },
+            {
+              "text": "<p>Concevoir</p>"
+            },
+            {
+              "text": "<p>Livrer</p>"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "button-primary",
+      "label": "Bouton primaire",
+      "block": {
+        "type": "button",
+        "content": {
+          "text": "Nous contacter",
+          "link_type": "url",
+          "link_url": "https://example.test/contact",
+          "button_style": " uk-button-primary"
+        }
+      }
+    },
+    {
+      "name": "button-anchor",
+      "label": "Bouton vers une ancre",
+      "note": "Une ancre doit garder l'attribut uk-scroll pour le défilement doux.",
+      "block": {
+        "type": "button",
+        "content": {
+          "text": "Voir les tarifs",
+          "link_type": "anchor",
+          "link_anchor": "tarifs",
+          "button_style": " uk-button-secondary",
+          "button_size": " uk-button-large"
+        }
+      }
+    },
+    {
+      "name": "button-mailto",
+      "label": "Bouton mailto",
+      "block": {
+        "type": "button",
+        "content": {
+          "text": "Écrire",
+          "link_type": "email",
+          "link_email": "contact@example.test",
+          "button_style": " uk-button-text"
+        }
+      }
+    },
+    {
+      "name": "button-new-tab",
+      "label": "Bouton en nouvel onglet",
+      "block": {
+        "type": "button",
+        "content": {
+          "text": "Documentation",
+          "link_type": "url",
+          "link_url": "https://getkirby.com",
+          "target": true,
+          "button_style": " uk-button-default",
+          "margin_top": " uk-margin-top"
+        }
+      }
+    },
+    {
+      "name": "code-php",
+      "label": "Code avec nom de fichier et numéros de ligne",
+      "block": {
+        "type": "code",
+        "content": {
+          "language": "php",
+          "filename": "index.php",
+          "line_numbers": true,
+          "copy": true,
+          "code": "<?php\n\necho 'Bonjour';\n"
+        }
+      }
+    },
+    {
+      "name": "code-plain",
+      "label": "Code sans en-tête",
+      "block": {
+        "type": "code",
+        "content": {
+          "language": "bash",
+          "copy": false,
+          "code": "make build"
+        }
+      }
+    },
+    {
+      "name": "spacer",
+      "label": "Espacement de 80px",
+      "block": {
+        "type": "spacer",
+        "content": {
+          "height": 80
+        }
+      }
+    }
+  ]
+}
