@@ -19,9 +19,9 @@ $gridClass = 'uk-grid uk-grid-match uk-child-width-' . $colsTablet . '@s uk-chil
     $description = $item->description()->value();
     $features    = array_filter(array_map('trim', explode("\n", $item->features()->value() ?? '')));
     $btnLabel    = $item->btn_label()->value();
-    // Contenu antérieur à 1.0.1 : pas de link_type, l'URL brute était dans btn_url.
+    // Content predating 1.0.1: no link_type, the raw URL was in btn_url.
     $btnUrl      = $item->link_type()->isEmpty()
-        ? ($item->btn_url()->value() ?: null)
+        ? PixelOpen\KirbyUikitBuilder\Url::safe($item->btn_url()->value())
         : $item->linkHref();
 
     $cardClass = $highlighted

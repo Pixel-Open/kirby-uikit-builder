@@ -34,7 +34,7 @@ $gridClass = trim(implode(' ', array_filter([
     $logo = $item->logo()->toFiles()->first();
     if (!$logo) continue;
     $name = $item->name()->value();
-    $url  = $item->url()->value();
+    $url  = PixelOpen\KirbyUikitBuilder\Url::safe($item->url()->value());
   ?>
   <div class="uk-flex uk-flex-center uk-flex-middle">
     <?php if ($url): ?>

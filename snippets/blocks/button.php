@@ -1,6 +1,6 @@
 <?php
-// Lien résolu par le block method du plugin (voir index.php).
-// Une ancre garde le défilement doux de UIkit.
+// Link resolved by the plugin's block method (see index.php).
+// An anchor keeps UIkit's smooth scrolling.
 $src = $block->linkHref();
 
 if (!$src || $block->text()->isEmpty()) return;

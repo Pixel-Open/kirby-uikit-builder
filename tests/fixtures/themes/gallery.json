@@ -1,0 +1,79 @@
+{
+  "slug": "galerie",
+  "title": "Galerie",
+  "intro": "Une galerie en lightbox, recadrée ou en mosaïque. Le recadrage aligne la grille, la mosaïque respecte les proportions de chaque image.",
+  "variants": [
+    {
+      "name": "three-columns-cropped",
+      "label": "Recadrée, trois colonnes",
+      "block": {
+        "type": "gallery",
+        "content": {
+          "gallery": [
+            "slider-1.jpg",
+            "vertical-1.jpg",
+            "slider-2.jpg",
+            "vertical-2.jpg",
+            "slider-3.jpg",
+            "vertical-3.jpg"
+          ],
+          "gallery_grid": "three",
+          "gallery_style": "cropped",
+          "hover_style": "white",
+          "hover_icon": "plus",
+          "hover_opacity": 70
+        }
+      },
+      "note": "Toutes les vignettes sont recadrées au même format : trois paysages et trois verticales rendent une grille parfaitement alignée."
+    },
+    {
+      "name": "masonry",
+      "label": "Mosaïque, hauteurs conservées",
+      "block": {
+        "type": "gallery",
+        "content": {
+          "gallery": [
+            "slider-1.jpg",
+            "vertical-1.jpg",
+            "team-1.jpg",
+            "slider-2.jpg",
+            "vertical-2.jpg",
+            "small-image.jpg",
+            "slider-3.jpg",
+            "vertical-3.jpg",
+            "team-2.jpg"
+          ],
+          "gallery_grid": "three",
+          "gallery_style": "masonry",
+          "hover_style": "none",
+          "hover_icon": "",
+          "hover_caption": false
+        }
+      },
+      "note": "Les mêmes images sans recadrage ni habillage : chacune garde ses proportions et les colonnes se décalent. Les ratios vont ici de 0,67 à 1,79."
+    },
+    {
+      "name": "no-hover",
+      "label": "Galerie sans effet de survol",
+      "block": {
+        "type": "gallery",
+        "content": {
+          "gallery": [
+            "slider-1.jpg",
+            "slider-2.jpg",
+            "slider-3.jpg",
+            "vertical-1.jpg",
+            "vertical-2.jpg",
+            "vertical-3.jpg",
+            "team-1.jpg",
+            "team-2.jpg"
+          ],
+          "gallery_grid": "four",
+          "hover_style": "none",
+          "hover_icon": ""
+        }
+      },
+      "note": "Aucun voile ni icône au survol : les images restent lisibles au premier coup d'œil."
+    }
+  ]
+}

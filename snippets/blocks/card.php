@@ -1,20 +1,20 @@
 <?php
 $cardColor  = $block->card_color()->value() ?: 'uk-card-default';
 $isCustom   = $cardColor === 'custom';
-$bgColor    = $isCustom ? $block->card_bg_color()->value() : '';
+$bgColor    = $isCustom ? PixelOpen\KirbyUikitBuilder\Color::hex($block->card_bg_color()->value()) : '';
 $textColor  = $isCustom ? $block->card_text_color()->value() : '';
-$blockId    = htmlspecialchars($block->block_id()->value());
+$blockId    = htmlspecialchars($block->block_id()->value() ?? '');
 $blockClass = $block->block_class()->value();
 
 $img      = $block->media_enable()->isTrue() ? $block->media_image()->toFiles()->first() : null;
 $mediaPos = $block->media_position()->value() ?: 'top';
 
-// Lien résolu par le block method du plugin (voir index.php). Un contenu écrit
-// hors Panel peut n'avoir aucun link_type : on garde la retombée sur l'URL brute.
+// Link resolved by the plugin's block method (see index.php). Content written
+// outside the Panel may carry no link_type: the fallback to the raw URL stays.
 $href = null;
 if ($block->link_enable()->isTrue()) {
     $href = $block->link_type()->isEmpty()
-        ? ($block->link_url()->value() ?: null)
+        ? PixelOpen\KirbyUikitBuilder\Url::safe($block->link_url()->value())
         : $block->linkHref();
 }
 

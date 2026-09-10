@@ -40,7 +40,7 @@ $itemsClass = trim(implode(' ', array_filter([
 $ratioPaddings = ['16:9' => '56.25', '4:3' => '75', '3:2' => '66.67', '1:1' => '100'];
 $ratioPad      = $ratio ? ($ratioPaddings[$ratio] ?? null) : null;
 
-// sizes du srcset déduit du nombre de colonnes par breakpoint (s: 640px, m: 960px)
+// srcset sizes derived from the column count per breakpoint (s: 640px, m: 960px)
 $itemSizes = sprintf(
     '(min-width: 960px) %dvw, (min-width: 640px) %dvw, %dvw',
     ceil(100 / max(1, (int)$cols_desktop)),

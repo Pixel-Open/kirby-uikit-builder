@@ -2,12 +2,12 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: ['develop','main']
   pull_request:
 
 jobs:
-  smoke:
-    name: Lint & smoke test (PHP ${{ matrix.php }})
+  tests:
+    name: Lint & tests (PHP ${{ matrix.php }})
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -37,4 +37,7 @@ jobs:
           echo "Lint OK"
 
       - name: Smoke test
-        run: composer test
+        run: composer smoke
+
+      - name: Unit tests
+        run: composer unit

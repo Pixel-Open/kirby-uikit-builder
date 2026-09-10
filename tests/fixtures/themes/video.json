@@ -1,0 +1,54 @@
+{
+  "title": "Vidéo",
+  "intro": "YouTube sans cookie, Vimeo, ou fichier hébergé. Ratio, vignette cliquable, lecture automatique en boucle.",
+  "variants": [
+    {
+      "name": "youtube",
+      "label": "Vidéo YouTube sans cookie",
+      "block": {
+        "type": "video",
+        "content": {
+          "source": "youtube",
+          "youtube_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "ratio": "16:9",
+          "nocookie": true,
+          "video_title": "Présentation"
+        }
+      }
+    },
+    {
+      "name": "vimeo-poster",
+      "label": "Vidéo Vimeo avec vignette cliquable",
+      "block": {
+        "type": "video",
+        "content": {
+          "source": "vimeo",
+          "vimeo_url": "https://vimeo.com/76979871",
+          "ratio": "21:9",
+          "click_to_play": true,
+          "thumbnail": [
+            "slider-1.jpg"
+          ],
+          "video_title": "Bande démo"
+        }
+      }
+    },
+    {
+      "name": "hosted-file",
+      "label": "Vidéo hébergée, en boucle et muette",
+      "block": {
+        "type": "video",
+        "content": {
+          "source": "file",
+          "video_file": [
+            "video.mp4"
+          ],
+          "ratio": "4:3",
+          "autoplay": true,
+          "loop": true,
+          "muted": true
+        }
+      }
+    }
+  ]
+}

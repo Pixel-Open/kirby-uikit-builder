@@ -19,7 +19,9 @@ foreach ($layout->columns() as $column):
     $isCard       = $colStyle === 'card';
     $isTile       = $colStyle === 'tile';
 
-    $classes = implode(' ', array_filter(array_map('trim', [
+    // (string) before trim(): content written outside the Panel, or predating
+    // the option, leaves the field at null rather than at an empty string.
+    $classes = implode(' ', array_filter(array_map(fn ($value) => trim((string)$value), [
         $opts ? $opts->mobile_width()->value()  : '',
         $opts ? $opts->tablet_width()->value()  : '',
         $opts ? ($opts->column_width()->value() ?: $defaultWidth) : $defaultWidth,
@@ -40,8 +42,10 @@ foreach ($layout->columns() as $column):
 
     $inlineStyle = '';
     if ($opts) {
-        $min = $opts->column_min_height()->value();
-        $max = $opts->column_max_height()->value();
+        // Free-text fields injected into style: validate them, htmlspecialchars
+        // does not neutralise a semicolon.
+        $min = \PixelOpen\KirbyUikitBuilder\Css::length($opts->column_min_height()->value());
+        $max = \PixelOpen\KirbyUikitBuilder\Css::length($opts->column_max_height()->value());
         $inlineStyle = ($min ? 'min-height:' . $min . ';' : '') . ($max ? 'max-height:' . $max . ';' : '');
     }
 
@@ -52,7 +56,7 @@ foreach ($layout->columns() as $column):
         $animation = 'uk-scrollspy="cls: ' . htmlspecialchars($cls) . '; delay: ' . $delay . '"';
     }
 
-    $colId = $opts ? htmlspecialchars($opts->column_id()->value()) : '';
+    $colId = $opts ? htmlspecialchars($opts->column_id()->value() ?? '') : '';
 ?>
 <div <?= $colId ? 'id="' . $colId . '"' : '' ?> class="<?= htmlspecialchars($classes) ?>"<?= $inlineStyle ? ' style="' . htmlspecialchars($inlineStyle) . '"' : '' ?> <?= $animation ?>>
   <?= $column->blocks() ?>

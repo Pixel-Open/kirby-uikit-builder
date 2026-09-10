@@ -13,7 +13,7 @@ $class   ??= '';
 $animate ??= null;
 // $width: responsive width: string '1/2' or array ['default'=>'1/1','s'=>'1/2','m'=>'1/3'] | null
 $width   ??= null;
-// $sizes: attribut sizes du srcset, ex. '(min-width: 960px) 50vw, 100vw'
+// $sizes: srcset sizes attribute, e.g. '(min-width: 960px) 50vw, 100vw'
 $sizes   ??= '100vw';
 
 $imgSrc      = $src;

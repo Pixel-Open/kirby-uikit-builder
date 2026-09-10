@@ -1,28 +1,29 @@
 <?php
 
 /**
- * Smoke test autonome du plugin pixelopen/kirby-uikit-builder.
+ * Standalone smoke test for the pixelopen/kirby-uikit-builder plugin.
  *
- * Contrairement au smoke test du dépôt vitrine, celui-ci ne suppose aucun site
- * autour du plugin : il installe une arborescence Kirby minimale dans un dossier
- * temporaire, y lie le plugin comme le ferait site/plugins/, et boote Kirby.
+ * Unlike the showcase repository's smoke test, this one assumes no site around
+ * the plugin: Fixture installs a minimal Kirby tree in a temporary folder,
+ * links the plugin into it the way site/plugins/ would, and boots Kirby. The
+ * same fixture serves as the PHPUnit bootstrap.
  *
- * Vérifie :
- *   1. que le plugin est enregistré ;
- *   2. que chaque blueprint de bloc/champ se résout en tableau non vide ;
- *   3. la cohérence blueprint / snippet pour les blocs ;
- *   4. qu'aucune clé de traduction pixelopen.kirby-uikit-builder.* ne reste non résolue ;
- *   5. la parité des clés entre translations/fr.php et translations/en.php ;
- *   6. que les classes PSR-4 du plugin sont autoloadables ;
- *   7. que chaque bloc a une icône existant dans le sprite du Panel ;
- *   8. que chaque bloc est proposé dans les fieldsets de fields/layout.yml ;
- *   9. que chaque bloc a sa page de doc et sa ligne dans doc/index.md.
+ * Checks:
+ *   1. that the plugin is registered;
+ *   2. that every block/field blueprint resolves to a non-empty array;
+ *   3. blueprint / snippet consistency for blocks;
+ *   4. that no pixelopen.kirby-uikit-builder.* translation key is left unresolved;
+ *   5. key parity between translations/fr.php and translations/en.php;
+ *   6. that the plugin's PSR-4 classes are autoloadable;
+ *   7. that every block has an icon that exists in the Panel sprite;
+ *   8. that every block is offered in the fieldsets of fields/layout.yml;
+ *   9. that every block has its doc page and its line in doc/index.md.
  *
- * Usage : composer install && php tests/smoke.php   (exit 0 = OK, exit 1 = échec)
+ * Usage: composer install && php tests/smoke.php   (exit 0 = pass, exit 1 = fail)
  */
 
-use Kirby\Cms\App as Kirby;
 use Kirby\Data\Data;
+use PixelOpen\KirbyUikitBuilder\Tests\Fixture;
 
 $plugin   = dirname(__DIR__);
 $autoload = $plugin . '/vendor/autoload.php';
@@ -34,37 +35,7 @@ if (is_file($autoload) === false) {
 
 require $autoload;
 
-// Arborescence Kirby minimale : le plugin est lié comme dans site/plugins/.
-$fixture = sys_get_temp_dir() . '/kirby-uikit-builder-smoke-' . getmypid();
-$plugins = $fixture . '/site/plugins';
-
-register_shutdown_function(static function () use ($fixture, $plugins): void {
-    @unlink($plugins . '/kirby-uikit-builder');
-    foreach (['/site/plugins', '/site', '/content', '/public', ''] as $sub) {
-        @rmdir($fixture . $sub);
-    }
-});
-
-foreach ([$plugins, $fixture . '/content', $fixture . '/public'] as $dir) {
-    if (is_dir($dir) === false && mkdir($dir, 0777, true) === false) {
-        fwrite(STDERR, "Impossible de créer $dir\n");
-        exit(1);
-    }
-}
-
-if (symlink($plugin, $plugins . '/kirby-uikit-builder') === false) {
-    fwrite(STDERR, "Impossible de lier le plugin dans la fixture\n");
-    exit(1);
-}
-
-$kirby = new Kirby([
-    'roots' => [
-        'index'   => $fixture . '/public',
-        'base'    => $fixture,
-        'site'    => $fixture . '/site',
-        'content' => $fixture . '/content',
-    ]
-]);
+$kirby = Fixture::kirby();
 
 $errors = [];
 $passed = 0;
@@ -77,10 +48,10 @@ $check  = function (bool $ok, string $label) use (&$errors, &$passed) {
     }
 };
 
-// 1. Plugin enregistré
+// 1. Plugin registered
 $check($kirby->plugin('pixelopen/kirby-uikit-builder') !== null, 'plugin pixelopen/kirby-uikit-builder enregistré');
 
-// 2. Résolution de tous les blueprints du plugin
+// 2. Resolution of every blueprint in the plugin
 $extensions = $kirby->extensions('blueprints');
 $unresolved = [];
 
@@ -100,8 +71,8 @@ foreach ($blueprintFiles as $file) {
     $resolved = is_callable($ext) ? $ext() : $ext;
     $check(is_array($resolved) && $resolved !== [], "blueprint $name se résout en tableau non vide");
 
-    // 4. Toute chaîne encore préfixée pixelopen.kirby-uikit-builder.* après résolution
-    //    est une clé de traduction manquante (t() retourne la clé en fallback).
+    // 4. Any string still prefixed pixelopen.kirby-uikit-builder.* after resolution
+    //    is a missing translation key (t() returns the key as a fallback).
     if (is_array($resolved)) {
         array_walk_recursive($resolved, function ($value) use (&$unresolved, $name) {
             if (is_string($value) && str_starts_with($value, 'pixelopen.kirby-uikit-builder.')) {
@@ -113,7 +84,7 @@ foreach ($blueprintFiles as $file) {
 
 $check($unresolved === [], 'aucune clé de traduction non résolue' . ($unresolved ? ' (' . implode(', ', array_keys($unresolved)) . ')' : ''));
 
-// 3. Cohérence blueprint / snippet pour les blocs
+// 3. Blueprint / snippet consistency for blocks
 $snippets = $kirby->extensions('snippets');
 foreach (glob($plugin . '/blueprints/blocks/*.yml') as $file) {
     $block = basename($file, '.yml');
@@ -124,7 +95,7 @@ foreach (glob($plugin . '/snippets/blocks/*.php') as $file) {
     $check(isset($extensions['blocks/' . $block]), "blueprint blocks/$block présent pour son snippet");
 }
 
-// 5. Parité des clés de traduction fr / en
+// 5. fr / en translation key parity
 $fr = require $plugin . '/translations/fr.php';
 $en = require $plugin . '/translations/en.php';
 $missingEn = array_keys(array_diff_key($fr, $en));
@@ -132,13 +103,13 @@ $missingFr = array_keys(array_diff_key($en, $fr));
 $check($missingEn === [], 'clés fr toutes présentes en en' . ($missingEn ? ' (manquantes : ' . implode(', ', $missingEn) . ')' : ''));
 $check($missingFr === [], 'clés en toutes présentes en fr' . ($missingFr ? ' (manquantes : ' . implode(', ', $missingFr) . ')' : ''));
 
-// 6. Classes PSR-4 du plugin
+// 6. The plugin's PSR-4 classes
 foreach (glob($plugin . '/src/*.php') as $file) {
     $class = 'PixelOpen\\KirbyUikitBuilder\\' . basename($file, '.php');
     $check(class_exists($class), "classe $class autoloadable");
 }
 
-// 7. Icônes des blocs : définies et présentes dans le sprite du Panel
+// 7. Block icons: defined and present in the Panel sprite
 $sprite = $plugin . '/vendor/getkirby/cms/panel/dist/img/icons.svg';
 $panelIcons = [];
 if (is_file($sprite) && preg_match_all('/id="icon-([a-z0-9-]+)"/', file_get_contents($sprite), $m)) {
@@ -160,8 +131,8 @@ foreach ($icons as $icon => $blocks) {
     $check(count($blocks) === 1, "icône « $icon » unique (partagée par : " . implode(', ', $blocks) . ')');
 }
 
-// 8. Chaque bloc est proposé dans les fieldsets de fields/layout.yml.
-//    Un bloc absent de cette liste est valide mais invisible dans le Panel.
+// 8. Every block is offered in the fieldsets of fields/layout.yml.
+//    A block missing from that list is valid but invisible in the Panel.
 $layout    = Data::read($plugin . '/blueprints/fields/layout.yml');
 $offered   = [];
 foreach ($layout['fieldsets'] ?? [] as $group) {
@@ -172,12 +143,12 @@ foreach ($layout['fieldsets'] ?? [] as $group) {
 foreach (glob($plugin . '/blueprints/blocks/*.yml') as $file) {
     $block = basename($file, '.yml');
     if ($block === 'column-options') {
-        continue; // fieldset de layout, pas un bloc de contenu
+        continue; // layout fieldset, not a content block
     }
     $check(isset($offered[$block]), "bloc $block proposé dans les fieldsets de fields/layout.yml");
 }
 
-// 9. Couverture documentaire
+// 9. Documentation coverage
 $index = file_get_contents($plugin . '/doc/index.md');
 foreach (glob($plugin . '/blueprints/blocks/*.yml') as $file) {
     $block = basename($file, '.yml');

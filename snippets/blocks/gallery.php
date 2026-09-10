@@ -36,10 +36,14 @@ $showOverlay = $hoverStyle !== 'none' || $hoverIcon || $hoverCaption;
 <?php foreach ($images as $image):
     $caption = $image->caption()->isNotEmpty() ? $image->caption()->value() : ($image->alt()->value() ?? '');
     if ($masonry) {
-        $thumb  = $image->thumb(['width' => 900, 'format' => 'webp'])->url();
-        $src    = $image->resize(900)->url();
-        $width  = $image->width();
-        $height = $image->height();
+        // Masonry serves the uncropped image: its dimensions are those of the
+        // generated variant, not of the original file. resize() already exposes
+        // them, and does not upscale an image smaller than the breakpoint.
+        $resized = $image->resize(900);
+        $thumb   = $image->thumb(['width' => 900, 'format' => 'webp'])->url();
+        $src     = $resized->url();
+        $width   = $resized->width();
+        $height  = $resized->height();
     } else {
         $thumb  = $image->thumb(['crop' => true, 'width' => 900, 'height' => 600, 'format' => 'webp'])->url();
         $src    = $image->crop(900, 600)->url();
@@ -51,7 +55,11 @@ $showOverlay = $hoverStyle !== 'none' || $hoverIcon || $hoverCaption;
     <a class="uk-inline-clip uk-transition-toggle" href="<?= $image->url() ?>" data-caption="<?= htmlspecialchars($caption) ?>">
       <picture>
         <source type="image/webp" srcset="<?= $thumb ?>">
-        <img src="<?= $src ?>" alt="<?= htmlspecialchars($image->alt()->value() ?? '') ?>" width="<?= $width ?>" height="<?= $height ?>" loading="lazy">
+        <?php // uk-width-1-1: an image smaller than its column would render at its
+              // natural size and leave a gap, masonry being the only mode serving
+              // uneven widths. The width/height attributes keep the ratio so the
+              // space stays reserved. ?>
+        <img class="uk-width-1-1" src="<?= $src ?>" alt="<?= htmlspecialchars($image->alt()->value() ?? '') ?>" width="<?= $width ?>" height="<?= $height ?>" loading="lazy">
       </picture>
       <?php if ($showOverlay): ?>
       <div class="uk-transition-fade uk-position-cover uk-flex uk-flex-center uk-flex-middle uk-flex-column<?= $overlayClass ?>"<?= $overlayStyle ? ' style="' . $overlayStyle . '"' : '' ?>>

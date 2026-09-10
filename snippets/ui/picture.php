@@ -1,12 +1,12 @@
 <?php
-// Rendu <picture> responsive minimal (srcset original + WebP), pour les
-// snippets qui gèrent eux-mêmes leur wrapper (slider, carousel, card…).
-// Pour un rendu complet (ratio, lightbox, lien, légende), voir ui/image.
+// Minimal responsive <picture> output (original srcset + WebP), for snippets
+// that handle their own wrapper (slider, carousel, card…).
+// For a full rendering (ratio, lightbox, link, caption), see ui/image.
 $image  ??= null;  // Kirby\Cms\File
 $sizes  ??= '100vw';
 $widths ??= \PixelOpen\KirbyUikitBuilder\Image::SRCSET_WIDTHS;
 $alt    ??= null;
-$attrs  ??= '';    // attributs additionnels du <img> : 'uk-cover loading="lazy"'…
+$attrs  ??= '';    // extra <img> attributes: 'uk-cover loading="lazy"'…
 
 if (!$image instanceof \Kirby\Cms\File) return;
 

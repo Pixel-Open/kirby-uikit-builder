@@ -30,7 +30,7 @@
     <?php snippet('layout/shape-divider', ['type' => $shapeDividerType, 'color' => $shapeDividerColor]) ?>
   </div>
   <?php endif ?>
-  <div class="<?= $containerClass ?> uk-position-relative">
+  <div class="<?= $containerClass ?> uk-position-relative"<?= $containerStyle ? ' style="' . $containerStyle . '"' : '' ?>>
     <div class="<?= implode(' ', array_filter(['uk-grid', $gridGap, $gridValign, $gridHalign, $gridDivider ? 'uk-grid-divider' : null])) ?>" uk-grid>
       <?php snippet('layout/grid', ['layout' => $layout]) ?>
     </div>

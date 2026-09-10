@@ -1,0 +1,210 @@
+{
+  "title": "Animations",
+  "intro": "Scrollspy sur la section, animation par colonne et parallaxe : les trois niveaux d'entrée en scène.",
+  "variants": [
+    {
+      "name": "scrollspy-fade",
+      "label": "Scrollspy, fondu",
+      "layout": {
+        "attrs": {
+          "scrollspy": true,
+          "scrollspy_cls": "uk-animation-fade"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Apparition en fondu"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "scrollspy-slide-delayed",
+      "label": "Scrollspy, glissement retardé et répété",
+      "layout": {
+        "attrs": {
+          "scrollspy": true,
+          "scrollspy_cls": "uk-animation-slide-bottom-medium",
+          "scrollspy_delay": 300,
+          "scrollspy_repeat": true
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Glissement par le bas"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "scrollspy-scale",
+      "label": "Scrollspy, agrandissement",
+      "layout": {
+        "attrs": {
+          "scrollspy": true,
+          "scrollspy_cls": "uk-animation-scale-up"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Agrandissement"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "staggered-columns",
+      "label": "Animations décalées colonne par colonne",
+      "layout": {
+        "attrs": {
+          "grid_gap": "uk-grid-medium"
+        },
+        "columns": [
+          {
+            "width": "1/3",
+            "blocks": [
+              {
+                "type": "column-options",
+                "content": {
+                  "animation": true,
+                  "animation_type": "uk-animation-slide-left-medium",
+                  "animation_delay": 0
+                }
+              },
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h3",
+                  "text": "Un"
+                }
+              }
+            ]
+          },
+          {
+            "width": "1/3",
+            "blocks": [
+              {
+                "type": "column-options",
+                "content": {
+                  "animation": true,
+                  "animation_type": "uk-animation-slide-bottom-medium",
+                  "animation_delay": 150
+                }
+              },
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h3",
+                  "text": "Deux"
+                }
+              }
+            ]
+          },
+          {
+            "width": "1/3",
+            "blocks": [
+              {
+                "type": "column-options",
+                "content": {
+                  "animation": true,
+                  "animation_type": "uk-animation-slide-right-medium",
+                  "animation_delay": 300
+                }
+              },
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h3",
+                  "text": "Trois"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "parallax",
+      "label": "Parallaxe sur l'image de fond",
+      "layout": {
+        "attrs": {
+          "bg_image": [
+            "slider-1.jpg"
+          ],
+          "parallax": true,
+          "parallax_speed": -300,
+          "text_color": "uk-light",
+          "padding": "uk-section-xlarge",
+          "overlay_color": "#000000",
+          "overlay_opacity": 30
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Fond en parallaxe"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "eager-background-image",
+      "label": "Image de fond chargée immédiatement",
+      "note": "À réserver à la première section : le chargement anticipé pénalise les suivantes.",
+      "layout": {
+        "attrs": {
+          "bg_image": [
+            "slider-1.jpg"
+          ],
+          "eager_image": true,
+          "text_color": "uk-light"
+        },
+        "columns": [
+          {
+            "width": "1/1",
+            "blocks": [
+              {
+                "type": "heading",
+                "content": {
+                  "level": "h2",
+                  "text": "Au-dessus de la ligne de flottaison"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -14,7 +14,8 @@
     "getkirby/composer-installer": "^1.2"
   },
   "require-dev": {
-    "getkirby/cms": "^5.0"
+    "getkirby/cms": "^5.0",
+    "phpunit/phpunit": "^11.5 || ^12.0"
   },
   "conflict": {
     "getkirby/cms": "<5.0"
@@ -22,6 +23,11 @@
   "autoload": {
     "psr-4": {
       "PixelOpen\\KirbyUikitBuilder\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PixelOpen\\KirbyUikitBuilder\\Tests\\": "tests/"
     }
   },
   "extra": {
@@ -34,6 +40,12 @@
     }
   },
   "scripts": {
-    "test": "php tests/smoke.php"
+    "test": [
+      "@smoke",
+      "@unit"
+    ],
+    "smoke": "php tests/smoke.php",
+    "unit": "phpunit",
+    "snapshots": "UPDATE_SNAPSHOTS=1 phpunit --testsuite Render --filter SnapshotTest"
   }
 }

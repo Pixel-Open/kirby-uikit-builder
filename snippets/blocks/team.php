@@ -29,12 +29,12 @@ $isCard = $style === 'card';
     $name       = $item->name()->value();
     $role       = $item->role()->value();
     $bio        = $item->bio()->value();
-    $linkedin   = $item->link_linkedin()->value();
-    $twitter    = $item->link_twitter()->value();
-    $github     = $item->link_github()->value();
-    $instagram  = $item->link_instagram()->value();
+    $linkedin   = PixelOpen\KirbyUikitBuilder\Url::safe($item->link_linkedin()->value());
+    $twitter    = PixelOpen\KirbyUikitBuilder\Url::safe($item->link_twitter()->value());
+    $github     = PixelOpen\KirbyUikitBuilder\Url::safe($item->link_github()->value());
+    $instagram  = PixelOpen\KirbyUikitBuilder\Url::safe($item->link_instagram()->value());
     $email      = $item->link_email()->value();
-    $website    = $item->link_website()->value();
+    $website    = PixelOpen\KirbyUikitBuilder\Url::safe($item->link_website()->value());
 
     $hasSocial  = $showSocial && ($linkedin || $twitter || $github || $instagram || $email || $website);
   ?>

@@ -1,0 +1,66 @@
+{
+  "slug": "frise",
+  "title": "Frise chronologique",
+  "intro": "Une suite d'étapes datées, en colonne simple ou alternée, avec puces colorées.",
+  "variants": [
+    {
+      "name": "default",
+      "label": "Frise chronologique",
+      "block": {
+        "type": "timeline",
+        "content": {
+          "marker_color": "primary",
+          "items": [
+            {
+              "date": "2019",
+              "icon": "star",
+              "title": "Création",
+              "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+            },
+            {
+              "date": "2022",
+              "icon": "check",
+              "title": "Première refonte",
+              "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+            },
+            {
+              "date": "2026",
+              "icon": "calendar",
+              "title": "Aujourd'hui",
+              "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "alternate-cards",
+      "label": "Frise alternée en cartes",
+      "block": {
+        "type": "timeline",
+        "content": {
+          "style": "card",
+          "alternate": true,
+          "marker_color": "success",
+          "items": [
+            {
+              "date": "Janvier",
+              "title": "Cadrage",
+              "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+            },
+            {
+              "date": "Mars",
+              "title": "Conception",
+              "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+            },
+            {
+              "date": "Juin",
+              "title": "Livraison",
+              "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

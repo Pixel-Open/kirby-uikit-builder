@@ -1,0 +1,78 @@
+{
+  "title": "Objet média",
+  "intro": "Image et contenu côte à côte : position, largeur, alignement vertical, gouttière et ratio de l'image.",
+  "variants": [
+    {
+      "name": "image-left",
+      "label": "Image à gauche, texte à droite",
+      "block": {
+        "type": "media-object",
+        "content": {
+          "media_image": [
+            "slider-1.jpg"
+          ],
+          "image_position": "left",
+          "image_width": "1-2",
+          "valign": "middle",
+          "gap": " uk-grid-large",
+          "content_blocks": [
+            {
+              "type": "heading",
+              "content": {
+                "level": "h2",
+                "text": "Notre méthode"
+              }
+            },
+            {
+              "type": "text",
+              "content": {
+                "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+              }
+            },
+            {
+              "type": "button",
+              "content": {
+                "text": "En savoir plus",
+                "link_type": "url",
+                "link_url": "https://example.test/methode",
+                "button_style": " uk-button-primary"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "image-right",
+      "label": "Image à droite, alignée en haut",
+      "block": {
+        "type": "media-object",
+        "content": {
+          "media_image": [
+            "small-image.jpg"
+          ],
+          "image_position": "right",
+          "image_width": "1-3",
+          "valign": "top",
+          "gap": " uk-grid-medium",
+          "image_ratio": "1:1",
+          "content_blocks": [
+            {
+              "type": "heading",
+              "content": {
+                "level": "h3",
+                "text": "Un contrepoint"
+              }
+            },
+            {
+              "type": "text",
+              "content": {
+                "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

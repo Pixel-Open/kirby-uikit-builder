@@ -16,7 +16,7 @@ $ratioPad      = $imageRatio ? ($ratioPaddings[$imageRatio] ?? null) : null;
 
 $imageColClass = 'uk-width-' . $imageWidth . '@m' . ($reversed ? ' uk-flex-last@m' : '');
 
-// sizes du srcset déduit de la fraction de largeur ('1-2' → 50vw au-delà de 960px)
+// srcset sizes derived from the width fraction ('1-2' gives 50vw above 960px)
 [$num, $den] = array_pad(explode('-', $imageWidth, 2), 2, 1);
 $imageSizes  = sprintf('(min-width: 960px) %dvw, 100vw', ceil(100 * (int)$num / max(1, (int)$den)));
 ?>

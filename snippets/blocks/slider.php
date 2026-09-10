@@ -24,8 +24,8 @@ $pauseOnHover = $block->pause_on_hover()->isEmpty() || $block->pause_on_hover()-
 $finite       = $block->finite()->isTrue();
 $draggable    = $block->draggable()->isEmpty() || $block->draggable()->isTrue();
 
-// Navigation : arrows (indépendant) + nav secondaire (dotnav/thumbnails)
-// Compat ascendante : ancien navigation_type=arrows → show_arrows implicite
+// Navigation: arrows (independent) + secondary nav (dotnav/thumbnails)
+// Backward compatibility: legacy navigation_type=arrows implies show_arrows
 $showArrows     = $block->show_arrows()->isEmpty() ? ($navType === 'arrows') : $block->show_arrows()->isTrue();
 $arrowsColor    = $block->arrows_color()->or('light')->value();
 $arrowsLarge    = $block->arrows_large()->isTrue();

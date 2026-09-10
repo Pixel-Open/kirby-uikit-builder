@@ -6,43 +6,16 @@ use Kirby\Cms\Layout;
 
 class Section
 {
-    // Largeurs générées pour le srcset de l'image de fond
+    // Widths generated for the srcset of the background image
     public const BG_SRCSET_WIDTHS = [640, 1024, 1280, 1920];
-
-    // Les valeurs éditeur injectées dans style="" doivent être validées :
-    // une couleur ou une direction inattendue ne doit jamais sortir du format attendu.
-    private static function safeHex(?string $hex): ?string
-    {
-        return ($hex && preg_match('/^#[0-9a-f]{3,8}$/i', $hex)) ? $hex : null;
-    }
-
-    private static function safeGradientDir(?string $dir, string $default): string
-    {
-        return ($dir && preg_match('/^to( (top|bottom|left|right)){1,2}$/', $dir)) ? $dir : $default;
-    }
-
-    private static function hexToRgba(string $hex, int $opacity): string
-    {
-        $hex = ltrim($hex, '#');
-        if (strlen($hex) === 3) {
-            $hex = $hex[0].$hex[0].$hex[1].$hex[1].$hex[2].$hex[2];
-        }
-        return sprintf(
-            'rgba(%d, %d, %d, %.2f)',
-            hexdec(substr($hex, 0, 2)),
-            hexdec(substr($hex, 2, 2)),
-            hexdec(substr($hex, 4, 2)),
-            $opacity / 100
-        );
-    }
 
     public static function prepare(Layout $layout): array
     {
         $bg              = $layout->attrs()->background()->value();
-        $bgCustomColor   = self::safeHex($layout->attrs()->bg_custom_color()->value());
+        $bgCustomColor   = Color::hex($layout->attrs()->bg_custom_color()->value());
         $bgCustomGradient = ($bg === 'custom') && $layout->attrs()->bg_custom_gradient()->isTrue();
-        $bgCustomColor2  = self::safeHex($layout->attrs()->bg_custom_color2()->value());
-        $bgGradientDir   = self::safeGradientDir($layout->attrs()->bg_gradient_dir()->value(), 'to right');
+        $bgCustomColor2  = Color::hex($layout->attrs()->bg_custom_color2()->value());
+        $bgGradientDir   = Color::gradientDirection($layout->attrs()->bg_gradient_dir()->value(), 'to right');
 
         $sectionStyle = null;
         if ($bg === 'custom') {
@@ -87,23 +60,23 @@ class Section
         $shapeDivider       = $layout->attrs()->shape_divider()->isTrue();
         $shapeDividerType   = $layout->attrs()->shape_divider_type()->value() ?: 'curve';
         $shapeDividerPos    = $layout->attrs()->shape_divider_position()->value() ?: 'bottom';
-        $shapeDividerColor  = self::safeHex($layout->attrs()->shape_divider_color()->value()) ?: '#ffffff';
-        $shapeDividerHeight = $layout->attrs()->shape_divider_height()->value() ?: '150px';
+        $shapeDividerColor  = Color::hex($layout->attrs()->shape_divider_color()->value()) ?: '#ffffff';
+        $shapeDividerHeight = Css::length($layout->attrs()->shape_divider_height()->value()) ?? '150px';
 
         $visibility     = $layout->attrs()->visibility()->value();
         $sectionId      = $layout->attrs()->section_id()->value();
         $ariaLabel      = $layout->attrs()->aria_label()->value();
-        $overlayHex      = self::safeHex($layout->attrs()->overlay_color()->value());
+        $overlayHex      = Color::hex($layout->attrs()->overlay_color()->value());
         $overlayOpacity  = (int)($layout->attrs()->overlay_opacity()->value() ?: 40);
         $overlayGradient = $layout->attrs()->overlay_gradient()->isTrue();
-        $overlayDir      = self::safeGradientDir($layout->attrs()->overlay_gradient_dir()->value(), 'to bottom');
-        $overlayHex2     = self::safeHex($layout->attrs()->overlay_color2()->value());
+        $overlayDir      = Color::gradientDirection($layout->attrs()->overlay_gradient_dir()->value(), 'to bottom');
+        $overlayHex2     = Color::hex($layout->attrs()->overlay_color2()->value());
 
         $overlayStyle = null;
         if ($overlayHex) {
-            $rgba1 = self::hexToRgba($overlayHex, $overlayOpacity);
+            $rgba1 = Color::toRgba($overlayHex, $overlayOpacity);
             if ($overlayGradient && $overlayHex2) {
-                $rgba2 = self::hexToRgba($overlayHex2, $overlayOpacity);
+                $rgba2 = Color::toRgba($overlayHex2, $overlayOpacity);
                 $overlayStyle = "background-image: linear-gradient({$overlayDir}, {$rgba1}, {$rgba2})";
             } else {
                 $overlayStyle = "background-color: {$rgba1}";
@@ -129,6 +102,16 @@ class Section
 
         $containerClass = 'uk-container' . ($container ? ' uk-container-' . $container : '');
 
+        // The shape divider is absolutely positioned on top of the section:
+        // without reserved room, the content slides under it. The container is
+        // therefore offset by its height, on whichever sides it sits.
+        $containerStyle = null;
+        if ($shapeDivider === true) {
+            $containerStyle = ''
+                . (in_array($shapeDividerPos, ['top', 'both'], true) ? "padding-top: {$shapeDividerHeight};" : '')
+                . (in_array($shapeDividerPos, ['bottom', 'both'], true) ? "padding-bottom: {$shapeDividerHeight};" : '');
+        }
+
         $srcset = $bgImage ? $bgImage->srcset(self::BG_SRCSET_WIDTHS) : null;
 
         return compact(
@@ -138,7 +121,7 @@ class Section
             'gridValign', 'gridHalign', 'gridGap', 'gridDivider',
             'scrollspy', 'scrollspyAttr',
             'visibility', 'sectionId', 'ariaLabel', 'extraClasses', 'overlayStyle',
-            'classes', 'containerClass', 'srcset'
+            'classes', 'containerClass', 'containerStyle', 'srcset'
         );
     }
 }

@@ -1,0 +1,68 @@
+{
+  "title": "Chiffres clés",
+  "intro": "Des chiffres avec préfixe, suffixe, libellé et icône, animés au défilement ou figés.",
+  "variants": [
+    {
+      "name": "default",
+      "label": "Chiffres clés animés",
+      "block": {
+        "type": "stats",
+        "content": {
+          "cols_desktop": "1-4",
+          "cols_tablet": "1-2",
+          "countup": true,
+          "icon_color": "primary",
+          "items": [
+            {
+              "value": "1200",
+              "suffix": "+",
+              "label": "Projets livrés",
+              "icon": "check"
+            },
+            {
+              "value": "98",
+              "suffix": "%",
+              "label": "Clients satisfaits",
+              "icon": "star"
+            },
+            {
+              "value": "15",
+              "label": "Années",
+              "icon": "calendar"
+            },
+            {
+              "prefix": "€",
+              "value": "4",
+              "suffix": "M",
+              "label": "Chiffre d'affaires"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "cards-right-aligned",
+      "label": "Chiffres en cartes, alignés à droite",
+      "block": {
+        "type": "stats",
+        "content": {
+          "style": "card",
+          "alignment": "uk-text-right",
+          "countup": false,
+          "cols_desktop": "1-3",
+          "items": [
+            {
+              "value": "24",
+              "suffix": "/7",
+              "label": "Supervision"
+            },
+            {
+              "value": "3",
+              "label": "Agences"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

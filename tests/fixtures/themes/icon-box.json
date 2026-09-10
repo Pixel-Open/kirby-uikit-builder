@@ -1,0 +1,68 @@
+{
+  "title": "Encadrés à icône",
+  "intro": "Une grille d'encadrés icône, titre et texte. Icône au-dessus ou à gauche, rendu nu ou en carte.",
+  "variants": [
+    {
+      "name": "three-columns",
+      "label": "Encadrés à icône, trois colonnes",
+      "block": {
+        "type": "icon-box",
+        "content": {
+          "cols_desktop": "1-3",
+          "cols_tablet": "1-2",
+          "icon_size": 3,
+          "icon_color": "primary",
+          "icon_position": "top",
+          "items": [
+            {
+              "icon": "bolt",
+              "title": "Rapide",
+              "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>",
+              "link": ""
+            },
+            {
+              "icon": "lock",
+              "title": "Sécurisé",
+              "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>",
+              "link": "https://example.test/securite"
+            },
+            {
+              "icon": "heart",
+              "title": "Soigné",
+              "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>",
+              "link": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "card-icon-left",
+      "label": "Encadrés en carte, icône à gauche",
+      "block": {
+        "type": "icon-box",
+        "content": {
+          "style": "card",
+          "icon_position": "left",
+          "cols_desktop": "1-2",
+          "gap": "large",
+          "icon_size": 2,
+          "items": [
+            {
+              "icon": "users",
+              "title": "Accompagnement",
+              "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>",
+              "link": ""
+            },
+            {
+              "icon": "world",
+              "title": "International",
+              "text": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>",
+              "link": ""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

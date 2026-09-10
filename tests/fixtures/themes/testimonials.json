@@ -1,0 +1,67 @@
+{
+  "slug": "temoignages",
+  "title": "Témoignages",
+  "intro": "Des citations client avec auteur, rôle, avatar et note en étoiles, en carte ou en rendu sobre.",
+  "variants": [
+    {
+      "name": "cards-with-ratings",
+      "label": "Témoignages en cartes avec notes",
+      "block": {
+        "type": "testimonial",
+        "content": {
+          "style": "card",
+          "cols_desktop": "1-3",
+          "cols_tablet": "1-2",
+          "show_rating": true,
+          "show_avatar": true,
+          "items": [
+            {
+              "quote_text": "Un accompagnement sérieux du début à la fin.",
+              "author_name": "Claude Bernard",
+              "author_role": "Gérant",
+              "author_avatar": [
+                "team-2.jpg"
+              ],
+              "rating": "5"
+            },
+            {
+              "quote_text": "Le site est rapide et facile à mettre à jour.",
+              "author_name": "Sam Leroy",
+              "author_role": "Responsable communication",
+              "rating": "4"
+            },
+            {
+              "quote_text": "Des délais tenus.",
+              "author_name": "Alex Morin",
+              "rating": "5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "plain",
+      "label": "Témoignages sans note ni avatar",
+      "block": {
+        "type": "testimonial",
+        "content": {
+          "style": "plain",
+          "cols_desktop": "1-2",
+          "show_rating": false,
+          "show_avatar": false,
+          "gap": " uk-grid-large",
+          "items": [
+            {
+              "quote_text": "Une refonte qui a doublé notre trafic.",
+              "author_name": "Charlie Nguyen"
+            },
+            {
+              "quote_text": "Enfin un back-office compréhensible.",
+              "author_name": "Maxime Ferrand"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

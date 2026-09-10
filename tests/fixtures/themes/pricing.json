@@ -1,0 +1,53 @@
+{
+  "title": "Tarifs",
+  "intro": "Des offres côte à côte, avec mise en avant, badge, liste de fonctionnalités et un lien par offre.",
+  "variants": [
+    {
+      "name": "three-plans",
+      "label": "Trois offres, une mise en avant",
+      "block": {
+        "type": "pricing",
+        "content": {
+          "cols_desktop": "1-3",
+          "cols_tablet": "1-2",
+          "btn_style": "uk-button-primary",
+          "highlighted_style": "primary",
+          "items": [
+            {
+              "name": "Essentiel",
+              "price": "29",
+              "period": "/mois",
+              "description": "Pour démarrer",
+              "features": "Un site\nHébergement\nSupport courriel",
+              "btn_label": "Choisir",
+              "link_type": "url",
+              "link_url": "https://example.test/essentiel"
+            },
+            {
+              "name": "Pro",
+              "price": "59",
+              "period": "/mois",
+              "description": "Le plus demandé",
+              "features": "Trois sites\nHébergement\nSupport prioritaire",
+              "btn_label": "Choisir",
+              "link_type": "anchor",
+              "link_anchor": "contact",
+              "highlighted": true,
+              "badge": "Populaire"
+            },
+            {
+              "name": "Sur mesure",
+              "price": "Sur devis",
+              "period": "",
+              "description": "Grands comptes",
+              "features": "Illimité\nInfogérance",
+              "btn_label": "Nous écrire",
+              "link_type": "email",
+              "link_email": "devis@example.test"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

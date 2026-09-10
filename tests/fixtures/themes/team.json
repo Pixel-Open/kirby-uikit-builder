@@ -1,0 +1,71 @@
+{
+  "title": "Équipe",
+  "intro": "Les membres d'une équipe : photo recadrée en carré, portrait ou paysage, biographie et liens sociaux optionnels.",
+  "variants": [
+    {
+      "name": "four-columns",
+      "label": "Équipe, quatre colonnes",
+      "block": {
+        "type": "team",
+        "content": {
+          "cols_desktop": "1-4",
+          "cols_tablet": "1-2",
+          "photo_ratio": "square",
+          "show_bio": true,
+          "show_social": true,
+          "items": [
+            {
+              "photo": [
+                "team-1.jpg"
+              ],
+              "name": "Camille Roux",
+              "role": "Direction artistique",
+              "bio": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>",
+              "link_linkedin": "https://linkedin.test/camille",
+              "link_email": "camille@example.test"
+            },
+            {
+              "photo": [
+                "team-2.jpg"
+              ],
+              "name": "Dominique Pires",
+              "role": "Développement",
+              "bio": "<p>Un texte de démonstration, assez long pour montrer le comportement du bloc sur plusieurs lignes.</p>",
+              "link_github": "https://github.test/dominique"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "cards-portrait",
+      "label": "Équipe en cartes, format portrait",
+      "block": {
+        "type": "team",
+        "content": {
+          "style": "card",
+          "photo_ratio": "portrait",
+          "cols_desktop": "1-3",
+          "show_bio": false,
+          "gap": "small",
+          "items": [
+            {
+              "photo": [
+                "team-3.jpg"
+              ],
+              "name": "Alix Fontaine",
+              "role": "Gestion de projet"
+            },
+            {
+              "photo": [
+                "team-1.jpg"
+              ],
+              "name": "Sacha Merle",
+              "role": "Référencement"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
