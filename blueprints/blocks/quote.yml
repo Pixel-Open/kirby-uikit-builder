@@ -1,5 +1,7 @@
 name: pixelopen.kirby-uikit-builder.quote.name
 icon: quote
+wysiwyg: true
+preview: quote
 
 tabs:
 

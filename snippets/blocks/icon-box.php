@@ -6,9 +6,11 @@ $colsTablet  = $block->cols_tablet()->value() ?: '1-2';
 $colsDesktop = $block->cols_desktop()->value() ?: '1-3';
 $iconSize    = $block->icon_size()->value() ?: '2';
 $iconColor   = $block->icon_color()->value();
+$iconColor   = $iconColor === 'none' ? '' : $iconColor;
 $position    = $block->icon_position()->value() ?: 'top';
 $style       = $block->style()->value();
 $gap         = $block->gap()->value();
+$gap         = $gap === 'default' ? '' : $gap;
 
 $gridClasses = implode(' ', array_filter([
     'uk-grid',

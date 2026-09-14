@@ -5,7 +5,9 @@ if ($rows->isEmpty()) return;
 $columns    = $block->columns()->toStructure();
 $caption    = $block->caption()->value();
 $divider    = $block->divider()->value();
+$divider    = $divider === 'none' ? '' : $divider;
 $size       = $block->size()->value();
+$size       = $size === 'default' ? '' : $size;
 $hover      = $block->hover()->isTrue() ? ' uk-table-hover' : '';
 $justify    = $block->justify()->isTrue() ? ' uk-table-justify' : '';
 $responsive = $block->responsive()->value();
@@ -18,6 +20,8 @@ $colsArr = [];
 foreach ($columns as $col) {
     $colsArr[] = $col;
 }
+
+$colAlign = fn ($col) => $col->align()->value() === 'left' ? '' : $col->align()->value();
 ?>
 <?php if ($overflow): ?><div class="uk-overflow-auto"><?php endif ?>
 <table class="<?= $tableClass ?>">
@@ -28,7 +32,7 @@ foreach ($columns as $col) {
     <tr>
       <?php foreach ($colsArr as $col):
         $thClass = implode(' ', array_filter([
-            $col->align()->value(),
+            $colAlign($col),
             $col->shrink()->isTrue() ? 'uk-table-shrink' : '',
         ]));
       ?>
@@ -45,7 +49,7 @@ foreach ($columns as $col) {
     <tr>
       <?php foreach ($cells as $i => $cell):
         $col        = $colsArr[$i] ?? null;
-        $alignClass = $col ? $col->align()->value() : '';
+        $alignClass = $col ? $colAlign($col) : '';
       ?>
       <td<?= $alignClass ? ' class="' . $alignClass . '"' : '' ?>><?= html($cell) ?></td>
       <?php endforeach ?>

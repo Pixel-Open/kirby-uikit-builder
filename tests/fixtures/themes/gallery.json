@@ -46,7 +46,7 @@
           "gallery_grid": "three",
           "gallery_style": "masonry",
           "hover_style": "none",
-          "hover_icon": "",
+          "hover_icon": "none",
           "hover_caption": false
         }
       },
@@ -70,7 +70,7 @@
           ],
           "gallery_grid": "four",
           "hover_style": "none",
-          "hover_icon": ""
+          "hover_icon": "none"
         }
       },
       "note": "Aucun voile ni icône au survol : les images restent lisibles au premier coup d'œil."

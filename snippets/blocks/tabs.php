@@ -4,7 +4,8 @@ if ($tabs->isEmpty()) return;
 
 $vertical  = $block->vertical()->isTrue();
 $alignment = $block->alignment()->or('left')->value();
-$animation = $block->animation()->or('uk-animation-fade')->value();
+$animation = $block->animation()->value();
+$animation = $animation === 'none' ? '' : ($animation ?: 'uk-animation-fade');
 
 $tabId = 'tab-' . $block->id();
 

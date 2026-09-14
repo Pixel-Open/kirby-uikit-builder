@@ -75,8 +75,9 @@ tabs:
         type: select
         label: pixelopen.kirby-uikit-builder.carousel.gap.label
         width: 1/4
+        default: default
         options:
-          - value: ""
+          - value: default
             text: pixelopen.kirby-uikit-builder.carousel.gap.default
           - value: small
             text: pixelopen.kirby-uikit-builder.carousel.gap.small

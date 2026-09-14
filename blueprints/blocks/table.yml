@@ -29,7 +29,7 @@ tabs:
             type: select
             label: pixelopen.kirby-uikit-builder.table.column.align.label
             options:
-              - value: ""
+              - value: left
                 text: pixelopen.kirby-uikit-builder.table.column.align.left
               - value: "uk-text-center"
                 text: pixelopen.kirby-uikit-builder.table.column.align.center
@@ -58,7 +58,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.table.divider.label
         width: 1/3
         options:
-          - value: ""
+          - value: none
             text: pixelopen.kirby-uikit-builder.table.divider.none
           - value: " uk-table-divider"
             text: pixelopen.kirby-uikit-builder.table.style.divider
@@ -70,7 +70,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.table.size.label
         width: 1/3
         options:
-          - value: ""
+          - value: default
             text: pixelopen.kirby-uikit-builder.table.size.default
           - value: " uk-table-small"
             text: pixelopen.kirby-uikit-builder.table.style.small
@@ -94,7 +94,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.table.responsive.label
         width: 1/3
         options:
-          - value: ""
+          - value: none
             text: pixelopen.kirby-uikit-builder.table.responsive.none
           - value: overflow
             text: pixelopen.kirby-uikit-builder.table.responsive.overflow

@@ -81,10 +81,10 @@ tabs:
       cols_large:
         type: select
         label: pixelopen.kirby-uikit-builder.carousel.cols.large
-        default: ""
+        default: inherit
         width: 1/4
         options:
-          - value: ""
+          - value: inherit
             text: pixelopen.kirby-uikit-builder.carousel.cols.inherit
           - value: "1"
             text: "1"
@@ -102,10 +102,10 @@ tabs:
       gap:
         type: select
         label: pixelopen.kirby-uikit-builder.carousel.gap.label
-        default: ""
+        default: default
         width: 1/3
         options:
-          - value: ""
+          - value: default
             text: pixelopen.kirby-uikit-builder.carousel.gap.default
           - value: " uk-grid-small"
             text: pixelopen.kirby-uikit-builder.carousel.gap.small
@@ -119,10 +119,10 @@ tabs:
       item_ratio:
         type: select
         label: pixelopen.kirby-uikit-builder.carousel.item_ratio.label
-        default: ""
+        default: auto
         width: 1/3
         options:
-          - value: ""
+          - value: auto
             text: pixelopen.kirby-uikit-builder.carousel.item_ratio.auto
           - value: "16:9"
             text: "16:9"

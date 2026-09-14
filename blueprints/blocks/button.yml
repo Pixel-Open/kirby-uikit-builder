@@ -91,7 +91,7 @@ fields:
     label: pixelopen.kirby-uikit-builder.btn.size
     width: 1/3
     options:
-      - value: ""
+      - value: default
         text: pixelopen.kirby-uikit-builder.btn.size.default
       - value: " uk-button-small"
         text: pixelopen.kirby-uikit-builder.btn.size.small
@@ -102,7 +102,7 @@ fields:
     label: pixelopen.kirby-uikit-builder.btn.margin_top
     width: 1/3
     options:
-      - value: ""
+      - value: none
         text: pixelopen.kirby-uikit-builder.btn.margin_top.none
       - value: " uk-margin-small-top"
         text: pixelopen.kirby-uikit-builder.btn.margin_top.small

@@ -21,7 +21,7 @@
                 "slider-3.jpg"
               ],
               "slide_position": "bottom-left",
-              "slide_width": "",
+              "slide_width": "auto",
               "content_blocks": [
                 {
                   "type": "heading",
@@ -38,7 +38,7 @@
                 "slider-1.jpg"
               ],
               "slide_position": "center",
-              "slide_width": "",
+              "slide_width": "auto",
               "content_blocks": [
                 {
                   "type": "heading",
@@ -71,24 +71,24 @@
               "slide_image": [
                 "slider-2.jpg"
               ],
-              "slide_position": "",
-              "slide_width": "",
+              "slide_position": "global",
+              "slide_width": "auto",
               "content_blocks": []
             },
             {
               "slide_image": [
                 "slider-3.jpg"
               ],
-              "slide_position": "",
-              "slide_width": "",
+              "slide_position": "global",
+              "slide_width": "auto",
               "content_blocks": []
             },
             {
               "slide_image": [
                 "slider-1.jpg"
               ],
-              "slide_position": "",
-              "slide_width": "",
+              "slide_position": "global",
+              "slide_width": "auto",
               "content_blocks": []
             }
           ]
@@ -103,7 +103,7 @@
         "content": {
           "animation": "fade",
           "kenburns": true,
-          "navigation_type": "",
+          "navigation_type": "none",
           "show_arrows": false,
           "content_style": "primary",
           "ratio": "4:3",
@@ -113,7 +113,7 @@
                 "slider-2.jpg"
               ],
               "slide_position": "center",
-              "slide_width": "",
+              "slide_width": "auto",
               "content_blocks": [
                 {
                   "type": "heading",
@@ -165,7 +165,7 @@
                 "slider-1.jpg"
               ],
               "slide_position": "bottom-center",
-              "slide_width": "",
+              "slide_width": "auto",
               "content_blocks": []
             }
           ]
@@ -180,23 +180,23 @@
         "content": {
           "animation": "scale",
           "show_arrows": false,
-          "navigation_type": "",
+          "navigation_type": "none",
           "ratio": "1:1",
           "slides": [
             {
               "slide_image": [
                 "slider-2.jpg"
               ],
-              "slide_position": "",
-              "slide_width": "",
+              "slide_position": "global",
+              "slide_width": "auto",
               "content_blocks": []
             },
             {
               "slide_image": [
                 "slider-3.jpg"
               ],
-              "slide_position": "",
-              "slide_width": "",
+              "slide_position": "global",
+              "slide_width": "auto",
               "content_blocks": []
             }
           ]

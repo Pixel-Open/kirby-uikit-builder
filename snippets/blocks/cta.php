@@ -3,6 +3,7 @@ $heading   = $block->heading()->value();
 $subtext   = $block->subtext()->kirbytext();
 $style     = $block->style()->value();
 $alignment = $block->alignment()->value();
+$alignment = $alignment === 'left' ? '' : $alignment;
 
 // Both buttons share the plugin's link resolver (see index.php), through the
 // btn1_ and btn2_ prefixes. A button without a label or a target is skipped.

@@ -30,7 +30,8 @@ $showArrows     = $block->show_arrows()->isEmpty() ? ($navType === 'arrows') : $
 $arrowsColor    = $block->arrows_color()->or('light')->value();
 $arrowsLarge    = $block->arrows_large()->isTrue();
 $arrowsPosition = $block->arrows_position()->or('center')->value();
-$arrowsOffset   = $block->arrows_offset()->or(' uk-position-small')->value();
+$arrowsOffset   = $block->arrows_offset()->value();
+$arrowsOffset   = $arrowsOffset === 'none' ? '' : ($arrowsOffset ?: ' uk-position-small');
 $dotnavColor    = $block->dotnav_color()->or('light')->value();
 $dotnavVertical = $block->dotnav_vertical()->isTrue();
 
@@ -58,8 +59,10 @@ $colorClass = $contentColor === 'light' ? ' uk-light' : ' uk-dark';
   <?php foreach ($slides as $i => $slide):
     $image     = $slide->slide_image()->toFiles()->first();
     $hasBlocks = $slide->content_blocks()->isNotEmpty();
-    $pos       = ($slide->slide_position()->isNotEmpty() ? $slide->slide_position()->value() : $globalPos);
+    $rawPos    = $slide->slide_position()->value();
+    $pos       = in_array($rawPos, ['', 'global'], true) ? $globalPos : $rawPos;
     $width     = $slide->slide_width()->value();
+    $width     = $width === 'auto' ? '' : $width;
     $isCenter  = $pos === 'center';
     $isFullWidth = in_array($pos, ['top', 'bottom']);
 

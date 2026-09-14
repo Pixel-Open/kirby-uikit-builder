@@ -98,10 +98,10 @@ tabs:
       shadow:
         type: select
         label: pixelopen.kirby-uikit-builder.image.shadow
-        default: ""
+        default: none
         width: 1/3
         options:
-          - value: ""
+          - value: none
             text: pixelopen.kirby-uikit-builder.image.shadow.none
           - value: small
             text: pixelopen.kirby-uikit-builder.image.shadow.small

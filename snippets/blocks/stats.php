@@ -6,8 +6,10 @@ $colsTablet  = $block->cols_tablet()->value() ?: '1-2';
 $colsDesktop = $block->cols_desktop()->value() ?: '1-4';
 $style       = $block->style()->value();
 $iconColor   = $block->icon_color()->value();
+$iconColor   = $iconColor === 'none' ? '' : $iconColor;
 $countup     = $block->countup()->isTrue();
-$alignment   = $block->alignment()->value() ?: 'uk-text-center';
+$alignment   = $block->alignment()->value();
+$alignment   = $alignment === 'left' ? '' : ($alignment ?: 'uk-text-center');
 
 $gridClass = 'uk-grid uk-grid-match uk-child-width-' . $colsTablet . '@s uk-child-width-' . $colsDesktop . '@m';
 $boxClass  = $style === 'card' ? 'uk-card uk-card-default uk-card-body' : '';

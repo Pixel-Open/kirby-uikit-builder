@@ -34,8 +34,9 @@ tabs:
           slide_position:
             type: select
             label: pixelopen.kirby-uikit-builder.slider.slide_position
+            default: global
             options:
-              - value: ""
+              - value: global
                 text: pixelopen.kirby-uikit-builder.slider.position.global
               - value: bottom
                 text: pixelopen.kirby-uikit-builder.content.position.bottom
@@ -58,8 +59,9 @@ tabs:
           slide_width:
             type: select
             label: pixelopen.kirby-uikit-builder.slider.slide_width
+            default: auto
             options:
-              - value: ""
+              - value: auto
                 text: pixelopen.kirby-uikit-builder.slider.slide_width.auto
               - value: " uk-width-1-3@s"
                 text: "1/3"
@@ -104,10 +106,10 @@ tabs:
       navigation_type:
         type: select
         label: pixelopen.kirby-uikit-builder.slider.navigation_type
-        default: ""
+        default: none
         width: 1/3
         options:
-          - value: ""
+          - value: none
             text: pixelopen.kirby-uikit-builder.slider.navigation_type.none
           - value: dotnav
             text: pixelopen.kirby-uikit-builder.slider.navigation_type.dotnav
@@ -164,7 +166,7 @@ tabs:
             text: pixelopen.kirby-uikit-builder.col.card.size.default
           - value: " uk-position-large"
             text: pixelopen.kirby-uikit-builder.col.card.size.large
-          - value: ""
+          - value: none
             text: pixelopen.kirby-uikit-builder.arrows.offset.none
 
       dotnav_color:

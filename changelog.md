@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.3 (09/14/2026)
+
++ Plugin version pinned in `composer.json` and shown in the Panel's system info instead of `dev-main`.
++ `text`: the Panel override for Kirby's native block adds visual size, color, style, per-breakpoint alignment, max width and multi-column layout.
+- `heading`, `quote` and `code`: the Panel preview registered in `index.js` silently replaced Kirby's native wysiwyg editor, forcing every edit through the block's offcanvas even though their fields match the native blocks exactly. `quote` and `code` also get back the `wysiwyg: true` and `preview` keys that actually restore it, `heading` already had them.
+- `heading`: fields split into a content tab (level, text) and a settings tab (size, style, color, alignment), consistent with `text`, `quote` and `code`.
+- Layout settings and `text` block: a `select` field whose chosen option had `value: ""` showed a dash in the Panel instead of the option's label, a Kirby quirk with empty option values. The default option of `background`, `padding`, `container`, `grid_valign`, `grid_halign`, `visibility` and every `text` size/color/style/alignment/columns field now carries a named value (`none`, `m`, `normal`, `stretch`, `left`, `all`, `inherit`), normalized back to an empty string before it reaches an attribute.
+
 ## 1.0.2 (09/10/2026)
 
 + New `Url::safe()`, `Color` and `Css::length()`: validate the URLs, colours and lengths typed in the Panel before they reach an attribute. Escaping protects the attribute, never the value inside it.

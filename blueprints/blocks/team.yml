@@ -107,7 +107,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.icon_box.style.label
         width: 1/4
         options:
-          - value: ""
+          - value: plain
             text: pixelopen.kirby-uikit-builder.icon_box.style.plain
           - value: card
             text: pixelopen.kirby-uikit-builder.icon_box.style.card
@@ -117,7 +117,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.carousel.gap.label
         width: 1/4
         options:
-          - value: ""
+          - value: default
             text: pixelopen.kirby-uikit-builder.carousel.gap.default
           - value: collapse
             text: pixelopen.kirby-uikit-builder.carousel.gap.none

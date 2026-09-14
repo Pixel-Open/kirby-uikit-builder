@@ -10,7 +10,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.col.width.desktop
         width: 1/3
         options:
-          - value: ""
+          - value: inherit
             text: pixelopen.kirby-uikit-builder.col.inherit
           - value: "uk-width-expand@m"
             text: Expand
@@ -39,7 +39,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.col.width.tablet
         width: 1/3
         options:
-          - value: ""
+          - value: inherit
             text: pixelopen.kirby-uikit-builder.col.inherit
           - value: "uk-width-1-1@s "
             text: "1/1"
@@ -58,7 +58,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.col.width.mobile
         width: 1/3
         options:
-          - value: ""
+          - value: inherit
             text: pixelopen.kirby-uikit-builder.col.inherit
           - value: "uk-width-1-2 "
             text: "1/2"
@@ -71,7 +71,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.col.height
         width: 1/3
         options:
-          - value: ""
+          - value: inherit
             text: pixelopen.kirby-uikit-builder.col.inherit
           - value: " uk-height-small"
             text: "Small (150px)"
@@ -97,7 +97,7 @@ tabs:
         help: pixelopen.kirby-uikit-builder.col.content_valign.help
         width: 1/3
         options:
-          - value: ""
+          - value: inherit
             text: pixelopen.kirby-uikit-builder.col.inherit
           - value: " uk-flex uk-flex-column uk-flex-middle"
             text: pixelopen.kirby-uikit-builder.col.content_valign.middle
@@ -111,7 +111,7 @@ tabs:
         type: select
         label: pixelopen.kirby-uikit-builder.col.style
         options:
-          - value: ""
+          - value: none
             text: pixelopen.kirby-uikit-builder.col.style.none
           - value: card
             text: pixelopen.kirby-uikit-builder.col.style.card
@@ -137,7 +137,7 @@ tabs:
         when:
           column_style: card
         options:
-          - value: ""
+          - value: default
             text: pixelopen.kirby-uikit-builder.col.card.size.default
           - value: " uk-card-small"
             text: pixelopen.kirby-uikit-builder.col.card.size.small
@@ -169,7 +169,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.col.text_align.desktop
         width: 1/3
         options:
-          - value: ""
+          - value: inherit
             text: pixelopen.kirby-uikit-builder.col.inherit
           - value: " uk-text-left@m"
             text: pixelopen.kirby-uikit-builder.col.text_align.left
@@ -182,7 +182,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.col.text_align.tablet
         width: 1/3
         options:
-          - value: ""
+          - value: inherit
             text: pixelopen.kirby-uikit-builder.col.inherit
           - value: " uk-text-left@s"
             text: pixelopen.kirby-uikit-builder.col.text_align.left
@@ -195,7 +195,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.col.text_align.mobile
         width: 1/3
         options:
-          - value: ""
+          - value: inherit
             text: pixelopen.kirby-uikit-builder.col.inherit
           - value: " uk-text-left"
             text: pixelopen.kirby-uikit-builder.col.text_align.left
@@ -212,7 +212,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.col.padding
         width: 1/3
         options:
-          - value: ""
+          - value: inherit
             text: pixelopen.kirby-uikit-builder.col.inherit
           - value: " uk-padding-small"
             text: pixelopen.kirby-uikit-builder.col.padding.small
@@ -227,7 +227,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.col.order
         width: 1/3
         options:
-          - value: ""
+          - value: inherit
             text: pixelopen.kirby-uikit-builder.col.inherit
           - value: " uk-flex-first@m"
             text: pixelopen.kirby-uikit-builder.col.order.first_desktop

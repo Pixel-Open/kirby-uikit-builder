@@ -44,7 +44,7 @@ tabs:
         when:
           card_color: custom
         options:
-          - value: ""
+          - value: auto
             text: pixelopen.kirby-uikit-builder.text_color.auto
           - value: uk-light
             text: pixelopen.kirby-uikit-builder.text_color.light
@@ -55,7 +55,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.col.card.size
         width: 1/3
         options:
-          - value: ""
+          - value: default
             text: pixelopen.kirby-uikit-builder.col.card.size.default
           - value: uk-card-small
             text: pixelopen.kirby-uikit-builder.col.card.size.small

@@ -7,6 +7,7 @@ $colsDesktop = $block->cols_desktop()->value() ?: '1-4';
 $photoRatio  = $block->photo_ratio()->value() ?: 'square';
 $style       = $block->style()->value();
 $gap         = $block->gap()->value();
+$gap         = $gap === 'default' ? '' : $gap;
 $showBio     = $block->show_bio()->isTrue();
 $showSocial  = $block->show_social()->isTrue();
 

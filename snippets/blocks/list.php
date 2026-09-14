@@ -6,6 +6,7 @@ $listType = $block->list_type()->value() ?: 'bullet';
 $divider  = $block->divider()->isTrue();
 $large    = $block->large()->isTrue();
 $color    = $block->color()->value();
+$color    = $color === 'none' ? '' : $color;
 
 $tag = $listType === 'decimal' ? 'ol' : 'ul';
 
