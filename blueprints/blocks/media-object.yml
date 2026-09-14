@@ -79,10 +79,10 @@ tabs:
       image_ratio:
         type: select
         label: pixelopen.kirby-uikit-builder.media_object.image_ratio
-        default: ""
+        default: auto
         width: 1/3
         options:
-          - value: ""
+          - value: auto
             text: pixelopen.kirby-uikit-builder.media_object.image_ratio.auto
           - value: "16:9"
             text: "16:9"

@@ -218,7 +218,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.cta.style.label
         width: 1/2
         options:
-          - value: ""
+          - value: plain
             text: pixelopen.kirby-uikit-builder.cta.style.plain
           - value: card
             text: pixelopen.kirby-uikit-builder.cta.style.card
@@ -233,7 +233,7 @@ tabs:
         width: 1/2
         default: "uk-text-center"
         options:
-          - value: ""
+          - value: left
             text: pixelopen.kirby-uikit-builder.grid_halign.left
           - value: "uk-text-center"
             text: pixelopen.kirby-uikit-builder.grid_halign.center

@@ -1,5 +1,7 @@
 name: pixelopen.kirby-uikit-builder.code.name
 icon: code
+wysiwyg: true
+preview: code
 
 tabs:
 

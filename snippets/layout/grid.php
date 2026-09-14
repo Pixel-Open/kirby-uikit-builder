@@ -12,6 +12,11 @@ $defaultWidths = [
     '5/6' => 'uk-width-5-6@' . $bp,
 ];
 
+// (string) before trim(): content written outside the Panel, or predating
+// the option, leaves the field at null rather than at an empty string.
+// "inherit"/"default" are the select placeholders for "no extra class".
+$normalize = fn ($value) => in_array(trim((string)$value), ['inherit', 'default'], true) ? '' : trim((string)$value);
+
 foreach ($layout->columns() as $column):
     $opts         = $column->blocks()->filter('type', 'column-options')->first();
     $defaultWidth = $defaultWidths[(string)$column->width()] ?? 'uk-width-expand';
@@ -19,24 +24,26 @@ foreach ($layout->columns() as $column):
     $isCard       = $colStyle === 'card';
     $isTile       = $colStyle === 'tile';
 
+    $columnWidth = $opts ? ($normalize($opts->column_width()->value()) ?: $defaultWidth) : $defaultWidth;
+
     // (string) before trim(): content written outside the Panel, or predating
     // the option, leaves the field at null rather than at an empty string.
     $classes = implode(' ', array_filter(array_map(fn ($value) => trim((string)$value), [
-        $opts ? $opts->mobile_width()->value()  : '',
-        $opts ? $opts->tablet_width()->value()  : '',
-        $opts ? ($opts->column_width()->value() ?: $defaultWidth) : $defaultWidth,
-        $opts ? $opts->column_height()->value() : '',
+        $opts ? $normalize($opts->mobile_width()->value())  : '',
+        $opts ? $normalize($opts->tablet_width()->value())  : '',
+        $columnWidth,
+        $opts ? $normalize($opts->column_height()->value()) : '',
         $isCard ? 'uk-card uk-card-body'                           : '',
         $isCard ? ($opts->card_color()->value() ?: 'uk-card-default') : '',
-        $isCard ? $opts->card_size()->value()                      : '',
+        $isCard ? $normalize($opts->card_size()->value())          : '',
         ($isCard && $opts->card_hover()->isTrue()) ? 'uk-card-hover' : '',
         $isTile ? $opts->tile_color()->value()                     : '',
-        $opts ? $opts->text_align_mobile()->value()                : '',
-        $opts ? $opts->text_align_tablet()->value()                : '',
-        $opts ? $opts->text_align()->value()                       : '',
-        $opts ? $opts->column_padding()->value()                   : '',
-        $opts ? $opts->item_order()->value()                       : '',
-        $opts ? $opts->content_valign()->value()                   : '',
+        $opts ? $normalize($opts->text_align_mobile()->value())    : '',
+        $opts ? $normalize($opts->text_align_tablet()->value())    : '',
+        $opts ? $normalize($opts->text_align()->value())           : '',
+        $opts ? $normalize($opts->column_padding()->value())       : '',
+        $opts ? $normalize($opts->item_order()->value())           : '',
+        $opts ? $normalize($opts->content_valign()->value())       : '',
         $opts ? $opts->column_class()->value()                     : '',
     ])));
 

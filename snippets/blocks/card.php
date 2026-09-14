@@ -3,6 +3,7 @@ $cardColor  = $block->card_color()->value() ?: 'uk-card-default';
 $isCustom   = $cardColor === 'custom';
 $bgColor    = $isCustom ? PixelOpen\KirbyUikitBuilder\Color::hex($block->card_bg_color()->value()) : '';
 $textColor  = $isCustom ? $block->card_text_color()->value() : '';
+$textColor  = $textColor === 'auto' ? '' : $textColor;
 $blockId    = htmlspecialchars($block->block_id()->value() ?? '');
 $blockClass = $block->block_class()->value();
 
@@ -28,7 +29,7 @@ if ($block->animation()->isTrue()) {
 $cardClasses = implode(' ', array_filter([
     'uk-card',
     $isCustom ? null : $cardColor,
-    $block->card_size()->value() ?: null,
+    $block->card_size()->value() !== 'default' ? $block->card_size()->value() : null,
     $block->card_hover()->isTrue() ? 'uk-card-hover' : null,
     !$img ? 'uk-card-body' : null,
     $textColor ?: null,

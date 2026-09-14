@@ -6,6 +6,7 @@ $colsMobile  = $block->cols_mobile()->value() ?: '1-3';
 $colsTablet  = $block->cols_tablet()->value() ?: '1-4';
 $colsDesktop = $block->cols_desktop()->value() ?: '1-5';
 $gap         = $block->gap()->value();
+$gap         = $gap === 'default' ? '' : $gap;
 $height      = (int) ($block->height()->value() ?: 60);
 $grayscale   = $block->grayscale()->isTrue();
 $opacity     = (int) ($block->opacity()->value() ?: 100);

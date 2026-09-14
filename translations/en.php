@@ -761,4 +761,24 @@ return [
     'pixelopen.kirby-uikit-builder.timeline.alternate.label'    => 'Alternate left / right',
     'pixelopen.kirby-uikit-builder.timeline.alternate.help'     => 'On desktop, steps alternate on both sides of a central line',
 
+    // Text block (native override)
+    'pixelopen.kirby-uikit-builder.text.name'                    => 'Text',
+    'pixelopen.kirby-uikit-builder.text.placeholder'             => 'Text…',
+    'pixelopen.kirby-uikit-builder.text.size'                    => 'Visual size',
+    'pixelopen.kirby-uikit-builder.text.size.meta'                => 'Small, muted',
+    'pixelopen.kirby-uikit-builder.text.size.small'               => 'Small',
+    'pixelopen.kirby-uikit-builder.text.size.large'               => 'Large',
+    'pixelopen.kirby-uikit-builder.text.size.lead'                => 'Lead',
+    'pixelopen.kirby-uikit-builder.text.style'                   => 'Style',
+    'pixelopen.kirby-uikit-builder.text.style.italic'             => 'Italic',
+    'pixelopen.kirby-uikit-builder.text.style.bold'                => 'Bold',
+    'pixelopen.kirby-uikit-builder.text.style.bold_italic'         => 'Bold italic',
+    'pixelopen.kirby-uikit-builder.text.width'                   => 'Max width',
+    'pixelopen.kirby-uikit-builder.text.width.half'                => '1/2, centered',
+    'pixelopen.kirby-uikit-builder.text.width.two_thirds'          => '2/3, centered',
+    'pixelopen.kirby-uikit-builder.text.width.three_quarters'      => '3/4, centered',
+    'pixelopen.kirby-uikit-builder.text.columns'                 => 'Columns (desktop)',
+    'pixelopen.kirby-uikit-builder.text.columns.two'               => '2 columns',
+    'pixelopen.kirby-uikit-builder.text.columns.three'             => '3 columns',
+
 ];

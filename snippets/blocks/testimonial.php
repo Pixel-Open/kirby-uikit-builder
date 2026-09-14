@@ -5,6 +5,7 @@ if ($items->isEmpty()) return;
 $colsTablet  = $block->cols_tablet()->or('1-2')->value();
 $colsDesktop = $block->cols_desktop()->or('1-3')->value();
 $gap         = $block->gap()->value();
+$gap         = $gap === 'default' ? '' : $gap;
 $style       = $block->style()->or('card')->value();
 $showRating  = $block->show_rating()->isEmpty() || $block->show_rating()->isTrue();
 $showAvatar  = $block->show_avatar()->isEmpty() || $block->show_avatar()->isTrue();

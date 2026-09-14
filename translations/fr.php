@@ -761,4 +761,24 @@ return [
     'pixelopen.kirby-uikit-builder.timeline.alternate.label'    => 'Alternance gauche / droite',
     'pixelopen.kirby-uikit-builder.timeline.alternate.help'     => 'Sur bureau, les étapes alternent de part et d\'autre d\'une ligne centrale',
 
+    // Text block (native override)
+    'pixelopen.kirby-uikit-builder.text.name'                    => 'Texte',
+    'pixelopen.kirby-uikit-builder.text.placeholder'             => 'Texte…',
+    'pixelopen.kirby-uikit-builder.text.size'                    => 'Taille visuelle',
+    'pixelopen.kirby-uikit-builder.text.size.meta'                => 'Petit, atténué',
+    'pixelopen.kirby-uikit-builder.text.size.small'               => 'Small',
+    'pixelopen.kirby-uikit-builder.text.size.large'               => 'Large',
+    'pixelopen.kirby-uikit-builder.text.size.lead'                => 'Chapô',
+    'pixelopen.kirby-uikit-builder.text.style'                   => 'Style',
+    'pixelopen.kirby-uikit-builder.text.style.italic'             => 'Italique',
+    'pixelopen.kirby-uikit-builder.text.style.bold'                => 'Gras',
+    'pixelopen.kirby-uikit-builder.text.style.bold_italic'         => 'Gras italique',
+    'pixelopen.kirby-uikit-builder.text.width'                   => 'Largeur max',
+    'pixelopen.kirby-uikit-builder.text.width.half'                => '1/2, centré',
+    'pixelopen.kirby-uikit-builder.text.width.two_thirds'          => '2/3, centré',
+    'pixelopen.kirby-uikit-builder.text.width.three_quarters'      => '3/4, centré',
+    'pixelopen.kirby-uikit-builder.text.columns'                 => 'Colonnes (bureau)',
+    'pixelopen.kirby-uikit-builder.text.columns.two'               => '2 colonnes',
+    'pixelopen.kirby-uikit-builder.text.columns.three'             => '3 colonnes',
+
 ];

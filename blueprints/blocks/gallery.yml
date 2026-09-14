@@ -68,7 +68,7 @@ fields:
         text: pixelopen.kirby-uikit-builder.gallery.hover_icon.eye
       - value: link
         text: pixelopen.kirby-uikit-builder.gallery.hover_icon.link
-      - value: ""
+      - value: none
         text: pixelopen.kirby-uikit-builder.gallery.hover_icon.none
   hover_caption:
     type: toggle

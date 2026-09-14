@@ -16,6 +16,7 @@ $alignment = $block->alignment()->or('center')->value();
 $imgWidth  = $block->img_width()->or('auto')->value();
 $ratio     = $block->ratio()->value() ?: null;
 $shadow    = $block->shadow()->value();
+$shadow    = $shadow === 'none' ? '' : $shadow;
 $lightbox  = $block->lightbox()->isTrue();
 $link      = $lightbox ? '' : PixelOpen\KirbyUikitBuilder\Url::safe($block->link()->value());
 $eager     = $block->eager()->isTrue();

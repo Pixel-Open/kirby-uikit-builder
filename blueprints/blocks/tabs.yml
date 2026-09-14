@@ -61,5 +61,5 @@ tabs:
         options:
           - value: "uk-animation-fade"
             text: pixelopen.kirby-uikit-builder.tabs.animation.fade
-          - value: ""
+          - value: none
             text: pixelopen.kirby-uikit-builder.tabs.animation.none

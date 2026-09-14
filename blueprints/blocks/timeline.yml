@@ -42,7 +42,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.icon_box.style.label
         width: 1/3
         options:
-          - value: ""
+          - value: plain
             text: pixelopen.kirby-uikit-builder.icon_box.style.plain
           - value: card
             text: pixelopen.kirby-uikit-builder.icon_box.style.card

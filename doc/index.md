@@ -35,6 +35,7 @@ UIkit blocks and layout helpers for Kirby CMS 5.
 | [team](blocks/team.md) | Team member grid with photo, bio, and social links |
 | [logo-grid](blocks/logo-grid.md) | Partner / client logo grid with grayscale and opacity |
 | [timeline](blocks/timeline.md) | Vertical timeline of steps or milestones, optional alternate layout |
+| [text](blocks/text.md) | Rich text paragraph with size, color, responsive alignment, width, columns |
 | **Snippets** | |
 | [ui/image](snippets/ui-image.md) | Image render helper (WebP, uk-img, ratio, animate…) |
 | [ui/picture](snippets/ui-picture.md) | Minimal responsive `<picture>` (srcset original + WebP) |

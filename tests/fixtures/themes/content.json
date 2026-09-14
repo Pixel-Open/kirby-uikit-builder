@@ -64,6 +64,55 @@
       }
     },
     {
+      "name": "paragraph-lead-primary",
+      "label": "Chapô, couleur primaire",
+      "block": {
+        "type": "text",
+        "content": {
+          "text": "<p>Un chapô en couleur primaire pour introduire une section.</p>",
+          "text_size": "uk-text-lead",
+          "text_color": "uk-text-primary"
+        }
+      }
+    },
+    {
+      "name": "paragraph-narrow-centered",
+      "label": "Paragraphe étroit, centré",
+      "block": {
+        "type": "text",
+        "content": {
+          "text": "<p>Un paragraphe limité aux deux tiers de la largeur et centré, pour améliorer la lisibilité d'un long texte.</p>",
+          "text_width": "2-3",
+          "text_align": "uk-text-center@m",
+          "text_align_tablet": "uk-text-center@s",
+          "text_align_mobile": "uk-text-center"
+        }
+      }
+    },
+    {
+      "name": "paragraph-columns",
+      "label": "Paragraphe sur deux colonnes",
+      "block": {
+        "type": "text",
+        "content": {
+          "text": "<p>Un texte plus long réparti sur deux colonnes à partir du bureau, pour illustrer la mise en page en colonnes d'un bloc de texte.</p><p>Sur mobile et tablette, le texte reste affiché sur une seule colonne.</p>",
+          "text_columns": "uk-column-1-2@m"
+        }
+      }
+    },
+    {
+      "name": "paragraph-meta-italic",
+      "label": "Petit texte atténué, italique",
+      "block": {
+        "type": "text",
+        "content": {
+          "text": "<p>Une légende ou une note de bas de bloc, en italique et de taille réduite.</p>",
+          "text_size": "uk-text-meta",
+          "text_style": "uk-text-italic"
+        }
+      }
+    },
+    {
       "name": "quote-simple",
       "label": "Citation simple",
       "block": {

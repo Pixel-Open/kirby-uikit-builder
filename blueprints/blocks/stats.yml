@@ -72,7 +72,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.icon_box.style.label
         width: 1/4
         options:
-          - value: ""
+          - value: plain
             text: pixelopen.kirby-uikit-builder.icon_box.style.plain
           - value: card
             text: pixelopen.kirby-uikit-builder.icon_box.style.card
@@ -82,7 +82,7 @@ tabs:
         label: pixelopen.kirby-uikit-builder.icon_box.icon_color.label
         width: 1/4
         options:
-          - value: ""
+          - value: none
             text: pixelopen.kirby-uikit-builder.icon_box.icon_color.none
           - value: primary
             text: pixelopen.kirby-uikit-builder.icon_box.icon_color.primary
@@ -108,7 +108,7 @@ tabs:
         width: 1/4
         default: "uk-text-center"
         options:
-          - value: ""
+          - value: left
             text: pixelopen.kirby-uikit-builder.grid_halign.left
           - value: "uk-text-center"
             text: pixelopen.kirby-uikit-builder.grid_halign.center

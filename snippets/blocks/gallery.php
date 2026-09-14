@@ -13,6 +13,7 @@ $widthClass = $widthClasses[$block->gallery_grid()->value()] ?? $widthClasses['t
 $hoverStyle   = $block->hover_style()->value() ?: 'white';
 $hoverOpacity = (int)($block->hover_opacity()->value() ?: 70) / 100;
 $hoverIcon    = $block->hover_icon()->value();
+$hoverIcon    = $hoverIcon === 'none' ? '' : $hoverIcon;
 $hoverCaption = $block->hover_caption()->isTrue();
 
 $overlayClass = '';

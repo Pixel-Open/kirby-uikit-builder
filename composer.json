@@ -1,6 +1,7 @@
 {
   "name": "pixelopen/kirby-uikit-builder",
   "description": "UIkit blocks and layout helpers for Kirby CMS",
+  "version": "1.0.3",
   "type": "kirby-plugin",
   "license": "MIT",
   "authors": [
@@ -10,7 +11,7 @@
     }
   ],
   "require": {
-    "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
+    "php": "~8.3.0 || ~8.4.0 || ~8.5.0",
     "getkirby/composer-installer": "^1.2"
   },
   "require-dev": {

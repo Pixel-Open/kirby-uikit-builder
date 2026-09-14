@@ -16,8 +16,9 @@ settings:
         background:
           type: select
           label: pixelopen.kirby-uikit-builder.background.label
+          default: none
           options:
-            - value: ""
+            - value: none
               text: pixelopen.kirby-uikit-builder.background.none
             - value: uk-section-default
               text: pixelopen.kirby-uikit-builder.background.white
@@ -110,9 +111,9 @@ settings:
         text_color:
           type: select
           label: pixelopen.kirby-uikit-builder.text_color.label
-          default: ""
+          default: auto
           options:
-            - value: ""
+            - value: auto
               text: pixelopen.kirby-uikit-builder.text_color.auto
             - value: uk-light
               text: pixelopen.kirby-uikit-builder.text_color.light
@@ -168,13 +169,13 @@ settings:
         padding:
           type: select
           label: pixelopen.kirby-uikit-builder.padding.label
-          default: ""
+          default: m
           options:
             - value: uk-section-xsmall
               text: XS
             - value: uk-section-small
               text: S
-            - value: ""
+            - value: m
               text: pixelopen.kirby-uikit-builder.padding.m
             - value: uk-section-large
               text: L
@@ -195,9 +196,9 @@ settings:
         container:
           type: select
           label: pixelopen.kirby-uikit-builder.container.label
-          default: ""
+          default: normal
           options:
-            - value: ""
+            - value: normal
               text: pixelopen.kirby-uikit-builder.container.normal
             - value: small
               text: pixelopen.kirby-uikit-builder.container.narrow
@@ -213,10 +214,10 @@ settings:
         grid_valign:
           type: select
           label: pixelopen.kirby-uikit-builder.grid_valign.label
-          default: ""
+          default: stretch
           width: 1/2
           options:
-            - value: ""
+            - value: stretch
               text: pixelopen.kirby-uikit-builder.grid_valign.stretch
             - value: uk-flex-top
               text: pixelopen.kirby-uikit-builder.grid_valign.top
@@ -227,10 +228,10 @@ settings:
         grid_halign:
           type: select
           label: pixelopen.kirby-uikit-builder.grid_halign.label
-          default: ""
+          default: left
           width: 1/2
           options:
-            - value: ""
+            - value: left
               text: pixelopen.kirby-uikit-builder.grid_halign.left
             - value: uk-flex-center
               text: pixelopen.kirby-uikit-builder.grid_halign.center
@@ -383,9 +384,9 @@ settings:
         visibility:
           type: select
           label: pixelopen.kirby-uikit-builder.visibility.label
-          default: ""
+          default: all
           options:
-            - value: ""
+            - value: all
               text: pixelopen.kirby-uikit-builder.visibility.all
             - value: uk-visible@s
               text: pixelopen.kirby-uikit-builder.visibility.tablet_up

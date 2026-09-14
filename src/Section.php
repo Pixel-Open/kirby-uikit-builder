@@ -12,6 +12,7 @@ class Section
     public static function prepare(Layout $layout): array
     {
         $bg              = $layout->attrs()->background()->value();
+        $bg              = $bg === 'none' ? '' : $bg;
         $bgCustomColor   = Color::hex($layout->attrs()->bg_custom_color()->value());
         $bgCustomGradient = ($bg === 'custom') && $layout->attrs()->bg_custom_gradient()->isTrue();
         $bgCustomColor2  = Color::hex($layout->attrs()->bg_custom_color2()->value());
@@ -26,6 +27,7 @@ class Section
             }
         }
         $padding        = $layout->attrs()->padding()->value();
+        $padding        = $padding === 'm' ? '' : $padding;
         $paddingRemove  = $layout->attrs()->padding_remove()->split();
         $bgImage        = $layout->attrs()->bg_image()->toFiles()->first();
         $bgVideoEnabled = $layout->attrs()->bg_video_enable()->isTrue();
@@ -41,12 +43,16 @@ class Section
         }
         $hasVideo       = (bool)($bgVideoFile || $bgVideoUrl);
         $textColor     = $layout->attrs()->text_color()->value();
+        $textColor     = $textColor === 'auto' ? '' : $textColor;
         $parallax      = $layout->attrs()->parallax()->isTrue();
         $parallaxSpeed = (int)($layout->attrs()->parallax_speed()->value() ?: -200);
         $eagerImage    = $layout->attrs()->eager_image()->isTrue();
         $container     = $layout->attrs()->container()->value();
+        $container     = $container === 'normal' ? '' : $container;
         $gridValign      = $layout->attrs()->grid_valign()->value();
+        $gridValign      = $gridValign === 'stretch' ? '' : $gridValign;
         $gridHalign      = $layout->attrs()->grid_halign()->value();
+        $gridHalign      = $gridHalign === 'left' ? '' : $gridHalign;
         $gridGap         = $layout->attrs()->grid_gap()->value() ?: 'uk-grid-large';
         $gridDivider     = $layout->attrs()->grid_divider()->isTrue();
         $scrollspy       = $layout->attrs()->scrollspy()->isTrue();
@@ -64,6 +70,7 @@ class Section
         $shapeDividerHeight = Css::length($layout->attrs()->shape_divider_height()->value()) ?? '150px';
 
         $visibility     = $layout->attrs()->visibility()->value();
+        $visibility     = $visibility === 'all' ? '' : $visibility;
         $sectionId      = $layout->attrs()->section_id()->value();
         $ariaLabel      = $layout->attrs()->aria_label()->value();
         $overlayHex      = Color::hex($layout->attrs()->overlay_color()->value());

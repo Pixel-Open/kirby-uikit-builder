@@ -1,0 +1,139 @@
+name: pixelopen.kirby-uikit-builder.text.name
+icon: text
+wysiwyg: true
+preview: text
+
+tabs:
+
+  content:
+    label: pixelopen.kirby-uikit-builder.tab.content
+    fields:
+
+      text:
+        type: writer
+        nodes: false
+        placeholder: pixelopen.kirby-uikit-builder.text.placeholder
+
+  settings:
+    label: pixelopen.kirby-uikit-builder.tab.settings
+    fields:
+
+      text_size:
+        type: select
+        label: pixelopen.kirby-uikit-builder.text.size
+        width: 1/3
+        options:
+          - value: inherit
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: uk-text-meta
+            text: pixelopen.kirby-uikit-builder.text.size.meta
+          - value: uk-text-small
+            text: pixelopen.kirby-uikit-builder.text.size.small
+          - value: uk-text-large
+            text: pixelopen.kirby-uikit-builder.text.size.large
+          - value: uk-text-lead
+            text: pixelopen.kirby-uikit-builder.text.size.lead
+
+      text_color:
+        type: select
+        label: pixelopen.kirby-uikit-builder.heading.color
+        width: 1/3
+        options:
+          - value: inherit
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: uk-text-muted
+            text: pixelopen.kirby-uikit-builder.heading.color.muted
+          - value: uk-text-emphasis
+            text: pixelopen.kirby-uikit-builder.heading.color.emphasis
+          - value: uk-text-primary
+            text: pixelopen.kirby-uikit-builder.col.card.color.primary
+          - value: uk-text-secondary
+            text: pixelopen.kirby-uikit-builder.col.card.color.secondary
+          - value: uk-text-success
+            text: pixelopen.kirby-uikit-builder.heading.color.success
+          - value: uk-text-warning
+            text: pixelopen.kirby-uikit-builder.heading.color.warning
+          - value: uk-text-danger
+            text: pixelopen.kirby-uikit-builder.btn.style.danger
+
+      text_style:
+        type: select
+        label: pixelopen.kirby-uikit-builder.text.style
+        width: 1/3
+        options:
+          - value: inherit
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: uk-text-italic
+            text: pixelopen.kirby-uikit-builder.text.style.italic
+          - value: uk-text-bold
+            text: pixelopen.kirby-uikit-builder.text.style.bold
+          - value: "uk-text-italic uk-text-bold"
+            text: pixelopen.kirby-uikit-builder.text.style.bold_italic
+
+      text_align:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.text_align.desktop
+        width: 1/3
+        options:
+          - value: inherit
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: uk-text-left@m
+            text: pixelopen.kirby-uikit-builder.col.text_align.left
+          - value: uk-text-center@m
+            text: pixelopen.kirby-uikit-builder.col.text_align.center
+          - value: uk-text-right@m
+            text: pixelopen.kirby-uikit-builder.col.text_align.right
+
+      text_align_tablet:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.text_align.tablet
+        width: 1/3
+        options:
+          - value: inherit
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: uk-text-left@s
+            text: pixelopen.kirby-uikit-builder.col.text_align.left
+          - value: uk-text-center@s
+            text: pixelopen.kirby-uikit-builder.col.text_align.center
+          - value: uk-text-right@s
+            text: pixelopen.kirby-uikit-builder.col.text_align.right
+
+      text_align_mobile:
+        type: select
+        label: pixelopen.kirby-uikit-builder.col.text_align.mobile
+        width: 1/3
+        options:
+          - value: inherit
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: uk-text-left
+            text: pixelopen.kirby-uikit-builder.col.text_align.left
+          - value: uk-text-center
+            text: pixelopen.kirby-uikit-builder.col.text_align.center
+          - value: uk-text-right
+            text: pixelopen.kirby-uikit-builder.col.text_align.right
+
+      text_width:
+        type: select
+        label: pixelopen.kirby-uikit-builder.text.width
+        width: 1/3
+        options:
+          - value: inherit
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: "1-2"
+            text: pixelopen.kirby-uikit-builder.text.width.half
+          - value: "2-3"
+            text: pixelopen.kirby-uikit-builder.text.width.two_thirds
+          - value: "3-4"
+            text: pixelopen.kirby-uikit-builder.text.width.three_quarters
+
+      text_columns:
+        type: select
+        label: pixelopen.kirby-uikit-builder.text.columns
+        width: 1/3
+        options:
+          - value: inherit
+            text: pixelopen.kirby-uikit-builder.col.inherit
+          - value: uk-column-1-2@m
+            text: pixelopen.kirby-uikit-builder.text.columns.two
+          - value: uk-column-1-3@m
+            text: pixelopen.kirby-uikit-builder.text.columns.three

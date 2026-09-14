@@ -1,65 +1,6 @@
 panel.plugin("pixelopen/kirby-uikit-builder", {
   blocks: {
 
-    // ─── Quote ──────────────────────────────────────────────────────────────
-    quote: {
-      computed: {
-        borderStyle() {
-          return this.content.style === 'border'
-            ? 'border-left: 4px solid #1e87f0; padding-left: 12px; margin-left: 0;'
-            : '';
-        }
-      },
-      template: `
-        <blockquote :style="'margin:0;' + borderStyle + (content.style === 'center' ? 'text-align:center;' : '')">
-          <p :style="content.style === 'large' ? 'font-size:1.2em;margin:0 0 6px;' : 'margin:0 0 6px;'">
-            <span v-if="content.text" v-html="content.text"></span>
-            <span v-else style="opacity:.4">Quote text…</span>
-          </p>
-          <footer v-if="content.citation" style="font-size:13px;opacity:.6">
-            <span v-html="content.citation"></span>
-          </footer>
-        </blockquote>
-      `
-    },
-
-    // ─── Code ───────────────────────────────────────────────────────────────
-    code: {
-      computed: {
-        lang() {
-          const map = { js:'JavaScript', php:'PHP', css:'CSS', html:'HTML', python:'Python',
-            typescript:'TypeScript', rust:'Rust', go:'Go', sql:'SQL', yaml:'YAML', json:'JSON' };
-          return map[this.content.language] || (this.content.language || 'text').toUpperCase();
-        }
-      },
-      template: `
-        <div style="border-radius:4px;overflow:hidden;font-size:12px">
-          <div style="background:#282c34;color:#abb2bf;padding:6px 12px;display:flex;justify-content:space-between;align-items:center">
-            <span style="font-family:monospace;font-size:12px">{{ content.filename || lang }}</span>
-            <span style="font-size:10px;opacity:.5;text-transform:uppercase;letter-spacing:.05em">{{ content.filename ? lang : '' }}</span>
-          </div>
-          <pre style="margin:0;border-radius:0;font-size:12px;max-height:120px;overflow:hidden"><code v-if="content.code">{{ content.code }}</code><span v-else style="opacity:.4">Code…</span></pre>
-        </div>
-      `
-    },
-
-    // ─── Heading ────────────────────────────────────────────────────────────
-    heading: {
-      computed: {
-        tag() {
-          return this.content.level || "h2";
-        }
-      },
-      template: `
-        <div :class="'k-block-type-heading'">
-          <component :is="tag" class="uk-heading-preview" style="margin:0;line-height:1.2">
-            <span v-if="content.text" v-html="content.text"></span>
-            <span v-else style="opacity:.4">Heading…</span>
-          </component>
-        </div>
-      `
-    },
-
     // ─── Button ─────────────────────────────────────────────────────────────
     button: {
       template: `
