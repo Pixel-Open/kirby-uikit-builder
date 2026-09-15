@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.4 (09/15/2026)
+
++ Panel block preview: `slider`, `card`, `media-object` and `timeline` now show a live thumbnail in the block list, joining the eighteen block types that already had one.
++ `card`, `carousel`, `gallery`, `image`, `logo-grid`, `media-object`, `slider`, `team` and `testimonial`: a file uploaded through their image field is tagged with the `blocks/image` file template, to tell block images apart from the page's other files.
+
 ## 1.0.3 (09/14/2026)
 
 + Plugin version pinned in `composer.json` and shown in the Panel's system info instead of `dev-main`.

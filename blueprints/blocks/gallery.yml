@@ -7,6 +7,8 @@ fields:
     multiple: true
     layout: cardlets
     query: page.files.filterBy("type", "image")
+    uploads:
+      template: blocks/image
   gallery_grid:
     type: select
     label: pixelopen.kirby-uikit-builder.gallery.grid

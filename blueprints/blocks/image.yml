@@ -23,6 +23,8 @@ tabs:
         multiple: false
         image:
           back: black
+        uploads:
+          template: blocks/image
         when:
           location: kirby
       src:

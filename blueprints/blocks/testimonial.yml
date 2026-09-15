@@ -34,6 +34,8 @@ tabs:
             label: pixelopen.kirby-uikit-builder.testimonial.item.avatar
             max: 1
             query: page.files.filterBy("type", "image")
+            uploads:
+              template: blocks/image
             width: 1/2
           rating:
             type: select

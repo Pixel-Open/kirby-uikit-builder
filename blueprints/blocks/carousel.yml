@@ -20,6 +20,8 @@ tabs:
             label: pixelopen.kirby-uikit-builder.carousel.item.image
             max: 1
             query: page.files.filterBy("type", "image")
+            uploads:
+              template: blocks/image
           content_blocks:
             type: blocks
             label: pixelopen.kirby-uikit-builder.carousel.item.content
