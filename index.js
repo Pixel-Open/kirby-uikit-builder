@@ -1,3 +1,19 @@
+// Finds a short preview text in the first child block that carries one (heading, text, quote, button, cta…).
+function blockPreviewText(blocks) {
+  try {
+    const rows = Array.isArray(blocks) ? blocks : JSON.parse(blocks || "[]");
+    for (const block of rows) {
+      const c = block && block.content;
+      const text = c && (c.text || c.heading);
+      if (text) {
+        const stripped = String(text).replace(/<[^>]*>/g, "").trim();
+        if (stripped) return stripped.length > 60 ? stripped.slice(0, 60) + "…" : stripped;
+      }
+    }
+  } catch (e) {}
+  return null;
+}
+
 panel.plugin("pixelopen/kirby-uikit-builder", {
   blocks: {
 
@@ -392,6 +408,109 @@ panel.plugin("pixelopen/kirby-uikit-builder", {
             <span v-for="(col, j) in cols.slice(0,5)" :key="j" style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">-</span>
           </div>
           <span v-if="!cols.length && !rows.length" style="opacity:.4">Table…</span>
+        </div>
+      `
+    },
+
+    // ─── Slider ─────────────────────────────────────────────────────────────
+    slider: {
+      computed: {
+        rows() {
+          const v = this.content.slides;
+          try { return Array.isArray(v) ? v : (JSON.parse(v) || []); } catch(e) { return []; }
+        },
+        firstImage() {
+          const row = this.rows[0];
+          const f = row && row.slide_image;
+          return Array.isArray(f) ? f[0] : null;
+        }
+      },
+      template: `
+        <div style="position:relative;border-radius:4px;overflow:hidden;background:#111;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center">
+          <img v-if="firstImage && firstImage.url" :src="firstImage.url" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7">
+          <span v-if="!firstImage" uk-icon="icon: image; ratio: 1.5" style="opacity:.3;position:relative;z-index:1;color:#fff"></span>
+          <div v-if="rows.length" style="position:relative;z-index:1;background:rgba(0,0,0,.6);color:#fff;font-size:11px;padding:2px 8px;border-radius:10px">
+            {{ rows.length }} slide<span v-if="rows.length > 1">s</span>
+          </div>
+        </div>
+      `
+    },
+
+    // ─── Card ───────────────────────────────────────────────────────────────
+    card: {
+      computed: {
+        badgeColor() {
+          if (this.content.card_color === "custom") return this.content.card_bg_color || "#999";
+          return { "uk-card-primary": "#1e87f0", "uk-card-secondary": "#222" }[this.content.card_color] || "#999";
+        },
+        image() {
+          const enabled = this.content.media_enable === true || this.content.media_enable === "true";
+          const f = this.content.media_image;
+          return enabled && Array.isArray(f) ? f[0] : null;
+        },
+        firstText() {
+          return blockPreviewText(this.content.blocks);
+        }
+      },
+      template: `
+        <div style="display:flex;gap:8px;align-items:center">
+          <div v-if="image" style="width:40px;height:40px;border-radius:4px;overflow:hidden;background:#e5e5e5;flex-shrink:0">
+            <img v-if="image.url" :src="image.url" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+          </div>
+          <div style="font-size:12px;overflow:hidden;flex:1">
+            <span v-if="content.card_badge" :style="'display:inline-block;font-size:10px;padding:1px 6px;border-radius:10px;color:#fff;margin-bottom:2px;background:' + badgeColor">{{ content.card_badge }}</span>
+            <div v-if="firstText" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ firstText }}</div>
+            <span v-else-if="!content.card_badge" style="opacity:.4">Card…</span>
+          </div>
+        </div>
+      `
+    },
+
+    // ─── Media object ───────────────────────────────────────────────────────
+    "media-object": {
+      computed: {
+        image() {
+          const f = this.content.media_image;
+          return Array.isArray(f) ? f[0] : null;
+        },
+        position() {
+          return this.content.image_position || "left";
+        },
+        firstText() {
+          return blockPreviewText(this.content.content_blocks);
+        }
+      },
+      template: `
+        <div :style="'display:flex;gap:8px;align-items:center;' + (position === 'right' ? 'flex-direction:row-reverse' : '')">
+          <div style="width:48px;height:48px;border-radius:4px;overflow:hidden;background:#e5e5e5;flex-shrink:0;display:flex;align-items:center;justify-content:center">
+            <img v-if="image && image.url" :src="image.url" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+            <span v-else uk-icon="image" style="opacity:.3"></span>
+          </div>
+          <div style="font-size:12px;overflow:hidden">
+            <span v-if="firstText">{{ firstText }}</span>
+            <span v-else style="opacity:.4">Media object…</span>
+          </div>
+        </div>
+      `
+    },
+
+    // ─── Timeline ───────────────────────────────────────────────────────────
+    timeline: {
+      computed: {
+        rows() {
+          const v = this.content.items;
+          try { return Array.isArray(v) ? v : (JSON.parse(v) || []); } catch(e) { return []; }
+        }
+      },
+      template: `
+        <div style="font-size:12px">
+          <div v-if="rows.length" v-for="(row, i) in rows.slice(0,4)" :key="i" style="display:flex;gap:8px;align-items:baseline;margin-bottom:4px">
+            <span style="width:6px;height:6px;border-radius:50%;background:#1e87f0;flex-shrink:0"></span>
+            <span style="opacity:.5;white-space:nowrap">{{ row.date }}</span>
+            <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ row.title }}</span>
+          </div>
+          <span v-if="!rows.length" style="opacity:.4">Timeline items…</span>
+          <span v-if="rows.length > 4" style="opacity:.5;font-size:11px">+ {{ rows.length - 4 }} more</span>
         </div>
       `
     },
