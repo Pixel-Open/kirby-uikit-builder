@@ -84,6 +84,8 @@ tabs:
         multiple: false
         max: 1
         query: page.files.filterBy("type", "image")
+        uploads:
+          template: blocks/image
         width: 1/2
         when:
           media_enable: true

@@ -11,6 +11,8 @@ tabs:
         label: pixelopen.kirby-uikit-builder.media_object.image
         max: 1
         query: page.files.filterBy("type", "image")
+        uploads:
+          template: blocks/image
       content_blocks:
         type: blocks
         label: pixelopen.kirby-uikit-builder.media_object.content_blocks

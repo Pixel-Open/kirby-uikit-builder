@@ -23,6 +23,8 @@ tabs:
             label: pixelopen.kirby-uikit-builder.logo_grid.item.logo.label
             max: 1
             query: page.files.filterBy("type", "image")
+            uploads:
+              template: blocks/image
           name:
             type: text
             label: pixelopen.kirby-uikit-builder.logo_grid.item.name.label
