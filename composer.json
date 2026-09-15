@@ -1,7 +1,7 @@
 {
   "name": "pixelopen/kirby-uikit-builder",
   "description": "UIkit blocks and layout helpers for Kirby CMS",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "kirby-plugin",
   "license": "MIT",
   "authors": [
